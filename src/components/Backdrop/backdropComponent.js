@@ -33,28 +33,40 @@ const backdropComponent = ({ closeOnEsc, closeOnclick }) => BaseComponent => {
         this.state.closeOnclick === true &&
         e.target.id === 'BaseComponent'
       ) {
-        console.log(e.target);
+        this.setState({ showModal: false });
+      }
+    };
+
+    closeBackdrop = () => {
+      if (this.state.showModal === true) {
         this.setState({ showModal: false });
       }
     };
 
     render() {
-      const { showModal } = this.state;
-      return showModal ? (
-        <div
-          className={styles.overlay}
-          onClick={this.closeModal}
-          id="BaseComponent"
-        >
-          <div className={styles.modal}>
-            <BaseComponent {...this.props} />
-          </div>
-        </div>
-      ) : (
-        <BaseComponent />
-      );
+      return this.props.children({
+        showModal: this.state.showModal,
+        closeOnEsc: this.state.closeOnEsc,
+      });
     }
   };
 };
 
 export default backdropComponent;
+
+// render() {
+//   const { showModal } = this.state;
+//   return showModal ? (
+//     <div
+//       className={styles.overlay}
+//       onClick={this.closeModal}
+//       id="BaseComponent"
+//     >
+//       <div className={styles.modal}>
+//         <BaseComponent />
+//       </div>
+//     </div>
+//   ) : (
+//     <BaseComponent />
+//   );
+// }
