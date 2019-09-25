@@ -10,42 +10,41 @@ const withAuthRedirect = BaseComponent => {
       history: PropTypes.shape({
         replace: PropTypes.func.isRequired,
       }).isRequired,
-      // location: PropTypes.func.isRequired,
+      location: PropTypes.shape({}).isRequired,
+    };
+
+    state = {
+      isCdu: true,
     };
 
     componentDidMount() {
       const { authenticated, history } = this.props;
-      if (authenticated) {
-        history.replace('/dashboard');
-      }
+      if (!authenticated) return;
+      history.replace('/dashboard');
     }
 
     componentDidUpdate() {
-      const { authenticated, history } = this.props;
-      if (authenticated) {
+      const { authenticated, history, location } = this.props;
+      if (!authenticated) return;
+      const { isCdu } = this.state;
+      if (isCdu) {
+        if (location.state && location.state.from) {
+          return history.replace(location.state.from);
+        }
+
         history.replace('/dashboard');
+
+        this.setState({
+          isCdu: false,
+        });
       }
     }
 
-    // componentDidMount() {
-    //   const { authenticated, history } = this.props;
-    //   if (!authenticated) return;
-
-    //   history.replace('/');
-    // }
-
-    // componentDidUpdate() {
-    //   const { authenticated, history, location } = this.props;
-    //   if (!authenticated) return;
-
-    //   console.log('WithAuthRedirect: ', this.props);
-
-    //   if (location.state && location.state.from)
-    //     // eslint-disable-next-line consistent-return
-    //     return history.replace(location.state.from);
-
-    //   history.replace('/');
-    // }
+    componentWillUnmount() {
+      this.setState({
+        isCdu: true,
+      });
+    }
 
     render() {
       // eslint-disable-next-line react/jsx-props-no-spreading

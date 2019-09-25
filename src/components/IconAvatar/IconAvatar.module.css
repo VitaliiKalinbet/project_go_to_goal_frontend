@@ -1,0 +1,50 @@
+.avatar_choose {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: fit-content;
+}
+
+.user_avatar_big {
+  width: 190px;
+  height: 140px;
+  align-self: center;
+}
+
+.avatar_little_div {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: space-evenly;
+  justify-content: space-between;
+  width: 190px;
+  height: 70px;
+}
+
+.user_avatar_small {
+  max-height: auto;
+  max-width: 40px;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}
+
+.user_avatar_small:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+  translate: transform 0.4s ease-in;
+}
+
+.avatar_txt {
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.active {
+  cursor: pointer;
+  outline: none;
+  transform: scale(1.1, 1.1);
+  translate: transform 0.4s ease;
+  border: 0.5px solid darkgreen;
+}

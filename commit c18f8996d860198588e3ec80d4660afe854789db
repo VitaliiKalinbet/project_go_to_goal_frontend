@@ -1,0 +1,931 @@
+[33mcommit aff85e453fca42cb05a91bf4baac951de8d93765[m[33m ([m[1;36mHEAD -> [m[1;32mheaderLog[m[33m)[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Fri Sep 20 16:05:17 2019 +0300
+
+    f**k up
+
+[33mcommit c18f8996d860198588e3ec80d4660afe854789db[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Fri Sep 20 15:38:32 2019 +0300
+
+    end
+
+[33mcommit 9eacf3865050cf831a811d2a543b9b2efe1645be[m[33m ([m[1;31morigin/headerLog[m[33m)[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Fri Sep 20 15:36:17 2019 +0300
+
+    end
+
+[33mcommit 235e9e64e2a115bc303f80e622d07748bed3e53a[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Thu Sep 19 18:50:55 2019 +0300
+
+    come to class Header
+
+[33mcommit 391091fa860d65e36ac6f99834e0e58031ab8667[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Thu Sep 19 18:43:54 2019 +0300
+
+    code pretier
+
+[33mcommit b453c4460aa6731061975743194a0b55aea39fb9[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Thu Sep 19 18:25:08 2019 +0300
+
+    added redux and some action
+
+[33mcommit 4428ddd2e3e2ef8b94e7c7a3cb9c0bc5b73b9beb[m
+Merge: b432158 7996ee2
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Thu Sep 19 18:24:36 2019 +0300
+
+    added redux and some action
+
+[33mcommit b4321588504a712e20b16fd8f0446207e003e259[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Thu Sep 19 15:53:53 2019 +0300
+
+    log PB
+
+[33mcommit 7996ee23bd2690d5159e6100736f73de763d4460[m
+Author: Oleh Zharovskyi <olegzhora11@gmail.com>
+Date:   Thu Sep 19 15:51:45 2019 +0300
+
+    add button close window
+
+[33mcommit 3c5552c0fa9fa1c177d84ae1dac7459fb4b9f46b[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Thu Sep 19 15:51:41 2019 +0300
+
+    log PB
+
+[33mcommit 3808d2f8fe6b64d5a5a72f12724dc7c76ec02aab[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Thu Sep 19 11:47:42 2019 +0300
+
+    merge dev
+
+[33mcommit d21f669834176b1ece409e440e008b75ad382fe5[m
+Author: Oleh Zharovskyi <olegzhora11@gmail.com>
+Date:   Thu Sep 19 11:46:55 2019 +0300
+
+    merge actual dev
+
+[33mcommit 313aa618bc618d93b51f052aff0d50c320ab0220[m[33m ([m[1;32mdev[m[33m)[m
+Merge: c1e516b f65b499
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Wed Sep 18 22:29:13 2019 +0300
+
+    Merge pull request #22 from VitaliiKalinbet/dashboard
+    
+    Dashboard
+
+[33mcommit f65b49939a2ea72524ffec50897d5f54601c02dc[m[33m ([m[1;31morigin/dashboard[m[33m)[m
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Wed Sep 18 18:57:33 2019 +0300
+
+    dashboard fixed
+
+[33mcommit 46eb6b67970020e5c38a0ba30b44251632ff14a2[m
+Merge: b753fc5 c1e516b
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Wed Sep 18 17:52:59 2019 +0300
+
+    dashboard w/o API draft 1
+
+[33mcommit b753fc5101a679ef280634ae89fd0ac93fb71c98[m
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Wed Sep 18 17:50:25 2019 +0300
+
+    dashboard w/o API draft 1
+
+[33mcommit c1e516b6dee362b25b9dec119b551edaf063c16f[m
+Merge: a2ff6e0 229e159
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Wed Sep 18 17:43:23 2019 +0300
+
+    Merge pull request #21 from VitaliiKalinbet/ModalAddTask
+    
+    Modal add task
+
+[33mcommit 229e15909d92a631d74f921faf18928266a73291[m
+Author: OlgaSavytska <o.savytska77@gmail.com>
+Date:   Wed Sep 18 17:42:18 2019 +0300
+
+    init ModalAddTask
+
+[33mcommit 8447452eb469f0e799c8bed48b144f00df2b83cc[m
+Merge: 365f3e7 a2ff6e0
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Wed Sep 18 17:40:49 2019 +0300
+
+    dashboard w/o API draft 1
+
+[33mcommit c5586c8564bf648a8708397ff768767844fc0246[m
+Merge: 63f0363 a2ff6e0
+Author: OlgaSavytska <o.savytska77@gmail.com>
+Date:   Wed Sep 18 17:38:44 2019 +0300
+
+    init ModalAddTask
+
+[33mcommit 63f0363f3ec29b7523153c6858b82140cdbc243c[m
+Author: OlgaSavytska <o.savytska77@gmail.com>
+Date:   Wed Sep 18 17:29:12 2019 +0300
+
+    init ModalAddTask
+
+[33mcommit b95c05f5148c682352c7910f3d3c80faa32dde7e[m
+Author: OlgaSavytska <o.savytska77@gmail.com>
+Date:   Wed Sep 18 17:27:48 2019 +0300
+
+    init ModalAddTask
+
+[33mcommit 365f3e7fe3dee6b2630cbca32e8867d4aa0eea1c[m
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Wed Sep 18 17:26:04 2019 +0300
+
+    dashboard w/o API draft 1
+
+[33mcommit a2ff6e091566463027923b3c49617148c6cdcc1c[m
+Merge: 6e12f1d 154d620
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Wed Sep 18 17:24:30 2019 +0300
+
+    Merge pull request #20 from VitaliiKalinbet/login-page_start_html_css
+    
+    Login page start html css
+
+[33mcommit 154d62042398491532f38aabea0e28820c5ce5d8[m
+Merge: b413705 6e12f1d
+Author: Kh-Ol-An <olegkhristenko@gmail.com>
+Date:   Wed Sep 18 17:21:31 2019 +0300
+
+    html/css end after merge
+
+[33mcommit b4137055a859d57628194ecfc38486c71caae087[m
+Author: Kh-Ol-An <olegkhristenko@gmail.com>
+Date:   Wed Sep 18 17:13:42 2019 +0300
+
+    html/css end befor merg3
+
+[33mcommit 91b85ad45b30b02ae49d1695b81ed8dd5ed47363[m
+Author: Kh-Ol-An <olegkhristenko@gmail.com>
+Date:   Wed Sep 18 17:12:04 2019 +0300
+
+    html/css end befor merge2
+
+[33mcommit 6e12f1d6e0bf2b429acf07e7c445cea101d57674[m
+Merge: c4951d4 96d0386
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Wed Sep 18 17:10:14 2019 +0300
+
+    Merge pull request #15 from VitaliiKalinbet/modalCongrats
+    
+    Modal congrats
+
+[33mcommit 96d038612599b54ed4235ed78a948873db91e3fe[m
+Merge: 88b4b55 53da881
+Author: Pushtaryk Oleksii <pushtarik@gmail.come>
+Date:   Wed Sep 18 17:08:48 2019 +0300
+
+    merge dev
+
+[33mcommit 9bc7e74c92003d4604b56917689f35d2ec17fab9[m
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Wed Sep 18 17:05:00 2019 +0300
+
+    dashboard w/o API draft 1
+
+[33mcommit 53da881e9c70f7577d714a91f9e3637afa50ea43[m
+Merge: 3a50a0a c4951d4
+Author: Pushtaryk Oleksii <pushtarik@gmail.come>
+Date:   Wed Sep 18 17:03:18 2019 +0300
+
+    merge local dev with oringin dev
+
+[33mcommit 88b4b551cb45a90a703b6eb6eaa3094127170829[m
+Author: Pushtaryk Oleksii <pushtarik@gmail.come>
+Date:   Wed Sep 18 16:59:53 2019 +0300
+
+    add
+
+[33mcommit c4951d4bc646dfd98dc511eb86ededd77e4e891b[m
+Merge: d09f711 a0b9a36
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Wed Sep 18 16:58:14 2019 +0300
+
+    Merge pull request #11 from VitaliiKalinbet/header
+    
+    Header
+
+[33mcommit a0b9a36d37733f3774fa9da5924a5be1c609feb9[m[33m ([m[1;31morigin/header[m[33m, [m[1;32mheader[m[33m)[m
+Merge: d53f837 d09f711
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Wed Sep 18 16:56:29 2019 +0300
+
+    fix bag, add header
+
+[33mcommit d53f837a16adb4d85046adde1054bf961b5753b1[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Wed Sep 18 16:47:48 2019 +0300
+
+    last ver
+
+[33mcommit 8d22e51570e0b81edb5c2cbe22610fb6de6c4fc7[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Wed Sep 18 16:45:45 2019 +0300
+
+    last
+
+[33mcommit d09f711b1ff866dce53825133ce381ec71de860b[m
+Merge: 2eb31ce 7ccc752
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Wed Sep 18 16:44:44 2019 +0300
+
+    Merge pull request #19 from VitaliiKalinbet/TaskList
+    
+    changed origin App
+
+[33mcommit 7ccc752770785226b952752db3d9a3a875356b0c[m
+Author: Andrii Kuznietsov <awesomeakm@gmail.com>
+Date:   Wed Sep 18 16:43:16 2019 +0300
+
+    changed origin App
+
+[33mcommit 2eb31ce45f96d63e5c59fe0c4f648cd6c334af64[m
+Merge: 76e47f5 e4d9880
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Wed Sep 18 16:39:50 2019 +0300
+
+    Merge pull request #18 from VitaliiKalinbet/TaskList
+    
+    Task list
+
+[33mcommit 498b25483eca677b357fe043d315f06c680278f6[m
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Wed Sep 18 16:39:20 2019 +0300
+
+    dashboard w/o API draft 1
+
+[33mcommit e4d9880271347af8638a86130261045fbaf778af[m[33m ([m[1;31morigin/TaskList[m[33m)[m
+Merge: 60e78d1 76e47f5
+Author: Andrii Kuznietsov <awesomeakm@gmail.com>
+Date:   Wed Sep 18 16:37:33 2019 +0300
+
+    new update
+
+[33mcommit 76e47f51202cf1c53743bea2c77cb84bf6a702bc[m
+Merge: 689ced1 537e184
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Wed Sep 18 16:28:34 2019 +0300
+
+    Merge pull request #17 from VitaliiKalinbet/ModalCreateGoal
+    
+    Modal create goal
+
+[33mcommit 537e184ea3e8cc7a09741952684575bf0580873d[m
+Merge: 9ddb855 689ced1
+Author: Aleksandr <olexander.o.havrylenko@gmail.com>
+Date:   Wed Sep 18 16:24:31 2019 +0300
+
+    Merge branch 'dev' into ModalCreateGoal
+
+[33mcommit 689ced17d068dbb1f671bc7b6eac05ac4010a31c[m
+Merge: 80e6930 024dc1c
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Wed Sep 18 16:21:21 2019 +0300
+
+    Merge pull request #16 from VitaliiKalinbet/logining
+    
+    Logining
+
+[33mcommit 60e78d123f80b9151402b223df4b56d61d705d0d[m
+Author: Andrii Kuznietsov <awesomeakm@gmail.com>
+Date:   Wed Sep 18 16:21:07 2019 +0300
+
+    test
+
+[33mcommit 0a3ce78e48a89d8b1e3e26682025d5a26b1cbf40[m
+Author: Andrii Kuznietsov <awesomeakm@gmail.com>
+Date:   Wed Sep 18 16:20:37 2019 +0300
+
+    test
+
+[33mcommit 024dc1ce457bf6fdac943ad56ebd40de81a4ab43[m[33m ([m[1;31morigin/logining[m[33m)[m
+Author: EvgenyBorisenko <borisenkoevgeny1991@gmail.com>
+Date:   Wed Sep 18 16:19:29 2019 +0300
+
+    merge width dev
+
+[33mcommit 26d2bc1e72de4da2d2d449f859fd4f8dd56796fb[m
+Merge: fa1ca93 80e6930
+Author: EvgenyBorisenko <borisenkoevgeny1991@gmail.com>
+Date:   Wed Sep 18 16:13:20 2019 +0300
+
+    Merge branch 'dev' into logining
+
+[33mcommit fa1ca93518c456bbaeabe56c593d6e5aa489249a[m
+Author: EvgenyBorisenko <borisenkoevgeny1991@gmail.com>
+Date:   Wed Sep 18 16:12:06 2019 +0300
+
+    create Sign up form 16;11
+
+[33mcommit 835cf5335c3cbeffdc34805796837b825826542c[m[33m ([m[1;31morigin/modalCongrats[m[33m)[m
+Author: Pushtaryk Oleksii <pushtarik@gmail.come>
+Date:   Wed Sep 18 16:12:03 2019 +0300
+
+    mergin dev
+
+[33mcommit dee8914c09d3934ef60bf90841ab60189d8f44cf[m
+Author: EvgenyBorisenko <borisenkoevgeny1991@gmail.com>
+Date:   Wed Sep 18 16:09:35 2019 +0300
+
+    create Sign up form
+
+[33mcommit bae3d270f904c8f5afdcffed5633c0f88cb853a4[m[33m ([m[1;31morigin/login-page_start_html_css[m[33m)[m
+Author: Kh-Ol-An <olegkhristenko@gmail.com>
+Date:   Wed Sep 18 16:08:57 2019 +0300
+
+    html/css end before merge
+
+[33mcommit ab94d580cfddd3856f45bf706bedba0bbd6c3b0e[m
+Merge: c10c651 3a50a0a
+Author: Pushtaryk Oleksii <pushtarik@gmail.come>
+Date:   Wed Sep 18 16:07:53 2019 +0300
+
+    origin modalCongrats
+
+[33mcommit dc6c97fe851083a69d814007c1ee2e65da33d628[m
+Merge: 311005d 8244367
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Wed Sep 18 16:05:14 2019 +0300
+
+    fix font
+
+[33mcommit 80e6930a7d0605580ac662ef1e89b5a42d47bc8f[m
+Merge: 8244367 541a4a7
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Wed Sep 18 16:01:07 2019 +0300
+
+    Merge pull request #14 from VitaliiKalinbet/BackdropNoProps
+    
+    Backdrop no props
+
+[33mcommit 541a4a7013e9d9c9d49cb0a5956522172d81c5e6[m
+Author: Roman Gruba <roman.gruba@gmail.com>
+Date:   Wed Sep 18 15:59:58 2019 +0300
+
+    onClose in if
+
+[33mcommit 311005deba0928556eaa7af25fed46fc3620f22c[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Wed Sep 18 15:59:50 2019 +0300
+
+    final ver header
+
+[33mcommit efe3c4daebdaefb92600b61747b4548d8453cb6e[m[33m ([m[1;31morigin/BackdropNoProps[m[33m)[m
+Merge: c861d5c 8244367
+Author: Roman Gruba <roman.gruba@gmail.com>
+Date:   Wed Sep 18 15:56:58 2019 +0300
+
+    final Backdrop
+
+[33mcommit 9ddb855f4cdef0d766fa69d43e267f9b5f2d203f[m[33m ([m[1;31morigin/ModalCreateGoal[m[33m)[m
+Author: Aleksandr <olexander.o.havrylenko@gmail.com>
+Date:   Wed Sep 18 15:55:22 2019 +0300
+
+    deleted ModalCreateGoal from App.js
+
+[33mcommit ccbf9c8bd03159b5b76709ca7df369e597295757[m
+Author: Aleksandr <olexander.o.havrylenko@gmail.com>
+Date:   Wed Sep 18 15:53:47 2019 +0300
+
+    added shortid and changed ModalCreateGoal.js
+
+[33mcommit 824436743dfc3a3b81e12d317428354378202e86[m
+Merge: cb3b7a5 f97b8fd
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Wed Sep 18 15:51:40 2019 +0300
+
+    Merge pull request #13 from VitaliiKalinbet/Yana
+    
+    Yana
+
+[33mcommit 350cc9c98b970e718f77bce44b4205d1bff585fc[m
+Merge: fad6c71 9813017
+Author: Andrii Kuznietsov <awesomeakm@gmail.com>
+Date:   Wed Sep 18 15:49:18 2019 +0300
+
+    added new component to TaskList
+
+[33mcommit f97b8fd28945ba34011e3641b8dce9bfcbb87e28[m
+Author: Iana Matrosova <iana.matrosova@gmail.com>
+Date:   Wed Sep 18 15:48:08 2019 +0300
+
+    fixing component placement
+
+[33mcommit 8626c93c217bb23b54fdf36932dcf78fde61401b[m
+Author: Iana Matrosova <iana.matrosova@gmail.com>
+Date:   Wed Sep 18 15:44:37 2019 +0300
+
+    fixing responsive
+
+[33mcommit c861d5c2d56aa350a888542a103fc54dcfc33945[m
+Author: Roman Gruba <roman.gruba@gmail.com>
+Date:   Wed Sep 18 15:43:09 2019 +0300
+
+    with this.props.onClose
+
+[33mcommit 9f0f176cd1e51209187c6152f018acdc72551b52[m
+Author: Roman Gruba <roman.gruba@gmail.com>
+Date:   Wed Sep 18 15:18:41 2019 +0300
+
+    finished Backdrop as renderProp
+
+[33mcommit fad6c7134ef40a4aedca0f851bbdc0faa4f15fcf[m
+Merge: 64d103e a944560
+Author: Andrii Kuznietsov <awesomeakm@gmail.com>
+Date:   Wed Sep 18 15:17:07 2019 +0300
+
+    new upd
+
+[33mcommit dd58441c41d89f5ed4ab272fd2cd0695d685e0ba[m
+Author: Aleksandr <olexander.o.havrylenko@gmail.com>
+Date:   Wed Sep 18 15:07:50 2019 +0300
+
+    added css and js for ModalCreateGoal
+
+[33mcommit ff21f59b27f0d3310e7bf0aff65781b70acc14bf[m
+Merge: 60b80e4 3b5ca7c
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Wed Sep 18 14:42:39 2019 +0300
+
+    final ver header
+
+[33mcommit a944560e66aa76b842721ec859767fd11268d287[m[33m ([m[1;31morigin/ToggleButton[m[33m)[m
+Author: viccyviccy <iamviccyviccy@gmail.com>
+Date:   Wed Sep 18 14:40:37 2019 +0300
+
+    changes to background on a card: via toggle button
+
+[33mcommit 310c52e38f76cf78b4416b073dd4b1ea26dcc555[m
+Author: Iana Matrosova <iana.matrosova@gmail.com>
+Date:   Wed Sep 18 14:36:32 2019 +0300
+
+    fixing fonts
+
+[33mcommit 80803119fd2212c03b6dc2993c06070cdf0595de[m
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Wed Sep 18 14:35:57 2019 +0300
+
+    store raising
+
+[33mcommit a6c947cc467bd8f114a4f850b57a2d9f1656767e[m
+Merge: 79161de cb3b7a5
+Author: Iana Matrosova <iana.matrosova@gmail.com>
+Date:   Wed Sep 18 14:31:06 2019 +0300
+
+    Merge branch 'dev' into Yana
+
+[33mcommit 64d103ed7ab4675cf12e51b1b059b9eae939f631[m
+Author: Andrii Kuznietsov <awesomeakm@gmail.com>
+Date:   Wed Sep 18 14:13:35 2019 +0300
+
+    without bugs
+
+[33mcommit 79161deb757a40cb7724c46f274807d744e3140f[m
+Author: Iana Matrosova <iana.matrosova@gmail.com>
+Date:   Wed Sep 18 14:13:07 2019 +0300
+
+    styles fixes
+
+[33mcommit f52e3f79ad80418892dad8be45d00cafc213b63c[m
+Merge: f9ab482 cb3b7a5
+Author: Andrii Kuznietsov <awesomeakm@gmail.com>
+Date:   Wed Sep 18 14:06:12 2019 +0300
+
+    new update
+
+[33mcommit 60b80e4706d5cb5a2e6c7cec5a8c73203c5e4018[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Wed Sep 18 14:04:13 2019 +0300
+
+    finish css
+
+[33mcommit be8171666b614a77bc6711bd805848e7bed401da[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Wed Sep 18 14:03:06 2019 +0300
+
+    finish css
+
+[33mcommit 3b5ca7ccea3c3e710f223f4079ec09c03c6c30ab[m[33m ([m[1;31morigin/headerLogo[m[33m, [m[1;32mheaderLogo[m[33m)[m
+Author: Oleh Zharovskyi <olegzhora11@gmail.com>
+Date:   Wed Sep 18 14:03:04 2019 +0300
+
+    add style button
+
+[33mcommit f9ab482c0964f0a19845d6cc401b2764f3973111[m
+Author: Andrii Kuznietsov <awesomeakm@gmail.com>
+Date:   Wed Sep 18 14:01:25 2019 +0300
+
+    new update
+
+[33mcommit ff8ade248f21160ec059b5c06dd40758e057ae33[m
+Author: Andrii Kuznietsov <awesomeakm@gmail.com>
+Date:   Wed Sep 18 14:00:59 2019 +0300
+
+    new update
+
+[33mcommit 8b67b5648e33b5dbfc1d866593c3d9bd8141d114[m
+Merge: 991eb9f 63a0d13
+Author: Oleh Zharovskyi <olegzhora11@gmail.com>
+Date:   Wed Sep 18 13:29:01 2019 +0300
+
+    add merge with header
+
+[33mcommit 991eb9fb53e4805194b26b3e50ffc7893940be35[m
+Author: Oleh Zharovskyi <olegzhora11@gmail.com>
+Date:   Wed Sep 18 13:03:00 2019 +0300
+
+    add logo
+
+[33mcommit 63a0d13a64e18c803c0d8e058e54e640a8fcd870[m
+Merge: fa0efa1 a16ed89
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Wed Sep 18 13:01:39 2019 +0300
+
+    merge logo
+
+[33mcommit fa0efa12d43d4fc8e8b10059c12cb8b447bcd212[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Wed Sep 18 12:58:05 2019 +0300
+
+    last
+
+[33mcommit 3a50a0a4340a6b78e5d400dfd901ea3965a20343[m
+Merge: e4fe8ce cb3b7a5
+Author: Pushtaryk Oleksii <pushtarik@gmail.come>
+Date:   Wed Sep 18 12:55:03 2019 +0300
+
+    merge local dev with github dev
+
+[33mcommit c10c651593171e3418fc8f751a6c35234cb9312c[m
+Author: Pushtaryk Oleksii <pushtarik@gmail.come>
+Date:   Wed Sep 18 12:51:25 2019 +0300
+
+    done layout modalCongrats
+
+[33mcommit 29baf660592ec3dd26e5ef05cd9c63a5ec6203ef[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Wed Sep 18 12:40:05 2019 +0300
+
+    f***
+
+[33mcommit 4c18118cc7e2fa263aac765f0528b5612fff1081[m
+Merge: 6a22599 cb3b7a5
+Author: Aleksandr <olexander.o.havrylenko@gmail.com>
+Date:   Wed Sep 18 12:36:44 2019 +0300
+
+    Merge branch 'dev' into ModalCreateGoal
+
+[33mcommit a16ed895c33cae3efbfd2b32140aab1d0e0a5c82[m
+Author: Oleh Zharovskyi <olegzhora11@gmail.com>
+Date:   Wed Sep 18 12:20:40 2019 +0300
+
+    add logo with text to
+
+[33mcommit 1aaa00df405421e2d1488becd5cce7f94779024b[m
+Author: Iana Matrosova <iana.matrosova@gmail.com>
+Date:   Wed Sep 18 12:17:54 2019 +0300
+
+    pad and mobile markup done
+
+[33mcommit 9813017a40ad3463639014c5f52f1a900dc34334[m
+Author: Dmitriy <velkov55@gmail.com>
+Date:   Wed Sep 18 12:01:27 2019 +0300
+
+    added files
+
+[33mcommit 96d65d59a34a282871630b1a3d0def399e8fb9ce[m
+Merge: 0be9fd4 cb3b7a5
+Author: viccyviccy <iamviccyviccy@gmail.com>
+Date:   Wed Sep 18 11:52:53 2019 +0300
+
+    attempts to merge for the first time
+
+[33mcommit e4fe8cec46b51e2337ceea6e7e6f21dbba2d3f1d[m
+Author: Pushtaryk Oleksii <pushtarik@gmail.come>
+Date:   Wed Sep 18 11:50:54 2019 +0300
+
+    almost finish htmlcss of modal
+
+[33mcommit 0be9fd4cffc574234c04d2a836483b97ec02fa14[m
+Author: viccyviccy <iamviccyviccy@gmail.com>
+Date:   Wed Sep 18 11:37:52 2019 +0300
+
+    card, cardbody, cardfooter, toggle button - css/html done; basic elements for react/redux added
+
+[33mcommit 819c6eb278a5dc49f13c947a9c6968c40ccfa0ec[m[33m ([m[1;31morigin/ModalAddTask[m[33m)[m
+Merge: 26ee750 cb3b7a5
+Author: OlgaSavytska <o.savytska77@gmail.com>
+Date:   Wed Sep 18 11:25:17 2019 +0300
+
+    init ModalAddTask
+
+[33mcommit 26ee7502dd813eaa83604e97acbeffc0087453bd[m
+Author: OlgaSavytska <o.savytska77@gmail.com>
+Date:   Wed Sep 18 11:20:56 2019 +0300
+
+    init ModalAddTask
+
+[33mcommit 0319a795bb3e9d8b43be227456b8c6911aae212a[m
+Author: OlgaSavytska <o.savytska77@gmail.com>
+Date:   Wed Sep 18 11:19:27 2019 +0300
+
+    init ModalAddTask
+
+[33mcommit 760bdc2a2265229c55ba1a125da4419e63dcabf0[m
+Author: viccyviccy <iamviccyviccy@gmail.com>
+Date:   Wed Sep 18 11:18:04 2019 +0300
+
+    basic thml/css done, some of the props are thrown to be available-to-connect later
+
+[33mcommit cb3b7a51c1c2989a2dc9752180cb8ae85c12a83f[m
+Merge: dd12b36 058ab4f
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Wed Sep 18 11:15:57 2019 +0300
+
+    Merge pull request #9 from VitaliiKalinbet/updated-fonts
+    
+    updated Montserrat
+
+[33mcommit 058ab4f95c6eaa207085db252f0a399cba132c4b[m[33m ([m[1;31morigin/updated-fonts[m[33m)[m
+Author: Roman Gruba <roman.gruba@gmail.com>
+Date:   Wed Sep 18 11:13:27 2019 +0300
+
+    updated Montserrat
+
+[33mcommit ab2c9a13ca34391e41181ad68daf1f5dbe37c220[m
+Merge: 832a9cb dd12b36
+Author: Oleh Zharovskyi <olegzhora11@gmail.com>
+Date:   Wed Sep 18 10:53:11 2019 +0300
+
+    add json incoming changes
+
+[33mcommit ce6cf98ee23f21073ba0fbe0fc75c18fe2788a52[m
+Merge: 47d59dd dd12b36
+Author: OlgaSavytska <o.savytska77@gmail.com>
+Date:   Wed Sep 18 10:51:29 2019 +0300
+
+    ModallAdd
+
+[33mcommit 47d59dd50ecf877220efd3651a63333c3831931a[m
+Author: OlgaSavytska <o.savytska77@gmail.com>
+Date:   Wed Sep 18 10:36:46 2019 +0300
+
+    init ModalAddTask
+
+[33mcommit 240459c372bf8a7df16a4fa683ec1f5a137c6726[m
+Author: OlgaSavytska <o.savytska77@gmail.com>
+Date:   Wed Sep 18 09:36:26 2019 +0300
+
+    init ModalAddTask
+
+[33mcommit abaf4f9b297c115b4699eaf91878cb57aab10ce2[m
+Merge: 3feb831 dd12b36
+Author: Andrii Kuznietsov <awesomeakm@gmail.com>
+Date:   Wed Sep 18 09:35:33 2019 +0300
+
+    Merge branch 'dev' into TaskList
+
+[33mcommit 3feb831de5548ab67a1110090ddda3d5c54749e0[m
+Author: Andrii Kuznietsov <awesomeakm@gmail.com>
+Date:   Wed Sep 18 09:34:52 2019 +0300
+
+    new changes
+
+[33mcommit b5dc8b8dd1f6dff14b21930d0431db72eff4064a[m
+Author: Kh-Ol-An <olegkhristenko@gmail.com>
+Date:   Tue Sep 17 22:31:39 2019 +0300
+
+    html css draft
+
+[33mcommit 902a304834595e4b06d93138cacbc25e49f2c31a[m
+Author: Iana Matrosova <iana.matrosova@gmail.com>
+Date:   Tue Sep 17 22:18:33 2019 +0300
+
+    markup done
+
+[33mcommit 025b6a33ce62a412d630970077f359c0c1251ff6[m
+Merge: 3d73397 dd12b36
+Author: Roman Gruba <roman.gruba@gmail.com>
+Date:   Tue Sep 17 22:16:52 2019 +0300
+
+    backdrop
+
+[33mcommit 3d7339748c16d727c9e8706384a7c8546e0ed048[m
+Author: Roman Gruba <roman.gruba@gmail.com>
+Date:   Tue Sep 17 22:13:59 2019 +0300
+
+    finished backdrop
+
+[33mcommit d429dd367f856d9003f4d2ac3c97fbd9a5f09217[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Tue Sep 17 21:50:36 2019 +0300
+
+    desctop
+
+[33mcommit 832a9cb8caf1d82ed8125585f23412c5bceb8962[m
+Author: Oleh Zharovskyi <olegzhora11@gmail.com>
+Date:   Tue Sep 17 19:11:16 2019 +0300
+
+    add logo header
+
+[33mcommit 66c4dc457461acaafa6630d73e77c71cd251bb10[m
+Merge: cb9e678 dd12b36
+Author: Kh-Ol-An <olegkhristenko@gmail.com>
+Date:   Tue Sep 17 18:59:34 2019 +0300
+
+    interim3
+
+[33mcommit cb9e678485d2ce998af8b20381842f6edbed3917[m
+Author: Kh-Ol-An <olegkhristenko@gmail.com>
+Date:   Tue Sep 17 18:54:17 2019 +0300
+
+    interim2
+
+[33mcommit 81a6cfbd3c52c9e4aac7abad1eabf6bcf642b712[m
+Author: Kh-Ol-An <olegkhristenko@gmail.com>
+Date:   Tue Sep 17 18:52:17 2019 +0300
+
+    interim
+
+[33mcommit 84ac524404f465e07d8a199b83c4c8d4027eaaa0[m
+Author: Roman Gruba <roman.gruba@gmail.com>
+Date:   Tue Sep 17 18:40:51 2019 +0300
+
+    check listener
+
+[33mcommit 6a225990789e8b23ee14722c5f50183e306ec9e8[m
+Merge: a34f06b dd12b36
+Author: Aleksandr <olexander.o.havrylenko@gmail.com>
+Date:   Tue Sep 17 18:31:38 2019 +0300
+
+    Merge branch 'dev' into ModalCreateGoal
+
+[33mcommit 009a94a59470fb77ae4c532246102f79a58da7d5[m
+Author: OlgaSavytska <o.savytska77@gmail.com>
+Date:   Tue Sep 17 18:27:51 2019 +0300
+
+    init modalAddTask
+
+[33mcommit a34f06bcdd1597f18e1da2dcb2fcad24fd7bfc6f[m
+Author: Aleksandr <olexander.o.havrylenko@gmail.com>
+Date:   Tue Sep 17 18:22:08 2019 +0300
+
+    try to merge dev
+
+[33mcommit f39f57105545d16cf1eaffd1d31964f3cbf3b2b0[m
+Merge: efeb7e0 dd12b36
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Tue Sep 17 18:07:56 2019 +0300
+
+    dashboard for desktop
+
+[33mcommit efeb7e0f740be6eaa2294631f1f1c61783508c15[m
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Tue Sep 17 18:03:23 2019 +0300
+
+    dashboard for desktop
+
+[33mcommit dd12b3684150cf7d36a097e57909540f4c164218[m
+Merge: a537b91 652818e
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Tue Sep 17 17:30:02 2019 +0300
+
+    Merge pull request #5 from VitaliiKalinbet/header
+    
+    Header
+
+[33mcommit c365b413bf925dacf201ff9e7943ff9bfeda61c7[m
+Merge: ff858d8 a537b91
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Tue Sep 17 17:28:34 2019 +0300
+
+    fonts merged to dashboard
+
+[33mcommit 652818e8bee4ab8ec9daff4f16f0e0162a41acad[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Tue Sep 17 17:27:16 2019 +0300
+
+    added header to dashboard
+
+[33mcommit 0c0314e91e45308fe003af0e36babec28aef884c[m
+Merge: 611191e a537b91
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Tue Sep 17 17:18:30 2019 +0300
+
+    Merge branch 'dev' into header
+
+[33mcommit ff858d8021c3953b56c2afa6869e6e6e2e50b671[m
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Tue Sep 17 17:17:33 2019 +0300
+
+    draft 01
+
+[33mcommit 611191e160015adeb6af1d3844060c1196207d7f[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Tue Sep 17 17:17:30 2019 +0300
+
+    header goal
+
+[33mcommit a09b8d40539b2fbe73a589e4150fed7b89368434[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Tue Sep 17 17:16:41 2019 +0300
+
+    header goal
+
+[33mcommit a537b913429eb630dc07a5789538ab6052bd54de[m
+Merge: 96d5343 f9095b9
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Tue Sep 17 17:11:59 2019 +0300
+
+    Merge pull request #4 from VitaliiKalinbet/added_fonts
+    
+    added_fonts
+
+[33mcommit f1a6151fccf840edda53514a02f529e2468020ef[m
+Merge: 0fce628 96d5343
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Tue Sep 17 16:51:19 2019 +0300
+
+    Merge branch 'dev' into header
+
+[33mcommit 0fce628df03dfd07809ba80ecba72d482497a079[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Tue Sep 17 16:50:25 2019 +0300
+
+    header
+
+[33mcommit 585a9739a35ca5be3e19a77960e16e7e08f4ac16[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Tue Sep 17 16:48:55 2019 +0300
+
+    header
+
+[33mcommit f9095b99aff8e09caf973d7d73e43cd1dee12194[m[33m ([m[1;31morigin/added_fonts[m[33m)[m
+Author: Roman Gruba <roman.gruba@gmail.com>
+Date:   Tue Sep 17 16:44:39 2019 +0300
+
+    added_fonts
+
+[33mcommit 96d53438f17b846d678f4167c2d8b172e55f3505[m
+Author: VitaliiKalinbet <bosssvit@gmail.com>
+Date:   Tue Sep 17 16:27:24 2019 +0300
+
+    add file structure in DashBoard component
+
+[33mcommit 3ffb1e48ca4ecbc27b389b4f3b906a7cf2f7330c[m
+Merge: 602307a 0cecad7
+Author: VitaliiKalinbet <43337844+VitaliiKalinbet@users.noreply.github.com>
+Date:   Tue Sep 17 16:19:52 2019 +0300
+
+    Merge pull request #2 from VitaliiKalinbet/dashboard_components
+    
+    dashboard components file structure
+
+[33mcommit a4fe0a02397427b31f151dc9b46dde04c04ecf41[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Tue Sep 17 16:08:14 2019 +0300
+
+    start
+
+[33mcommit 0cecad79bcabded52e668f5c8acb5593a2742a6f[m[33m ([m[1;31morigin/dashboard_components[m[33m)[m
+Author: v-potap <v.o.potapenko@gmail.com>
+Date:   Tue Sep 17 15:40:39 2019 +0300
+
+    dashboard components file structure
+
+[33mcommit 5b2d7ffa7322faab1ba206ca0472657ed943d903[m
+Author: bor9sik <asdf514asdf514@gmail.com>
+Date:   Tue Sep 17 15:13:43 2019 +0300
+
+    start
+
+[33mcommit 602307a8890972d0cf1130137975c5685f2e0f45[m
+Author: VitaliiKalinbet <bosssvit@gmail.com>
+Date:   Tue Sep 17 13:48:07 2019 +0300
+
+    delete lock file
+
+[33mcommit c34a8e39c9f82c15a77b9b965875c5e76f57ca5e[m
+Author: VitaliiKalinbet <bosssvit@gmail.com>
+Date:   Tue Sep 17 13:45:28 2019 +0300
+
+    initial dev
+
+[33mcommit 8203fe6f64f47400ff3d2423299c6c3c73ac1208[m
+Author: VitaliiKalinbet <bosssvit@gmail.com>
+Date:   Tue Sep 17 13:44:50 2019 +0300
+
+    initial build

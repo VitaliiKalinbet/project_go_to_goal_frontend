@@ -6,11 +6,11 @@
 }
 
 .container {
-  padding-top: 100px;
+  /* padding-top: 100px; */
   width: 100%;
-  height: 100wh;
-  background: url('../../assets/images/FlagsIcon.png') no-repeat -5% 150%;
-  background-color: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  background: url('../../assets/images/FlagsIcon.png') no-repeat -10px -100px;
+  background-size: 60% 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +33,7 @@
 }
 .congrats {
   color: white;
-  font-size: 22px;
+  font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
   font-family: 'Montserrat';
@@ -41,14 +41,14 @@
 .flagContainer {
   background: url('../../assets/images/BlueFlagIcon.png') center;
   background-repeat: no-repeat;
-  background-size: 80% 100%;
+  background-size: 100% 100%;
   display: block;
   width: 100%;
   height: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 10px;
   margin-bottom: 30px;
 }
 
@@ -57,24 +57,27 @@
   font-size: 10px;
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   font-family: 'Montserrat';
 }
 .textPrise {
+  padding-top: 17px;
   color: white;
-  font-size: 15px;
-  margin-bottom: 40px;
+  font-size: 13px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   font-weight: bold;
   font-family: 'Montserrat';
 }
 
 .textNewTask {
+  padding-top: 20px;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 9px;
   color: #15356f;
   width: 100px;
+  line-height: 10px;
   text-align: center;
   font-family: 'Montserrat';
 }
@@ -99,8 +102,8 @@
 }
 @media (min-width: 768px) {
   .container {
-    padding-top: 200px;
-    background: url('../../assets/images/FlagsIcon.png') no-repeat -5% -35%;
+    /* padding-top: 100px; */
+    background: url('../../assets/images/FlagsIcon.png') no-repeat -2% -5%;
   }
   .congrats {
     font-size: 61px;
@@ -109,11 +112,9 @@
     font-size: 14px;
     margin-bottom: 10px;
   }
-  .textNewTask {
-    font-size: 10px;
-  }
+
   .textPrise {
-    font-size: 34px;
+    font-size: 28px;
   }
   .modal {
     background: url('../../assets/images/PipeParty.png') no-repeat 105% 105%;
@@ -124,7 +125,9 @@
   .flagContainer {
     background: url('../../assets/images/BlueFlagIcon.png') center;
     background-repeat: no-repeat;
-    background-size: 70% 100%;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,6 +136,8 @@
   .textNewTask {
     font-size: 10px;
     width: 100%;
+    line-height: 20px;
+    padding-top: 30px;
   }
 
   .button {

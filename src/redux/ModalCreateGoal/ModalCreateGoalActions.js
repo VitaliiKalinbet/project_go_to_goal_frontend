@@ -1,4 +1,4 @@
-export const Type = {
+export const TypeAddGoal = {
   MODAL_CREATE_GOAL_OPEN: 'MODAL_CREATE_GOAL_OPEN',
   MODAL_CREATE_GOAL_CLOSE: 'MODAL_CREATE_GOAL_CLOSE',
   ADD_GOAL_SUCCESS: 'ADD_GOAL_SUCCESS',
@@ -6,22 +6,22 @@ export const Type = {
 };
 
 export const openModal = () => ({
-  type: Type.MODAL_CREATE_GOAL_OPEN,
+  type: TypeAddGoal.MODAL_CREATE_GOAL_OPEN,
 });
 
 export const closeModal = () => ({
-  type: Type.MODAL_CREATE_GOAL_CLOSE,
+  type: TypeAddGoal.MODAL_CREATE_GOAL_CLOSE,
 });
 
 export const addGoalSuccess = goal => ({
-  type: Type.ADD_GOAL_SUCCESS,
+  type: TypeAddGoal.ADD_GOAL_SUCCESS,
   payload: {
     goal,
   },
 });
 
 export const addGoalError = error => ({
-  type: Type.ADD_GOAL_ERROR,
+  type: TypeAddGoal.ADD_GOAL_ERROR,
   payload: {
     error,
   },

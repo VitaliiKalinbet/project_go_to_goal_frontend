@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -18,10 +19,42 @@ class ActiveTaskList extends Component {
     }
 
     if (activePosts.length === 0) {
-      return <li className={styles.activeTaskCard}> </li>;
+      return (
+        <>
+          <h2 className={styles.dailyTasks}>Мої завдання:</h2>
+          <h2 className={styles.blocksTitles}>Сьогодні</h2>
+          <div className={styles.positionCards}>
+            <div className={styles.activeTaskCard} />
+            <div className={styles.activeTaskListSecretDiv}>
+              <h2 className={styles.activeTask_title1}>
+                Немає завдань? Тоді їх треба створити!
+              </h2>
+              <h2 className={styles.activeTask_title2}>
+                Бачиш кнопку праворуч?
+              </h2>
+              <h2 className={styles.activeTask_title3}>Бачиш кнопку внизу?</h2>
+              {/* <img
+                className={styles.imgageActiveTaskList}
+                src={Arow}
+                alt="Arrow"
+              /> */}
+              <p className={styles.text1}>
+                Натискай її, вибирай, що і коли треба зробити і
+                <b className={styles.text12}> вперед до мети!</b>
+              </p>
+
+              <p className={styles.text2}>
+                Пам'ятай, що бали нараховуються тільки за виконані завдання!
+              </p>
+            </div>
+          </div>
+        </>
+      );
     }
     return (
       <>
+        <h2 className={styles.dailyTasks}>Мої завдання:</h2>
+        <h2 className={styles.blocksTitles}>Сьогодні</h2>
         <ul className={styles.activeCards}>
           {activePosts.map(activePost => (
             <Card key={activePost._id} task={activePost} />

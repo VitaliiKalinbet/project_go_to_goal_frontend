@@ -1,6 +1,4 @@
-import windowSize from 'react-window-size';
 import { connect } from 'react-redux';
-import { compose } from 'redux';
 
 // ACTIONS
 import * as modalAddTaskActions from '../../redux/ModalAddTask/ModalAddTaskActions';
@@ -10,6 +8,7 @@ import * as modalDeleteTaskActions from '../../redux/ModalDeleteTask/ModalDelete
 import * as modalLogoutActions from '../../redux/ModalLogout/ModalLogoutActions';
 import * as dashboardOperations from '../../redux/Dashboard/DashboardOperations';
 import * as dashboardSelectors from '../../redux/Dashboard/DashboardSelectors';
+import * as sessionLoginActions from '../../redux/sessionLogin/sessionLoginActions';
 
 //  COMPONENT TO WRAP
 import DashboardPage from './DashboardPage';
@@ -20,6 +19,7 @@ const mapStateToProps = store => ({
   isModalCreateGoalOpen: store.modals.isModalCreateGoalOpen,
   isModalDeleteTaskOpen: store.modals.isModalDeleteTaskOpen,
   isModalLogoutOpen: store.modals.isModalLogoutOpen,
+  isLoading: store.isLoading,
   goal: dashboardSelectors.getGoal(store),
   tasks: dashboardSelectors.getTasks(store),
   token: dashboardSelectors.getToken(store),
@@ -28,20 +28,18 @@ const mapStateToProps = store => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onCloseModalAddTask: modalAddTaskActions.closeModal,
-  onCloseModalCongrats: modalCongratsActions.closeModal,
-  onCloseModalCreateGoal: modalCreateGoalActions.closeModal,
-  onCloseModalDeleteTask: modalDeleteTaskActions.closeModal,
-  onCloseModalLogout: modalLogoutActions.closeModal,
+  onCloseModalAddTask: () => dispatch(modalAddTaskActions.closeModal()),
+  onCloseModalCongrats: () => dispatch(modalCongratsActions.closeModal()),
+  onCloseModalCreateGoal: () => dispatch(modalCreateGoalActions.closeModal()),
+  onCloseModalDeleteTask: () => dispatch(modalDeleteTaskActions.closeModal()),
+  onCloseModalLogout: () => dispatch(modalLogoutActions.closeModal()),
   onGetGoal: token => dispatch(dashboardOperations.getGoalOperation(token)),
   onGetTasks: token => dispatch(dashboardOperations.getTasksOperation(token)),
   onDashboardErrors: errors => dashboardOperations.getErrorOperation(errors),
+  onLogout: () => dispatch(sessionLoginActions.logout()),
 });
 
-export default compose(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps,
-  ),
-  windowSize,
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
 )(DashboardPage);

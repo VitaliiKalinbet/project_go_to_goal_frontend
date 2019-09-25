@@ -10,6 +10,12 @@
   font-weight: 700;
   font-size: 14px;
   width: 100px;
+  margin: 0;
+}
+
+.progresBar {
+  width: 250px;
+  color: #000;
 }
 
 .total {
@@ -24,6 +30,6 @@
 
 @media screen and (max-width: 767px) {
   .progress {
-    max-width: 180px;
+    max-width: 320px;
   }
 }

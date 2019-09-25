@@ -1,10 +1,10 @@
 .modal {
-  width: 800px;
-  height: 580px;
+  width: 640px;
+  height: 430px;
   margin: 0;
   top: 50%;
   left: 50%;
-  transform: translate(-20%, -50%);
+  transform: translate(-50%, -50%);
   position: fixed;
   z-index: 1000;
   background-color: #fff;
@@ -12,12 +12,15 @@
 }
 
 .form {
-  width: 600px;
-  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 560px;
+  height: 320px;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-48%, -50%);
+  transform: translate(-46%, -52%);
   z-index: 1012;
 }
 
@@ -25,23 +28,25 @@
   margin: 0;
   color: #858598;
   font-family: Montserrat;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 32px;
   letter-spacing: 1px;
 }
 
 .input {
   border: 0;
-  margin-bottom: 30px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  width: 560px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 2px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  width: 514px;
   border-bottom: 1px solid #e0e0e0;
   outline: none;
 }
 
-.textarea::placeholder,
 .input::placeholder {
   color: #a8a8b5;
   font-family: Montserrat;
@@ -50,21 +55,12 @@
   letter-spacing: 0.84px;
 }
 
-.textarea {
-  resize: none;
-  border: 0;
-  width: 520px;
-  height: 140px;
-  margin-top: 8px;
-  margin-bottom: 28px;
-  padding: 22px;
+.text {
+  margin: 0;
   color: #000;
-  font-family: 'Montserrat';
+  font-family: Montserrat;
   font-size: 14px;
   font-weight: 400;
-  border-radius: 3px;
-  box-shadow: 2px 4px 23px 6px rgba(29, 29, 27, 0.05);
-  outline: none;
 }
 
 .button {
@@ -80,67 +76,72 @@
   background-color: #edb445;
   border-radius: 24px;
   box-shadow: 0 8px 29px rgba(178, 138, 61, 0.31);
+  outline: none;
   cursor: pointer;
+}
+
+.error {
+  width: 500px;
+  color: red;
+  position: fixed;
+  bottom: 18px;
+  left: 18%;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 @media (max-width: 1279px) {
   .modal {
-    width: 680px;
-    height: 600px;
+    width: 630px;
+    height: 480px;
     transform: translate(-50%, -50%);
   }
-
   .form {
-    width: 560px;
-    height: 436px;
-    transform: translate(-48%, -58%);
+    width: 520px;
+    height: 330px;
+    transform: translate(-50%, -60%);
   }
-
   .label {
     line-height: 30px;
   }
-
   .input {
-    margin-bottom: 20px;
-    width: 526px;
+    width: 512px;
   }
-
-  .textarea {
-    width: 484px;
-  }
-
-  .textarea::placeholder,
   .input::placeholder {
     letter-spacing: 0.45px;
+  }
+
+  .error {
+    bottom: 10%;
+    left: 18%;
   }
 }
 
 @media (max-width: 767px) {
   .modal {
-    width: 300px;
-    height: 530px;
+    width: 320px;
+    height: 500px;
   }
-
   .form {
     width: 250px;
-    transform: translate(-48%, -48%);
-    height: 490px;
+    transform: translate(-50%, -58%);
+    height: 365px;
   }
-
-  .label {
-    font-size: 22px;
-  }
-
   .input {
     width: 240px;
   }
-
-  .textarea {
-    width: 206px;
-    padding: 18px;
+  .text {
+    text-align: center;
+    letter-spacing: 0.4px;
   }
-
   .button {
     margin: 0 auto;
+  }
+  .error {
+    text-align: center;
+    width: 200px;
+    bottom: 6%;
+    left: 18%;
   }
 }

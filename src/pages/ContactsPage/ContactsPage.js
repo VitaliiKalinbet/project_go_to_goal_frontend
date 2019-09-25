@@ -7,20 +7,25 @@ const ContactsPage = () => {
   return (
     <div className={styles.contactsPageBlock}>
       <nav className={styles.header}>
-        <img src={logo} alt="logo" />
+        <a href="/">
+          <img src={logo} alt="logo" />
+        </a>
+        <a className={styles.toMainLink} href="/">
+          <span className={styles.toMain}>На головну</span>
+        </a>
       </nav>
       <div className={styles.infoBlock}>
-        <h2 className={styles.infoBlock__title}>Обратная связь</h2>
+        <h2 className={styles.infoBlock__title}>Зворотній зв'язок</h2>
         <p className={styles.infoBlock__info}>
-          Предложения, вопросы направляйте на указанный ниже адрес:
+          Пропозиції, питання направляйте на вказану нижче адресу:
         </p>
         <p className={styles.infoBlock__contacts}>
           <span>[E-mail: </span>
           <a
             className={styles.infoBlock__email}
-            href="mailto:bosssvit@gmail.com"
+            href="mailto:goittests@gmail.com"
           >
-            bosssvit@gmail.com
+            goittests@gmail.com
           </a>
           ]
         </p>

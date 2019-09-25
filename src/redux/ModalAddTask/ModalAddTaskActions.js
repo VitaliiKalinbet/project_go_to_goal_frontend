@@ -1,4 +1,4 @@
-export const Type = {
+export const TypeAddTask = {
   MODAL_ADD_TASK_OPEN: 'MODAL_ADD_TASK_OPEN',
   MODAL_ADD_TASK_CLOSE: 'MODAL_ADD_TASK_CLOSE',
   ADD_TASK_SUCCESS: 'ADD_TASK_SUCCESS',
@@ -6,11 +6,11 @@ export const Type = {
 };
 
 export const openModal = () => ({
-  type: Type.MODAL_ADD_TASK_OPEN,
+  type: TypeAddTask.MODAL_ADD_TASK_OPEN,
 });
 
 export const closeModal = () => ({
-  type: Type.MODAL_ADD_TASK_CLOSE,
+  type: TypeAddTask.MODAL_ADD_TASK_CLOSE,
 });
 
 /*
@@ -18,15 +18,15 @@ export const closeModal = () => ({
  */
 
 export const postSuccessModal = task => ({
-  type: Type.ADD_TASK_SUCCESS,
-  task: {
+  type: TypeAddTask.ADD_TASK_SUCCESS,
+  payload: {
     task,
   },
 });
 
 export const postErrorModal = error => ({
-  type: Type.ADD_TASK_ERROR,
-  post: {
+  type: TypeAddTask.ADD_TASK_ERROR,
+  payload: {
     error,
   },
 });

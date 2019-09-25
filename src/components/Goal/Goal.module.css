@@ -1,7 +1,6 @@
 .goal {
   display: flex;
   justify-content: space-between;
-  width: 260px;
   margin: 0 auto;
 }
 
@@ -17,28 +16,69 @@
   color: #858598;
   font-size: 12px;
   line-height: 32px;
+  margin: 0;
+  width: 75px;
 }
 
-.goalLabel {
+.goalBtn {
   display: block;
   font-family: 'Montserrat';
   font-weight: bold;
   text-transform: uppercase;
-  width: 180px;
+  min-width: 180px;
   height: 32px;
   line-height: 32px;
   background-color: #e0e0e0;
   border-radius: 16px;
-  margin-left: 10px;
+  margin: 0 20px;
+  border: none;
+  pointer-events: none;
+  padding: 0 15px;
 }
 
-.goalBtnAcrtive {
-  background-image: linear-gradient(
+.goalBtnActive {
+  display: block;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  text-transform: uppercase;
+  min-width: 180px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 16px;
+  margin-left: 10px;
+  padding: 0px 15px;
+  margin: 0 20px;
+  border: none;
+  background: linear-gradient(
     rgb(236, 177, 70) 0%,
     rgb(241, 195, 65) 55%,
     rgb(245, 213, 59) 100%
   );
   box-shadow: 0px 8px 29px 0px rgba(178, 138, 61, 0.31);
+  transform: scale(1.05);
+  transition: all 0.5s ease-out;
+  outline: none;
+}
+
+.goalBtnActive::before {
+  display: block;
+  color: #000;
+  content: 'Натисни мене !';
+  position: absolute;
+  transform: translate(-180px, 50px);
+  width: 85px;
+  /* padding-top: 50px; */
+}
+
+.goalBtnActive::after {
+  display: block;
+  width: 85px;
+  height: 45px;
+  background-image: url(../../assets/images/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  transform: translateX(-180px) scale(-1, 1);
 }
 
 .progresBar {

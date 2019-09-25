@@ -2,12 +2,11 @@
 import { postSuccessModal, postErrorModal } from './ModalAddTaskActions';
 import * as postsAPI from '../../services/api';
 
-export const postSuccess = task => dispatch => {
+export const postSuccess = (task, token) => dispatch => {
   postsAPI
-    .addTask(task)
+    .addTask(task, token)
     .then(response => {
-      console.log('response :', response);
-      dispatch(postSuccessModal(response.task));
+      dispatch(postSuccessModal(response.data.task));
     })
     .catch(error => {
       dispatch(postErrorModal(error));

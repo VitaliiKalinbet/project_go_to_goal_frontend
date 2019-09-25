@@ -3,23 +3,36 @@
   border: none;
   cursor: pointer;
   outline: none;
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/images/logout.svg');
 }
 
 .userInfo {
   font-family: 'Monserrat';
   display: flex;
   align-items: center;
-  max-width: 200px;
+  min-width: 200px;
+}
+
+.colum {
+  display: flex;
+  flex-flow: column;
+  margin: 0 10px;
+  min-width: 110px;
 }
 
 @media screen and (max-width: 767px) {
   .userAge {
     display: none;
   }
-  .btn {
-    display: none;
-  }
   .userInfo {
     flex-flow: row-reverse;
+  }
+  .colum {
+    order: 2;
+  }
+  .avatar {
+    order: 1;
   }
 }

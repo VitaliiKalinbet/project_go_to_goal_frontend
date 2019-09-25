@@ -40,6 +40,8 @@ export const refreshError = error => ({
   payload: { error },
 });
 
+// LOGOUT
+
 export const logout = () => ({
-  type: ActionType.LOGIN_ERROR,
+  type: ActionType.LOGOUT,
 });

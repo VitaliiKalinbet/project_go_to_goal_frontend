@@ -6,6 +6,16 @@
   padding: 20px 0;
   width: 1160px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toMainLink {
+  text-decoration: none;
+}
+
+.toMain {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .infoBlock {
@@ -59,11 +69,13 @@
 }
 
 .contactImage {
+  display: block;
   margin: 0 auto;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 230px;
+  height: 300px;
   margin-bottom: 30px;
+  margin-top: 20px;
+  object-fit: cover;
 }
 
 .contactName {
@@ -78,6 +90,7 @@
   font-weight: 700;
   color: black;
   text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
 .contactEmail {
@@ -89,7 +102,7 @@
 }
 
 .contactInfo {
-  text-align: justify;
+  text-align: left;
   font-size: 16px;
   color: grey;
 }
@@ -98,13 +111,16 @@
   .header {
     width: 650px;
   }
+
   .infoBlock {
     width: 674px;
     margin-bottom: 25px;
   }
+
   .contactsList {
     width: 674px;
   }
+
   .contactBlock {
     width: 280px;
     padding: 20px 22px;
@@ -115,14 +131,17 @@
   .header {
     width: 240px;
   }
+
   .infoBlock {
     width: 280px;
     margin-bottom: 25px;
   }
+
   .contactsList {
     width: 280px;
     margin-bottom: 25px;
   }
+
   .contactBlock {
     width: 280px;
   }

@@ -1,5 +1,5 @@
-import { toast } from 'react-toastify';
-import React from 'react';
+// import { toast } from 'react-toastify';
+// import React from 'react';
 
 import {
   getTaskListStart,
@@ -33,15 +33,15 @@ export const getGoalOperation = token => dispatch => {
       dispatch(
         getGoalSuccess(
           response.data.goals
-            .sort((createdAt1, createdAt2) => {
-              if (createdAt1 < createdAt2) {
-                return -1;
-              }
-              if (createdAt1 > createdAt2) {
-                return 1;
-              }
-              return 0;
-            })
+            // .sort((createdAt1, createdAt2) => {
+            //   if (createdAt1 < createdAt2) {
+            //     return -1;
+            //   }
+            //   if (createdAt1 > createdAt2) {
+            //     return 1;
+            //   }
+            //   return 0;
+            // })
             .find(goal => !goal.isDone),
         ),
       );
@@ -52,27 +52,36 @@ export const getGoalOperation = token => dispatch => {
 };
 
 export const getErrorOperation = errors => {
-  errors.map(error =>
-    toast.error(
-      error !== null ? (
-        <div>
-          {error.name}: {error.message}
-          <br />
-          <br />
-          {error.config !== undefined &&
-            `METHOD: ${error.config.method}
-        <br />
-        <br />`}
-          {error.config !== undefined && `URL: ${error.config.url}`}
-        </div>
-      ) : (
-        ''
-      ),
-      {
-        autoClose: false,
-        position: toast.POSITION.BOTTOM_RIGHT,
-      },
-    ),
-  );
+  // errors.map(error =>
+  //   toast.error(
+  //     error !== null ? (
+  //       <div>
+  //         {error.name}: {error.message}
+  //         <br />
+  //         <br />
+  //         {error.config !== undefined && (
+  //           <div>
+  //             <br />
+  //             <br />
+  //             METHOD: `${error.config.method}`
+  //           </div>
+  //         )}
+  //         {error.config !== undefined && (
+  //           <div>
+  //             <br />
+  //             <br />
+  //             `URL: ${error.config.url}`
+  //           </div>
+  //         )}
+  //       </div>
+  //     ) : (
+  //       ''
+  //     ),
+  //     {
+  //       autoClose: false,
+  //       position: toast.POSITION.BOTTOM_RIGHT,
+  //     },
+  //   ),
+  // );
   // dispatch([]);
 };

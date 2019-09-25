@@ -1,37 +1,53 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+// style & npm
 import 'react-sweet-progress/lib/style.css';
 import css from './Goal.module.css';
-
+import * as congratsActions from '../../redux/ModalCongrats/ModalCongratsActions';
 import * as dashboardSelectors from '../../redux/Dashboard/DashboardSelectors';
 
-const Goal = ({ goal }) => {
+const Goal = ({ goal, openModalCongrats, percent }) => {
+  let btn;
+  if (percent < 100) {
+    btn = 'disabled';
+  }
   const { title } = goal;
   return (
     <div className={css.goal}>
       <div className={css.goalLogo}>
         <p className={css.goalName}> Mоя мета:</p>
-        <div className={css.goalLabel}>{title}</div>
+        <button
+          type="button"
+          className={percent < 100 ? css.goalBtn : css.goalBtnActive}
+          onClick={openModalCongrats}
+          disabled={btn}
+        >
+          {title}
+        </button>
       </div>
     </div>
   );
 };
 
-Goal.propTypes = {
-  goal: PropTypes.shape({ title: PropTypes.string }),
-};
-
-Goal.defaultProps = {
-  goal: { title: '' },
-};
-
-const mapStateToProps = store => ({
+const MSTP = store => ({
+  percent: dashboardSelectors.getPercent(store),
   goal: dashboardSelectors.getGoal(store),
 });
-const mapDispatchToProps = {};
 
+const MDTP = dispatch => ({
+  openModalCongrats: e => dispatch(congratsActions.openModal(e)),
+});
+
+Goal.propTypes = {
+  goal: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+  }).isRequired,
+  percent: PropTypes.number.isRequired,
+  openModalCongrats: PropTypes.func.isRequired,
+};
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
+  MSTP,
+  MDTP,
 )(Goal);

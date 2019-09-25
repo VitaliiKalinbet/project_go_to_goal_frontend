@@ -14,6 +14,9 @@ const user = (prevState = null, { type, payload }) => {
     case ActionType.REFRESH_SUCCESS:
       return payload.response.data.user.userData;
 
+    // case ActionType.REFRESH_SUCCESS:
+    //   return payload.response.data.user;
+
     case ActionType.LOGOUT:
       return null;
     // ----------SIGN UP ACTIONS---------
@@ -87,12 +90,19 @@ const error = (prevState = null, { type, payload }) => {
 // ----------SIGN UP ACTIONS---------
 const loadingReducer = (prevState = false, { type }) => {
   switch (type) {
+    case Type.LOGIN_REQUEST:
+    case Type.REFRESH_REQUEST:
     case Type.SIGNUP_USER_START:
       return true;
+
+    case Type.LOGIN_SUCCESS:
+    case Type.LOGIN_ERROR:
+    case Type.REFRESH_SUCCESS:
+    case Type.REFRESH_ERROR:
     case Type.SIGNUP_USER_SUCCESS:
-      return false;
     case Type.SIGNUP_USER_ERROR:
       return false;
+
     default:
       return prevState;
   }

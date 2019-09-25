@@ -18,6 +18,14 @@
   margin-right: 24px;
 }
 
+.blocksTitles {
+  font-size: 12px;
+  margin-bottom: 32px;
+  font-family: 'Montserrat';
+  color: rgb(66, 65, 75);
+  text-transform: uppercase;
+}
+
 .doneTaskCard:nth-child(4n) {
   margin-right: 0;
 }

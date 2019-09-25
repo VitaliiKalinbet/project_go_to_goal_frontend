@@ -5,10 +5,10 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // COMPONENTS
+import Loader from '../../components/Loader/Loader';
 import Header from '../../components/Header/Header';
 import TaskList from '../../components/TaskList/TaskList';
 import Footer from '../../components/Footer/Footer';
-import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import Backdrop from '../../components/Backdrop/Backdrop';
 import ModalCreateGoal from '../../components/ModalCreateGoal/ModalCreateGoal';
 import ModalAddTask from '../../components/ModalAddTask/ModalAddTask';
@@ -26,7 +26,6 @@ class DashboardPage extends Component {
 
   componentDidMount() {
     const { onGetGoal, onGetTasks, token } = this.props;
-
     onGetGoal(token);
     onGetTasks(token);
   }
@@ -45,7 +44,6 @@ class DashboardPage extends Component {
 
   render() {
     const {
-      windowWidth,
       isModalAddTaskOpen,
       isModalCongratsOpen,
       isModalCreateGoalOpen,
@@ -56,12 +54,14 @@ class DashboardPage extends Component {
       onCloseModalCreateGoal,
       onCloseModalDeleteTask,
       onCloseModalLogout,
+      isLoading,
+      onLogout,
     } = this.props;
 
     return (
       <div className={styles.dashboardBody}>
+        {isLoading && <Loader />}
         <Header />
-        {windowWidth >= 768 && windowWidth < 1280 && <ProgressBar />}
         <TaskList />
         <Footer />
         {isModalAddTaskOpen && (
@@ -86,7 +86,7 @@ class DashboardPage extends Component {
         )}
         {isModalLogoutOpen && (
           <Backdrop onClose={onCloseModalLogout}>
-            <ModalLogout onClose={onCloseModalLogout} />
+            <ModalLogout onClose={onCloseModalLogout} onLogout={onLogout} />
           </Backdrop>
         )}
         <ToastContainer />
@@ -96,12 +96,12 @@ class DashboardPage extends Component {
 }
 
 DashboardPage.propTypes = {
-  windowWidth: PropTypes.number.isRequired,
   isModalAddTaskOpen: PropTypes.bool.isRequired,
   isModalCongratsOpen: PropTypes.bool.isRequired,
   isModalCreateGoalOpen: PropTypes.bool.isRequired,
   isModalDeleteTaskOpen: PropTypes.bool.isRequired,
   isModalLogoutOpen: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool.isRequired,
   goal: PropTypes.shape({
     isDone: PropTypes.bool.isRequired,
     _id: PropTypes.string.isRequired,
@@ -110,7 +110,7 @@ DashboardPage.propTypes = {
     points: PropTypes.number.isRequired,
     createdAt: PropTypes.string.isRequired,
   }),
-  tasks: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  // tasks: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
   token: PropTypes.string.isRequired,
   hasDashboardError: PropTypes.bool.isRequired,
   dashboardErrors: PropTypes.arrayOf(PropTypes.object),
@@ -123,6 +123,7 @@ DashboardPage.propTypes = {
   onGetGoal: PropTypes.func.isRequired,
   onGetTasks: PropTypes.func.isRequired,
   onDashboardErrors: PropTypes.func.isRequired,
+  onLogout: PropTypes.func.isRequired,
 };
 
 DashboardPage.defaultProps = {

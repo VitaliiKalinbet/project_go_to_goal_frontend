@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './CardFooter.module.css';
 
 const CardFooter = ({ title, deadline }) => {
@@ -10,6 +11,11 @@ const CardFooter = ({ title, deadline }) => {
       <p className={styles.CardFooter_timeFrames}>{deadline}</p>
     </div>
   );
+};
+
+CardFooter.propTypes = {
+  title: PropTypes.string.isRequired,
+  deadline: PropTypes.string.isRequired,
 };
 
 export default CardFooter;
