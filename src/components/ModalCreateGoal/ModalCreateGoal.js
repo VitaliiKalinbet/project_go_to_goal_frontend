@@ -54,6 +54,7 @@ class ModalCreateGoal extends Component {
           <label htmlFor={idForInputGoal} className={styles.label}>
             Що я хочу
             <input
+              minLength="3"
               maxLength="20"
               name="valueInputGoal"
               value={valueInputGoal}
