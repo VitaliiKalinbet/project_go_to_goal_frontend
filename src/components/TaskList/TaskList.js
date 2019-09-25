@@ -12,10 +12,11 @@ const TaskList = (activePosts, getGoal, goal) => {
     <div className={styles.taskList}>
       <CreateTaskButton />
       <ActiveTaskList activePosts={activePosts} getGoal={getGoal} />
-      {goal === null && <DoneTaskList />}
+      {goal !== null && <DoneTaskList />}
     </div>
   );
 };
+
 const MSTP = s => ({
   goal: dashboardSelectors.getGoal(s),
 });
