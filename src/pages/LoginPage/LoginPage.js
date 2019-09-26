@@ -183,5 +183,4 @@ export default compose(
     mapDispatchToProps,
   ),
   withAuthRedirect,
-  // windowSize,
 )(LoginPage);

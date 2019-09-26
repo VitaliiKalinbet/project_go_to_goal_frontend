@@ -113,45 +113,48 @@ class ModalRegistration extends Component {
               <div className={s.inputContant}>
                 <div className={s.nameSurname}>
                   <input
-                    className={s.userName}
                     type="text"
-                    placeholder="Ім'я"
-                    value={username}
                     name="username"
-                    onChange={this.HandleChange}
-                    required="Вкажіть Ім'я"
-                    maxLength="16"
-                  />
-                  <input
-                    className={s.userAge}
-                    type="number"
-                    placeholder="Вік"
-                    value={age}
-                    name="age"
-                    min="3"
-                    max="99"
+                    value={username}
                     onChange={this.HandleChange}
                     required
+                    minLength="2"
+                    maxLength="12"
+                    placeholder="Вкажiть своє iм'я..."
+                    className={s.userName}
+                  />
+                  <input
+                    type="number"
+                    name="age"
+                    value={age}
+                    onChange={this.HandleChange}
+                    required
+                    min="3"
+                    max="99"
+                    placeholder="Вкажiть свій вік..."
+                    className={s.userAge}
                   />
                 </div>
                 <input
-                  className={s.inputText}
                   type="email"
-                  placeholder="E-mail"
-                  value={email}
                   name="email"
+                  value={email}
                   onChange={this.HandleChange}
+                  required
+                  pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
+                  placeholder="Введiть свiй email..."
+                  className={s.inputText}
                 />
                 {/* <div> */}
                 <input
-                  className={s.inputText}
                   type={showPassword}
-                  placeholder="Пароль"
-                  value={password}
                   name="password"
+                  value={password}
                   onChange={this.HandleChange}
                   minLength="6"
                   maxLength="12"
+                  placeholder="Введiть свiй пароль..."
+                  className={s.inputText}
                 />
                 {/* <button
                     type="button"
@@ -167,14 +170,14 @@ class ModalRegistration extends Component {
                 {/* </div>
                 <div> */}
                 <input
-                  className={s.inputText}
                   type={showPassword}
-                  placeholder="Підтвердити пароль"
-                  value={correctPassword}
                   name="correctPassword"
+                  value={correctPassword}
                   onChange={this.HandleChange}
                   minLength="6"
                   maxLength="12"
+                  placeholder="Підтвердiть пароль..."
+                  className={s.inputText}
                 />
                 {/* </div> */}
                 <button
