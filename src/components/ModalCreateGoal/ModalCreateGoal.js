@@ -95,6 +95,12 @@ class ModalCreateGoal extends Component {
               Ви ввели не всі дані. Будь ласка, заповніть необхідні поля.
             </p>
           )}
+        {errorMessage && errorMessage.includes('50') && (
+          <p className={styles.error}>
+            Вибачте, але в нас виникли деякі труднощі. Спробуйте, будь ласка,
+            пізніше.
+          </p>
+        )}
       </div>
     );
   }
