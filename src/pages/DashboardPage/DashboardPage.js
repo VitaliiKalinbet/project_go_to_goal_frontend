@@ -110,11 +110,9 @@ DashboardPage.propTypes = {
     points: PropTypes.number.isRequired,
     createdAt: PropTypes.string.isRequired,
   }),
-  // tasks: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
   token: PropTypes.string.isRequired,
   hasDashboardError: PropTypes.bool.isRequired,
   dashboardErrors: PropTypes.arrayOf(PropTypes.object),
-  // ---------------------
   onCloseModalAddTask: PropTypes.func.isRequired,
   onCloseModalCongrats: PropTypes.func.isRequired,
   onCloseModalCreateGoal: PropTypes.func.isRequired,

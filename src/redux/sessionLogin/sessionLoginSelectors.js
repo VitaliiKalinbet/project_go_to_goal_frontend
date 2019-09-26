@@ -2,5 +2,8 @@ export const getIsAuthenticated = store => store.session.authenticated;
 
 export const getToken = store => store.session.token;
 
-export const getErrorMessage = store =>
-  store.session.error && store.session.error.message;
+export const getErrorMessageLogin = store =>
+  store.session.errorLogin && store.session.errorLogin.message;
+
+export const getErrorMessageRegistration = store =>
+  store.session.errorRegistration && store.session.errorRegistration.message;

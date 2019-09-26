@@ -39,7 +39,6 @@ export const errorsModalDeleteReducer = (prevState = null, action) => {
   switch (action.type) {
     case Type.DELETE_CARD_ERROR:
       return action.payload.error;
-    // case Type.DELETE_CARD_SUCCESS
 
     case ActionType.LOGOUT:
       return null;

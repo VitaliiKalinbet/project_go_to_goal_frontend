@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-// import windowSize from 'react-window-size';
 import PropTypes from 'prop-types';
 import { login } from '../../redux/sessionLogin/sessionLoginOperations';
 import withAuthRedirect from '../../hoc/withAuthRedirect';
@@ -15,12 +14,11 @@ import LoginCover from '../../components/LoginPage/LoginCover';
 import LoginGreeting from '../../components/LoginPage/LoginGreeting';
 import LoginGreetingTitle from '../../components/LoginPage/LoginGreetingTitle';
 import LoadingGreetingBtn from '../../components/LoginPage/LoadingGreetingBtn';
-// import LoginFooter from '../../components/LoginPage/LoginFooter';
 import Footer from '../../components/Footer/Footer';
 import ModalRegistration from '../../components/ModalRegistration/ModalRegistration';
 import Backdrop from '../../components/Backdrop/Backdrop';
 import { getIsOpenModalRegister } from '../../redux/ModalRegistration/ModalRegistrationSelectors';
-import { getErrorMessage } from '../../redux/sessionLogin/sessionLoginSelectors';
+import { getErrorMessageLogin } from '../../redux/sessionLogin/sessionLoginSelectors';
 import {
   openModal,
   closeModal,
@@ -43,18 +41,7 @@ class LoginPage extends Component {
     email: '',
     password: '',
     showPassword: 'password',
-    // windowWidth: null,
   };
-
-  // componentDidMount() {
-  //   window.addEventListener('resize', this.windowWidth());
-  // }
-
-  // windowWidth = () => {
-  //   this.setState({
-  //     windowWidth: document.documentElement.clientWidth,
-  //   });
-  // };
 
   handleChange = ({ target }) => {
     const { name, value } = target;
@@ -86,8 +73,6 @@ class LoginPage extends Component {
     const { email, password, showPassword } = this.state;
     const { isModalOpen, onOpenModal, onCloseModal, errorMessage } = this.props;
     const windowWidth = document.documentElement.clientWidth;
-    // const windowWidth = window.screen.clientWidth;
-    // console.log('windowWidth :', windowWidth);
     return (
       <div className={s.login_page}>
         {isModalOpen && (
@@ -183,7 +168,7 @@ class LoginPage extends Component {
 
 const mapStateToProps = state => ({
   isModalOpen: getIsOpenModalRegister(state),
-  errorMessage: getErrorMessage(state),
+  errorMessage: getErrorMessageLogin(state),
 });
 
 const mapDispatchToProps = {

@@ -14,7 +14,7 @@ const User = ({ user, avatar, openModalLogout }) => {
       <div className={style.userInfo}>
         <img
           src={avatar}
-          width="50"
+          width="58"
           height="50"
           alt="Вася Пупкін"
           className={style.avatar}
@@ -39,12 +39,16 @@ const MDTP = dispatch => ({
 });
 
 User.propTypes = {
-  avatar: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
   openModalLogout: PropTypes.func.isRequired,
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
     age: PropTypes.number.isRequired,
   }).isRequired,
+};
+
+User.defaultProps = {
+  avatar: '',
 };
 
 export default connect(

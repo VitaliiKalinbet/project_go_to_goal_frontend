@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as ModalAddTaskActions from '../../redux/ModalAddTask/ModalAddTaskActions';
 import * as TaskListSelectors from '../../redux/TaskList/TaskListSelectors';
+import * as dashboardSelectors from '../../redux/Dashboard/DashboardSelectors';
 import styles from './CreateTaskButton.module.css';
 
-const CreateTaskButton = ({ openModal, activePosts }) => {
+const CreateTaskButton = ({ openModal, activePosts, hasGoal }) => {
   let isDisabled;
-  if (activePosts.length >= 8) {
+  if (activePosts.length >= 8 || !hasGoal) {
     isDisabled = true;
   }
 
@@ -27,6 +28,7 @@ const CreateTaskButton = ({ openModal, activePosts }) => {
 
 const mapStateToProps = store => ({
   activePosts: TaskListSelectors.getActivePosts(store),
+  hasGoal: dashboardSelectors.hasGoal(store),
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -36,6 +38,7 @@ const mapDispatchToProps = dispatch => ({
 CreateTaskButton.propTypes = {
   openModal: PropTypes.func.isRequired,
   activePosts: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  hasGoal: PropTypes.bool.isRequired,
 };
 
 export default connect(

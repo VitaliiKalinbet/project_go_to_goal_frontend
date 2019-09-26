@@ -2,16 +2,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import s from './ModalRegistration.module.css';
-// import logo from '../../assets/images/zaglushka.PNG';
 import * as sessionOperations from '../../redux/session/sessionOperations';
 import { closeModal } from '../../redux/ModalRegistration/ModalRegistrationActions';
+import { getErrorMessageRegistration } from '../../redux/sessionLogin/sessionLoginSelectors';
 import IconsAvatar from '../IconAvatar/IconAvatar';
-// import passwordValidation from './signUpValidations';
+import { ReactComponent as OpenEye } from '../../assets/svg/openEye.svg';
+import { ReactComponent as CloseEye } from '../../assets/svg/closeEye.svg';
 
 class ModalRegistration extends Component {
   static propTypes = {
     onSignUp: PropTypes.func.isRequired,
     closeModal: PropTypes.func.isRequired,
+    errorMessage: PropTypes.string,
+  };
+
+  static defaultProps = {
+    errorMessage: '',
   };
 
   state = {
@@ -19,6 +25,7 @@ class ModalRegistration extends Component {
     age: '',
     email: '',
     password: '',
+    showPassword: 'password',
     correctPassword: '',
     errorPassword: '',
     avatar: 'https://go-to-goal.goit.co.ua/image/avatar_008.png',
@@ -40,7 +47,7 @@ class ModalRegistration extends Component {
       });
     } else {
       this.setState({
-        errorPassword: 'Пароли не совпадают!!!',
+        errorPassword: 'Паролі не співпадають!!!',
       });
     }
   };
@@ -60,17 +67,36 @@ class ModalRegistration extends Component {
     return this.setState({ avatar });
   };
 
+  onShowPassword = () => {
+    this.setState(prevState => ({
+      showPassword: prevState.showPassword === 'password' ? 'text' : 'password',
+    }));
+  };
+
   render() {
     const {
       username,
       age,
       email,
       password,
+      showPassword,
       correctPassword,
       errorPassword,
     } = this.state;
+    const { errorMessage } = this.props;
     return (
       <div className={s.formContainer}>
+        {errorMessage &&
+          (errorMessage.includes('40') || errorMessage.includes('41')) && (
+            <p className={s.error}>
+              Вибачте, але ви вiдправили некоректнi даннi...
+            </p>
+          )}
+        {errorMessage && errorMessage.includes('50') && (
+          <p className={s.error}>
+            Вибачте, але у нас виникли деякi труднощi. Спробуйте пiзнiше...
+          </p>
+        )}
         <div className={s.textContainer}>
           <h1 className={s.text}>Реєстрація</h1>
           <h2 className={s.text_2}>Дитина</h2>
@@ -116,9 +142,10 @@ class ModalRegistration extends Component {
                   name="email"
                   onChange={this.HandleChange}
                 />
+                {/* <div> */}
                 <input
                   className={s.inputText}
-                  type="password"
+                  type={showPassword}
                   placeholder="Пароль"
                   value={password}
                   name="password"
@@ -126,9 +153,22 @@ class ModalRegistration extends Component {
                   minLength="6"
                   maxLength="12"
                 />
+                {/* <button
+                    type="button"
+                    onClick={this.onShowPassword}
+                    className={s.btn_eye}
+                  >
+                    {showPassword === 'text' ? (
+                      <OpenEye className={s.eye} />
+                    ) : (
+                      <CloseEye className={s.eye} />
+                    )}
+                  </button> */}
+                {/* </div>
+                <div> */}
                 <input
                   className={s.inputText}
-                  type="password"
+                  type={showPassword}
                   placeholder="Підтвердити пароль"
                   value={correctPassword}
                   name="correctPassword"
@@ -136,6 +176,18 @@ class ModalRegistration extends Component {
                   minLength="6"
                   maxLength="12"
                 />
+                {/* </div> */}
+                <button
+                  type="button"
+                  onClick={this.onShowPassword}
+                  className={s.btn_eye}
+                >
+                  {showPassword === 'text' ? (
+                    <OpenEye className={s.eye} />
+                  ) : (
+                    <CloseEye className={s.eye} />
+                  )}
+                </button>
               </div>
               <div className={s.buttonDiv}>
                 <button
@@ -146,7 +198,7 @@ class ModalRegistration extends Component {
                   Назад
                 </button>
                 <button className={s.button} type="submit">
-                  OK
+                  Зареєструватися
                 </button>
               </div>
             </div>
@@ -158,12 +210,16 @@ class ModalRegistration extends Component {
   }
 }
 
+const mapStateToProps = store => ({
+  errorMessage: getErrorMessageRegistration(store),
+});
+
 const mapDispatchToProps = {
   onSignUp: sessionOperations.signupOperation,
   closeModal,
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(ModalRegistration);

@@ -3,7 +3,7 @@
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  max-width: 1250px;
+  width: 1250px;
   background-color: #fff;
   min-height: 54px;
   margin: 0 auto;
@@ -64,6 +64,7 @@
     flex-wrap: wrap;
     padding: 0 5px;
   }
+
   .center {
     order: 3;
   }

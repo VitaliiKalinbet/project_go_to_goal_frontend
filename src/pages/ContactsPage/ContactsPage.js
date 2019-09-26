@@ -15,7 +15,7 @@ const ContactsPage = () => {
         </a>
       </nav>
       <div className={styles.infoBlock}>
-        <h2 className={styles.infoBlock__title}>Зворотній зв'язок</h2>
+        <h2 className={styles.infoBlock__title}>Зворотній зв&apos;язок</h2>
         <p className={styles.infoBlock__info}>
           Пропозиції, питання направляйте на вказану нижче адресу:
         </p>
