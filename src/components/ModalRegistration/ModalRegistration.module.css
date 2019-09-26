@@ -45,13 +45,13 @@
   fill: var(--color-gray);
 } */
 
-.btn_eye[type="button"] {
+.btn_eye[type='button'] {
   display: none;
 }
 
 .error {
   color: #ff3561;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 600;
 }
@@ -102,7 +102,7 @@
   outline: none;
   border: none;
   border-bottom: 1px solid #999;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .userName::placeholder,
@@ -112,7 +112,7 @@
   letter-spacing: 1px;
   background-color: transparent;
   color: var(--color-gray);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
@@ -156,13 +156,13 @@
   width: 200px;
   padding: 15px 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .text_2 {
   color: grey;
   padding-bottom: 5px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .passwordError {
@@ -188,7 +188,7 @@
   width: 210px;
   height: 45px;
   outline: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .button:nth-of-type(2) {
@@ -206,7 +206,7 @@
   top: 85%;
   left: 25%;
   color: red;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 767px) {
