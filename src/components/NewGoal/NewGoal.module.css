@@ -24,6 +24,11 @@
   padding: 30px 0 0 0;
 }
 
+.p {
+  margin: 0 0 20px;
+  line-height: 32px;
+}
+
 .button {
   box-sizing: content-box;
   display: flex;
@@ -97,12 +102,12 @@
     background-image: url(../../assets/images/big-arrow.png);
     background-repeat: no-repeat;
     background-position: 0% 50%;
-    padding: 120px 0 0;
+    padding: 100px 0 0;
     margin: 0 auto;
   }
   .container {
-    width: 486px;
-    margin: 0 auto;
+    width: 738px;
+    /* margin: 0 auto; */
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
@@ -111,6 +116,11 @@
   .button {
     margin-right: 0;
     margin-bottom: 30px;
+  }
+  .button,
+  .button_overlay {
+    width: 220px;
+    height: 200px;
   }
 
   .arrow_icon {
@@ -126,7 +136,11 @@
   }
 
   .new_goal_title {
-    padding: 0 328px 230px;
+    display: inline-block;
+    width: 104px;
+
+    padding: 0 316px 230px;
+    /* padding: 0 0 230px 0; */
     background-image: url(../../assets/images/decor.png);
     background-repeat: no-repeat;
     background-position: 100% 0%;
@@ -166,6 +180,7 @@
     background-size: cover;
     position: absolute;
     bottom: 0;
+    top: unset;
     left: 50%;
     transform: translate(-50%, -50%);
   }
