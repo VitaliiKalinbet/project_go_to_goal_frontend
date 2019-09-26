@@ -4,7 +4,6 @@ export const Type = {
   SIGNUP_USER_ERROR: 'SIGNUP_USER_ERROR',
 };
 
-// user Sign up ---------------------------
 export const signUpUserStart = () => ({
   type: Type.SIGNUP_USER_START,
 });

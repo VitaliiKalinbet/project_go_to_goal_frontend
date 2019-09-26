@@ -4,8 +4,6 @@
   padding: 14px;
   width: 400px;
   height: 152px;
-  /* width: 420px;
-  height: 200px; */
   text-align: center;
 }
 
@@ -18,7 +16,6 @@
 .btnConteiner {
   display: flex;
   justify-content: center;
-  /* width: 30%; */
 }
 
 .btn {
@@ -115,33 +112,3 @@
     max-width: 320px;
   }
 }
-
-/* .modalContent {
-  background-color: #fff;
-  color: black;
-  padding: 2%;
-  max-width: 400px;
-  text-align: center;
-}
-
-.h2 {
-  margin: 0;
-  margin-top: 5%;
-  margin-bottom: 15%;
-}
-
-.btnConteiner {
-  display: flex;
-  justify-content: center;
-}
-
-.btn {
-  width: 20%;
-  border: none;
-  border-radius: 10px;
-  background-color: #f1c440;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  margin: 0 20px;
-} */

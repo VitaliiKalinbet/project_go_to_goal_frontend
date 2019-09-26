@@ -42,9 +42,11 @@
 }
 
 .active {
+  max-height: auto;
+  max-width: 40px;
   cursor: pointer;
   outline: none;
   transform: scale(1.1, 1.1);
   translate: transform 0.4s ease;
-  border: 0.5px solid darkgreen;
+  border: 1px solid darkgreen;
 }

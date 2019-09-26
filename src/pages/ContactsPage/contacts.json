@@ -12,7 +12,7 @@
     "id": 2,
     "avatar": "https://go-to-goal.goit.co.ua/image/AndriiKuznietsov.jpg",
     "name": "Андрій Кузнецов",
-    "position": "front end developer",
+    "position": "frontend developer",
     "emaillink": "mailto:email@mail.com",
     "email": "awesomeakm@gmail.com",
     "info": "Team Lead Створив три компонента для роботи користувача із завданнями і сторінку контактів. Використовував стек технологій React, Redux, працював з Front End і взаємодіяв з Back End. Тимчасово займав позицію Team Lead."
@@ -69,7 +69,7 @@
     "position": "FrontEnd Developer",
     "emaillink": "mailto:email@mail.com",
     "email": "iamviccyciccy@gmail.com",
-    "info": "Розробила картку завдань, додала чарівні аватарки."
+    "info": "Розробила картку завдань сторінки Dashboard (Card&Components), створила блок аватарок користувача Register Page, модифікувала глобальні стилі дизайну. У роботі використовувала: JavaScript, React.js (ES5, CSS module), Redux. "
   },
   {
     "id": 9,
@@ -127,11 +127,20 @@
   },
   {
     "id": 15,
+    "avatar": "https://go-to-goal.goit.co.ua/image/PavelPastushenko.jpg",
+    "name": "Павел Пастушенко",
+    "position": "BackEnd Developer",
+    "emaillink": "mailto:email@mail.com",
+    "email": "0638175303@ukr.net",
+    "info": "Написання api бекенду. Робота з MongoDB, nextJS, Passport (jwt,facebook,google), sendgrid для відновлення паролю"
+  },
+  {
+    "id": 16,
     "avatar": "https://go-to-goal.goit.co.ua/image/VitaliiKalinbet.jpg",
     "name": "Віталій Калінбет",
     "position": "TEAM LEAD",
     "emaillink": "mailto:email@mail.com",
     "email": "bosssvit@gmail.com",
-    "info": "Продумав структуру проекту, зробив initial build, організував роботу командиб, приймав pull request від розробників"
+    "info": "Продумав структуру проекту, зробив initial build, організував роботу командир, приймав pull request від розробників"
   }
 ]

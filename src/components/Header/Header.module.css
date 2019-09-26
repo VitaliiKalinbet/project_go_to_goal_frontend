@@ -1,12 +1,11 @@
 .header {
   display: flex;
-  width: 1250px;
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  max-width: 1250px;
+  width: 1250px;
   background-color: #fff;
-  height: 54px;
+  min-height: 54px;
   margin: 0 auto;
   margin-top: 22px;
   padding: 0 25px;
@@ -27,7 +26,7 @@
 
 @media screen and (max-width: 767px) {
   .header {
-    width: 300px;
+    width: 310px;
   }
 }
 
@@ -46,5 +45,27 @@
 .center {
   display: flex;
   width: 700px;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+}
+
+@media screen and (max-width: 1279px) {
+  .center {
+    flex-flow: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 0 5px;
+  }
+
+  .center {
+    order: 3;
+  }
 }

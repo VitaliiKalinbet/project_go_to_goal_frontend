@@ -9,7 +9,6 @@ import Loader from '../../components/Loader/Loader';
 import Header from '../../components/Header/Header';
 import TaskList from '../../components/TaskList/TaskList';
 import Footer from '../../components/Footer/Footer';
-import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import Backdrop from '../../components/Backdrop/Backdrop';
 import ModalCreateGoal from '../../components/ModalCreateGoal/ModalCreateGoal';
 import ModalAddTask from '../../components/ModalAddTask/ModalAddTask';
@@ -45,7 +44,6 @@ class DashboardPage extends Component {
 
   render() {
     const {
-      goal,
       isModalAddTaskOpen,
       isModalCongratsOpen,
       isModalCreateGoalOpen,
@@ -60,14 +58,10 @@ class DashboardPage extends Component {
       onLogout,
     } = this.props;
 
-    const windowWidth = document.documentElement.clientWidth;
-
     return (
       <div className={styles.dashboardBody}>
         {isLoading && <Loader />}
         <Header />
-        {goal !== null &&
-          (windowWidth >= 768 && windowWidth < 1280 && <ProgressBar />)}
         <TaskList />
         <Footer />
         {isModalAddTaskOpen && (
@@ -116,11 +110,9 @@ DashboardPage.propTypes = {
     points: PropTypes.number.isRequired,
     createdAt: PropTypes.string.isRequired,
   }),
-  // tasks: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
   token: PropTypes.string.isRequired,
   hasDashboardError: PropTypes.bool.isRequired,
   dashboardErrors: PropTypes.arrayOf(PropTypes.object),
-  // ---------------------
   onCloseModalAddTask: PropTypes.func.isRequired,
   onCloseModalCongrats: PropTypes.func.isRequired,
   onCloseModalCreateGoal: PropTypes.func.isRequired,

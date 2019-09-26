@@ -15,7 +15,7 @@ const ProgressBar = ({ goalPoints, taskPoints, percent }) => {
       <>
         <div className={css.progress}>
           <p className={css.progressScore}>
-            {taskPoints} / <span className={css.total}> {goalPoints}</span>
+            {taskPoints} <span className={css.total}> / {goalPoints}</span>
           </p>
           <Progress
             className={css.progresBar}

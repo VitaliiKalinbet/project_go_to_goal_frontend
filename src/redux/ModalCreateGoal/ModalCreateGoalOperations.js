@@ -12,4 +12,4 @@ export const addGoal = (goal, token) => dispatch => {
     });
 };
 
-export const w = () => null;
+export const stub = () => null;

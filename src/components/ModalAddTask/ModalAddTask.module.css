@@ -45,9 +45,7 @@
 
 .form {
   border-radius: 6px;
-  /* background-color: pink; */
   width: 600px;
-  /* height: 200px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -199,7 +197,6 @@
 
   .form {
     border-radius: 6px;
-    /* background-color: pink; */
     width: 600px;
     height: 400px;
     display: flex;
@@ -327,7 +324,6 @@
 
   .form {
     border-radius: 6px;
-    /* background-color: pink; */
     width: 300px;
     height: 400px;
     display: flex;
@@ -366,7 +362,6 @@
 
   .input_options_section {
     display: flex;
-    /* justify-content: space-between; */
     flex-flow: column-reverse;
     width: 270px;
     margin: 0 auto;

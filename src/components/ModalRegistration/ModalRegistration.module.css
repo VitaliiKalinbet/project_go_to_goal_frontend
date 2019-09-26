@@ -11,6 +11,51 @@
   position: relative;
 }
 
+/* .form div {
+  width: 400px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputText[name="password"],
+.inputText[name="currentPassword"] {
+  width: 400px;
+  height: 50px;
+}
+
+.btn_eye[type="button"] {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--color-gray);
+}
+
+.eye {
+  width: 12px;
+  height: 12px;
+  fill: var(--color-gray);
+} */
+
+.btn_eye[type='button'] {
+  display: none;
+}
+
+.error {
+  color: #ff3561;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .textContainer {
   display: flex;
   flex-flow: column;
@@ -62,6 +107,7 @@
   padding: 15px 0;
   margin: 0;
 }
+
 .text_2 {
   color: grey;
   padding-bottom: 5px;
@@ -115,6 +161,7 @@
     align-items: center;
     text-align: center;
   }
+
   .image_form {
     flex-flow: column;
     max-width: 300px;
@@ -143,6 +190,7 @@
     width: 100px;
     outline: none;
   }
+
   .buttonDiv {
     max-width: 205px;
     padding: 20px 0 0 0;
@@ -177,11 +225,18 @@
   .nameSurname {
     max-width: 350px;
   }
+
   .buttonDiv {
     max-width: 350px;
   }
+
   .button {
     max-width: 150px;
     outline: none;
+  }
+
+  .eye {
+    width: 25px;
+    height: 25px;
   }
 }
