@@ -7,18 +7,19 @@ import DoneTaskList from '../DoneTaskList/DoneTaskList';
 import CreateTaskButton from '../CreateTaskButton/CreateTaskButton';
 import * as dashboardSelectors from '../../redux/Dashboard/DashboardSelectors';
 
-const TaskList = (activePosts, getGoal, goal) => {
+const TaskList = (activePosts, getGoal, goal, tasks) => {
   return (
     <div className={styles.taskList}>
       <CreateTaskButton />
       <ActiveTaskList activePosts={activePosts} getGoal={getGoal} />
-      {goal !== null && <DoneTaskList />}
+      {goal !== null && tasks === 'undefined' && <DoneTaskList />}
     </div>
   );
 };
 
 const MSTP = s => ({
   goal: dashboardSelectors.getGoal(s),
+  tasks: dashboardSelectors.getTasks(s),
 });
 
 export default connect(
