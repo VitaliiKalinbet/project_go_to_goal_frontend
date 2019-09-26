@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 // style & npm
@@ -31,6 +32,14 @@ const Header = ({ goal }) => {
 const MSTP = s => ({
   goal: dashboardSelectors.getGoal(s),
 });
+
+Header.propTypes = {
+  goal: PropTypes.shape(),
+};
+
+Header.defaultProps = {
+  goal: null,
+};
 
 export default connect(
   MSTP,

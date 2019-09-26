@@ -6,8 +6,8 @@
     height: 54px;
     border-radius: 50%;
     position: fixed;
-    top: 98px;
-    right: 50px;
+    top: 125px;
+    right: 10%;
     outline: none;
     border: none;
     color: #ffffff;
@@ -32,7 +32,7 @@
 @media (max-width: 767px) {
     .button,
     .disableBtn {
-        top: 80%;
-        right: 14px;
+        top: 85%;
+        right: 10%;
     }
 }
