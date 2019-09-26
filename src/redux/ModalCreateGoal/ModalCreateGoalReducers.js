@@ -13,4 +13,13 @@ export const openCloseReducer = (prevState = false, action) => {
   }
 };
 
-export const i = () => null;
+export const modalCreateGoalsErrorsReducers = (prevState = null, action) => {
+  switch (action.type) {
+    case TypeAddGoal.ADD_GOAL_CLEAN_ERROR:
+      return null;
+    case TypeAddGoal.ADD_GOAL_ERROR:
+      return action.payload.error;
+    default:
+      return prevState;
+  }
+};

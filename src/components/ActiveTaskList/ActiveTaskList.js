@@ -33,11 +33,6 @@ class ActiveTaskList extends Component {
                 Бачиш кнопку праворуч?
               </h2>
               <h2 className={styles.activeTask_title3}>Бачиш кнопку внизу?</h2>
-              {/* <img
-                className={styles.imgageActiveTaskList}
-                src={Arow}
-                alt="Arrow"
-              /> */}
               <p className={styles.text1}>
                 Натискай її, вибирай, що і коли треба зробити і
                 <b className={styles.text12}> вперед до мети!</b>

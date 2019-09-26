@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import { connect } from 'react-redux';
 import styles from './ModalCreateGoal.module.css';
+import { cleanModalGoalErrors } from '../../redux/ModalCreateGoal/ModalCreateGoalActions';
 import { addGoal } from '../../redux/ModalCreateGoal/ModalCreateGoalOperations';
 import * as dashboardSelectors from '../../redux/Dashboard/DashboardSelectors';
 import * as modalCreateGoalSelectors from '../../redux/ModalCreateGoal/ModalCreateGoalSelectors';
 
 const idForInputGoal = shortid.generate();
 const idForInputPoints = shortid.generate();
-const keyForErrors = shortid.generate();
 const date = new Date().toISOString();
 
 class ModalCreateGoal extends Component {
@@ -26,9 +26,9 @@ class ModalCreateGoal extends Component {
 
   onSubmitForm = async e => {
     e.preventDefault();
-    const { postGoal, token } = this.props;
+    const { postGoal, token, cleanErrors } = this.props;
     const { valueInputGoal, valueInputPoints } = this.state;
-
+    cleanErrors();
     await postGoal(
       {
         title: valueInputGoal,
@@ -89,21 +89,17 @@ class ModalCreateGoal extends Component {
             Ok
           </button>
         </form>
-        {errorMessage.map(
-          el =>
-            el.includes(50) && (
-              <p key={keyForErrors} className={styles.error}>
-                Вибачте за технічні проблеми. Спробуйте, будь ласка, повторно.
-              </p>
-            ),
-        )}
-        {errorMessage.map(
-          el =>
-            el.includes(40) && (
-              <p key={keyForErrors} className={styles.error}>
-                Ви ввели неповні дані. Будь ласка, заповніть всі поля.
-              </p>
-            ),
+        {errorMessage &&
+          (errorMessage.includes('40') || errorMessage.includes('41')) && (
+            <p className={styles.error}>
+              Ви ввели не всі дані. Будь ласка, заповніть необхідні поля.
+            </p>
+          )}
+        {errorMessage && errorMessage.includes('50') && (
+          <p className={styles.error}>
+            Вибачте, але в нас виникли деякі труднощі. Спробуйте, будь ласка,
+            пізніше.
+          </p>
         )}
       </div>
     );
@@ -112,6 +108,7 @@ class ModalCreateGoal extends Component {
 
 const mapDispatchToProps = dispatch => ({
   postGoal: (goal, token) => dispatch(addGoal(goal, token)),
+  cleanErrors: () => dispatch(cleanModalGoalErrors()),
 });
 
 const mapStateToProps = store => ({
@@ -119,10 +116,15 @@ const mapStateToProps = store => ({
   errorMessage: modalCreateGoalSelectors.getMessageErr(store),
 });
 
+ModalCreateGoal.defaultProps = {
+  errorMessage: null,
+};
+
 ModalCreateGoal.propTypes = {
   postGoal: PropTypes.func.isRequired,
   token: PropTypes.string.isRequired,
-  errorMessage: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  cleanErrors: PropTypes.func.isRequired,
+  errorMessage: PropTypes.string,
 };
 
 export default connect(
