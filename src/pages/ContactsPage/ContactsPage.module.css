@@ -16,6 +16,11 @@
 
 .toMain {
   font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+  border-bottom: solid 0.5px;
+  text-transform: uppercase;
 }
 
 .infoBlock {
@@ -115,6 +120,7 @@
   .infoBlock {
     width: 674px;
     margin-bottom: 25px;
+    padding: 20px;
   }
 
   .contactsList {
@@ -129,12 +135,30 @@
 
 @media (max-width: 767px) {
   .header {
-    width: 240px;
+    width: 260px;
+  }
+
+  .toMain {
+    font-size: 12px;
   }
 
   .infoBlock {
     width: 280px;
     margin-bottom: 25px;
+  }
+
+  .infoBlock__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .infoBlock__info {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .infoBlock__contacts {
+    font-size: 14px;
   }
 
   .contactsList {
