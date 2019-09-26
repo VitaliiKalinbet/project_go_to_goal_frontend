@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Select from 'react-select';
@@ -141,9 +142,9 @@ class ModalAddTask extends Component {
 ModalAddTask.propTypes = {
   postfunc: PropTypes.func.isRequired,
   token: PropTypes.string.isRequired,
-  modalAddTaskErrors: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  modalAddTaskErrors: PropTypes.any.isRequired,
   clearModal: PropTypes.func.isRequired,
-  errorTask: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  errorTask: PropTypes.any.isRequired,
 };
 
 const mapDispatchToProps = dispatch => ({
