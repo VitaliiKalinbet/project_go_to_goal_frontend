@@ -35,7 +35,10 @@ const ModalCongrats = ({ goal, token, goalOperation, tasks }) => {
 };
 
 ModalCongrats.propTypes = {
-  goal: PropTypes.shape({}),
+  goal: PropTypes.shape({
+    _id: PropTypes.string,
+    title: PropTypes.string,
+  }),
   token: PropTypes.string.isRequired,
   goalOperation: PropTypes.func.isRequired,
 };
