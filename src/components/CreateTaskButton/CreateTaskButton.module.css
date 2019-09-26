@@ -1,38 +1,38 @@
 .button,
 .disableBtn {
-    display: flex;
-    justify-content: center;
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    position: fixed;
-    top: 125px;
-    right: 10%;
-    outline: none;
-    border: none;
-    color: #ffffff;
-    font-size: 40px;
-    text-align: center;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  position: fixed;
+  top: 125px;
+  right: 10%;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .button {
-    background-color: #d8ad3b;
-    cursor: pointer;
+  background-color: #d8ad3b;
+  cursor: pointer;
 }
 
 .disableBtn {
-    pointer-events: none;
-    background-color: #e0e0e0;
-    border: 2px solid;
+  pointer-events: none;
+  background-color: #e0e0e0;
+  border: 2px solid;
 }
 
 @media (max-width: 767px) {
-    .button,
-    .disableBtn {
-        top: 85%;
-        right: 10%;
-    }
+  .button,
+  .disableBtn {
+    top: 85%;
+    right: 10%;
+  }
 }
