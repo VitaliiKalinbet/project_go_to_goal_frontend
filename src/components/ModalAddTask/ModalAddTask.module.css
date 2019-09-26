@@ -187,7 +187,7 @@
     box-shadow: 2px 3.464px 23.2px 5.8px rgba(29, 29, 27, 0.1);
     margin: 0 auto;
     width: 849px;
-    height: 480px;
+    height: 495px;
     display: flex;
     justify-content: space-evenly;
     background-position: center;
@@ -318,8 +318,7 @@
     height: 400px;
     display: flex;
     justify-content: space-evenly;
-    background: url(/src//assets/images/modal_present.png);
-    background-position: center;
+    overflow: visible;
   }
 
   .form {
@@ -333,13 +332,10 @@
   }
 
   .title_form {
-    margin-right: auto;
-    height: 10px;
-    margin-left: 15px;
-    margin-bottom: 0px;
     margin-top: 20px;
     color: gray;
     font-weight: 900;
+    margin: 0 auto;
   }
 
   .input_task {

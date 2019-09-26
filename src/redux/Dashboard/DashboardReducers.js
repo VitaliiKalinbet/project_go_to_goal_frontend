@@ -108,6 +108,7 @@ export const errorsReducer = (prevState = [], action) => {
     case Type.TASKLIST_GET_SUCCESS:
     case Type.GOAL_GET_SUCCESS:
     case ActionType.LOGOUT:
+    case TypeAddTask.CLEAN_MODAL_TASK:
       return [];
 
     default:
