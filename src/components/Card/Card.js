@@ -6,6 +6,20 @@ import CardBodyDone from '../CardBodyDone/CardBodyDone';
 import CardFooter from '../CardFooter/CardFooter';
 
 class Card extends Component {
+  static propTypes = {
+    task: PropTypes.shape({
+      inActive: PropTypes.bool.isRequired,
+      isDone: PropTypes.bool.isRequired,
+      isComplete: PropTypes.bool.isRequired,
+      createdAt: PropTypes.string.isRequired,
+      points: PropTypes.number.isRequired,
+      _id: PropTypes.string.isRequired,
+      dateFinished: PropTypes.string,
+      title: PropTypes.string.isRequired,
+      deadline: PropTypes.string.isRequired,
+    }).isRequired,
+  };
+
   constructor(props) {
     super(props);
     this.state = { isDone: false };
@@ -25,7 +39,6 @@ class Card extends Component {
       <li className={styles.cardLi}>
         {task.inActive ? (
           <CardBodyActive
-            // onChangeToggle={handleCheckedToggle}
             isDone={task.isComplete}
             points={task.points}
             _id={task._id}
@@ -42,17 +55,5 @@ class Card extends Component {
     );
   }
 }
-
-Card.propTypes = {
-  task: PropTypes.shape({
-    inActive: PropTypes.bool.isRequired,
-    isDone: PropTypes.bool.isRequired,
-    points: PropTypes.number.isRequired,
-    _id: PropTypes.string.isRequired,
-    dateFinished: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    deadline: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 export default Card;

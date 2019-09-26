@@ -12,7 +12,7 @@ export const signupOperation = credentials => dispatch => {
 
   API.signUpUser(credentials)
     .then(response => {
-      dispatch(signUpUserSuccess(response.data));
+      dispatch(signUpUserSuccess(response));
       dispatch(closeModal());
     })
     .catch(error => {

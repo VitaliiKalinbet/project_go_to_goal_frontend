@@ -20,17 +20,6 @@ class DoneTaskList extends Component {
     const { donePosts } = this.props;
     const { showCloseButton } = this.state;
 
-    if (donePosts.length === 0) {
-      return (
-        <>
-          <h2 className={styles.blocksTitles}>Виконано</h2>
-
-          <ul className={styles.doneCards}>
-            <li className={styles.doneTaskCard}> </li>
-          </ul>
-        </>
-      );
-    }
     return (
       <>
         <h2 className={styles.blocksTitles}>Виконано</h2>

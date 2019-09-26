@@ -12,3 +12,5 @@ export const logOut = () => dispatch => {
       dispatch(logOutError(error));
     });
 };
+
+export const stub = () => {};
