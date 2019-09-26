@@ -3,6 +3,7 @@ export const TypeAddTask = {
   MODAL_ADD_TASK_CLOSE: 'MODAL_ADD_TASK_CLOSE',
   ADD_TASK_SUCCESS: 'ADD_TASK_SUCCESS',
   ADD_TASK_ERROR: 'ADD_TASK_ERROR',
+  CLEAN_MODAL_TASK: 'CLEAN_MODAL_TASK',
 };
 
 export const openModal = () => ({
@@ -29,4 +30,8 @@ export const postErrorModal = error => ({
   payload: {
     error,
   },
+});
+
+export const cleanModalTask = () => ({
+  type: TypeAddTask.CLEAN_MODAL_TASK,
 });

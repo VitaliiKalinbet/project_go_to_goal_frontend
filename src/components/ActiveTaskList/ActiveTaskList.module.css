@@ -37,11 +37,11 @@
 }
 
 .activeTask_title2::after {
-  content: url('../../assets/images/modifyArrow.png');
+  content: url('../../assets/images/Arrow-full-fledged1.png');
   margin: 0 auto;
   display: block;
-  right: -180px;
-  top: -50px;
+  right: -190px;
+  top: -60px;
 }
 
 /* .imgageActiveTaskList {
@@ -133,7 +133,7 @@
   }
 
   .activeTask_title2::after {
-    right: -120px;
+    right: -170px;
   }
 
   .activeTaskCard {

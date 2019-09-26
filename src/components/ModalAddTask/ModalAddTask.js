@@ -1,13 +1,17 @@
+/* eslint-disable react/forbid-prop-types */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import { postSuccess } from '../../redux/ModalAddTask/ModalAddTaskOperations';
 import style from './ModalAddTask.module.css';
 import modalPresent from '../../assets/images/modal_present.png';
 import * as dashBoardSelectors from '../../redux/Dashboard/DashboardSelectors';
 import * as getTaskError from '../../redux/ModalAddTask/ModalAddTaskSelectors';
+import { cleanModalTask } from '../../redux/ModalAddTask/ModalAddTaskActions';
 
+const keyelement = shortid.generate();
 const options = [
   { value: '8.00-10.00', label: '8.00-10.00' },
   { value: '10.00-12.00', label: '10.00-12.00' },
@@ -65,7 +69,7 @@ class ModalAddTask extends Component {
 
   render() {
     const { inputValue, inputPoint, selectData } = this.state;
-    const { errorTask } = this.props;
+    const { errorTask, clearModal, modalAddTaskErrors } = this.props;
     return (
       <div className={style.modal_title}>
         <div className={style.modal_container}>
@@ -77,13 +81,14 @@ class ModalAddTask extends Component {
               name="inputValue"
               type="text"
               className={style.input_task}
-              placeholder="Постав собі задачу"
+              placeholder="Обери завдання"
               value={inputValue}
               onChange={this.handleChange}
               required
             />
             <div className={style.input_options_section}>
               <Select
+                required
                 className={style.input_options}
                 value={findOption(selectData)}
                 options={options}
@@ -91,20 +96,25 @@ class ModalAddTask extends Component {
               >
                 Час
               </Select>
-
               {errorTask.map(
                 el =>
                   el.includes('40') && (
-                    <p className={style.errorParagraph}>Заповни поле Select</p>
+                    <p key={keyelement} className={style.errorParagraph}>
+                      Вибачте, але ви вiдправили некоректнi даннi...
+                    </p>
                   ),
+                modalAddTaskErrors.length > 0 ? clearModal() : null,
               )}
+
               {errorTask.map(
                 el =>
                   el.includes('50') && (
                     <p className={style.errorParagraphServer}>
-                      Сервер спить. Завітай пізніше
+                      Вибачте, але у нас виникли деякi труднощi. Спробуйте
+                      пiзнiше...
                     </p>
                   ),
+                modalAddTaskErrors.length > 0 ? clearModal() : null,
               )}
               <input
                 name="inputPoint"
@@ -132,16 +142,20 @@ class ModalAddTask extends Component {
 ModalAddTask.propTypes = {
   postfunc: PropTypes.func.isRequired,
   token: PropTypes.string.isRequired,
-  errorTask: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  modalAddTaskErrors: PropTypes.any.isRequired,
+  clearModal: PropTypes.func.isRequired,
+  errorTask: PropTypes.any.isRequired,
 };
 
 const mapDispatchToProps = dispatch => ({
   postfunc: (task, token) => dispatch(postSuccess(task, token)),
+  clearModal: () => dispatch(cleanModalTask()),
 });
 
 const mapStateToProps = store => ({
   token: dashBoardSelectors.getToken(store),
   errorTask: getTaskError.getTaskError(store),
+  modalAddTaskErrors: store.modalAddTaskErrors,
 });
 
 export default connect(
