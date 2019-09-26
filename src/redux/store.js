@@ -3,15 +3,14 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import ReduxThunk from 'redux-thunk';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import {
-  errorsModalDeleteReducer,
-  idForDeleteTaskReducer,
-} from './Dashboard/DashboardReducers';
 
 // импортируем сюда свои редюсеры
 import sessionLoginReducers from './sessionLogin/sessionLoginReducers';
 import modalsReducers from './modalsReducers';
 import * as dashboardReducers from './Dashboard/DashboardReducers';
+import { errorModalCongratsReducer } from './ModalCongrats/ModalCongratsReducers';
+import { modalCreateGoalsErrorsReducers } from './ModalCreateGoal/ModalCreateGoalReducers';
+import { modalAddTaskErrorsReducer } from './ModalAddTask/ModalAddTaskReducers';
 
 const sessionPersistConfig = {
   key: 'session',
@@ -24,10 +23,13 @@ const rootReducer = combineReducers({
   goal: dashboardReducers.goalReducer,
   tasks: dashboardReducers.tasksReducer,
   modals: modalsReducers,
-  idForDeleteTask: idForDeleteTaskReducer,
-  errorsModalDelete: errorsModalDeleteReducer,
+  idForDeleteTask: dashboardReducers.idForDeleteTaskReducer,
+  errorsModalDelete: dashboardReducers.errorsModalDeleteReducer,
   isLoading: dashboardReducers.isLoadingReducer,
   dashboardErrors: dashboardReducers.errorsReducer,
+  modalCongratsError: errorModalCongratsReducer,
+  modalCreateGoalsErrors: modalCreateGoalsErrorsReducers,
+  modalAddTaskErrors: modalAddTaskErrorsReducer,
 });
 
 const middleware = [ReduxThunk];

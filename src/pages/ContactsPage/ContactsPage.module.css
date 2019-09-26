@@ -6,6 +6,21 @@
   padding: 20px 0;
   width: 1160px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toMainLink {
+  text-decoration: none;
+}
+
+.toMain {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+  border-bottom: solid 0.5px;
+  text-transform: uppercase;
 }
 
 .infoBlock {
@@ -59,11 +74,13 @@
 }
 
 .contactImage {
+  display: block;
   margin: 0 auto;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 230px;
+  height: 300px;
   margin-bottom: 30px;
+  margin-top: 20px;
+  object-fit: cover;
 }
 
 .contactName {
@@ -78,6 +95,7 @@
   font-weight: 700;
   color: black;
   text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
 .contactEmail {
@@ -89,7 +107,7 @@
 }
 
 .contactInfo {
-  text-align: justify;
+  text-align: left;
   font-size: 16px;
   color: grey;
 }
@@ -98,13 +116,17 @@
   .header {
     width: 650px;
   }
+
   .infoBlock {
     width: 674px;
     margin-bottom: 25px;
+    padding: 20px;
   }
+
   .contactsList {
     width: 674px;
   }
+
   .contactBlock {
     width: 280px;
     padding: 20px 22px;
@@ -113,16 +135,37 @@
 
 @media (max-width: 767px) {
   .header {
-    width: 240px;
+    width: 260px;
   }
+
+  .toMain {
+    font-size: 12px;
+  }
+
   .infoBlock {
     width: 280px;
     margin-bottom: 25px;
   }
+
+  .infoBlock__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .infoBlock__info {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .infoBlock__contacts {
+    font-size: 14px;
+  }
+
   .contactsList {
     width: 280px;
     margin-bottom: 25px;
   }
+
   .contactBlock {
     width: 280px;
   }

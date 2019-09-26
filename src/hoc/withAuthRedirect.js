@@ -10,7 +10,15 @@ const withAuthRedirect = BaseComponent => {
       history: PropTypes.shape({
         replace: PropTypes.func.isRequired,
       }).isRequired,
-      location: PropTypes.shape({}).isRequired,
+      location: PropTypes.shape({
+        state: PropTypes.shape({
+          from: PropTypes.string,
+        }),
+      }),
+    };
+
+    static defaultProps = {
+      location: {},
     };
 
     componentDidMount() {
@@ -22,8 +30,10 @@ const withAuthRedirect = BaseComponent => {
     componentDidUpdate() {
       const { authenticated, history, location } = this.props;
       if (!authenticated) return;
-      if (location.state && location.state.from)
+      if (location.state && location.state.from) {
+        // eslint-disable-next-line consistent-return
         return history.replace(location.state.from);
+      }
 
       history.replace('/dashboard');
     }

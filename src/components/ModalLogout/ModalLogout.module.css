@@ -1,17 +1,21 @@
 .modalContent {
   background-color: #fff;
   color: black;
-  padding: 2%;
+  padding: 14px;
+  width: 400px;
+  height: 152px;
+  text-align: center;
 }
 
 .h2 {
   margin: 0;
-  margin-bottom: 25%;
+  margin-top: 5%;
+  margin-bottom: 15%;
 }
 
 .btnConteiner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .btn {
@@ -22,6 +26,7 @@
   outline: none;
   cursor: pointer;
   position: relative;
+  margin: 0 20px;
 }
 
 .btn:hover {
@@ -99,5 +104,11 @@
 
   100% {
     background-position: 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .modalContent {
+    max-width: 320px;
   }
 }

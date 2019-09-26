@@ -32,6 +32,7 @@
 }
 
 .form input {
+  width: 200px;
   margin: 0;
   padding: 0;
   border: none;
@@ -46,19 +47,17 @@
 .form input::placeholder {
   font-size: 12px;
   letter-spacing: 1px;
-  background-color: var(--color-white);
-  color: var(--color-pale-gray);
+  background-color: transparent;
+  color: var(--color-gray);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
 .form input:valid:not(:placeholder-shown) {
-  /* border-bottom: 2px solid #94cf4b; */
   color: #94cf4b;
 }
 
 .form input:invalid:not(:placeholder-shown) {
-  /* border-bottom: 2px solid #ff3561; */
   color: #ff3561;
 }
 
@@ -66,7 +65,6 @@
 .form input:-webkit-autofill:hover,
 .form input:-webkit-autofill:focus,
 .form input:-webkit-autofill:active {
-  /* border-bottom: 2px solid #94cf4b; */
   -webkit-text-fill-color: #94cf4b;
   box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
@@ -83,17 +81,31 @@
   outline: none;
 }
 
+.log_btn {
+  width: 56px;
+}
+
+.reg_btn {
+  width: 86px;
+}
+
 .form button {
   margin: 0;
   padding: 0;
   border: none;
   margin-left: 30px;
+  text-align: center;
   font-size: 12px;
   letter-spacing: 1px;
-  background-color: var(--color-white);
+  background-color: transparent;
   color: var(--color-gray);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  transition: all ease-in-out 200ms;
+}
+
+.form button:not(.btn_eye):hover {
+  font-size: 13px;
 }
 
 .btn_eye[type='button'] {
@@ -104,7 +116,7 @@
   margin: 0;
   padding: 0;
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: var(--color-gray);
 }
 
@@ -114,8 +126,11 @@
   fill: var(--color-gray);
 }
 
-.form button:focus {
-  outline: none;
+.error {
+  color: #ff3561;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 /* MAIN */
@@ -174,6 +189,10 @@
   margin-bottom: 20px;
 }
 
+.greeting_text:last-child {
+  margin-bottom: 42px;
+}
+
 .greeting_btn {
   width: 200px;
   height: 48px;
@@ -182,7 +201,6 @@
   padding: 0;
   border: none;
   border-radius: 24px;
-  margin-top: 22px;
   background: linear-gradient(
     to top,
     var(--color-yellow),
@@ -195,10 +213,11 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   text-align: center;
+  transition: all ease-in-out 200ms;
 }
 
-.greeting_btn:focus {
-  outline: none;
+.greeting_btn:hover {
+  font-size: 16px;
 }
 
 .decor {
@@ -210,27 +229,6 @@
   fill: var(--color-green);
 }
 
-/* FOOTER */
-
-.footer {
-  width: 100vw;
-  height: 6vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-yellow);
-}
-
-.footer_text {
-  font-size: 11px;
-  letter-spacing: 1px;
-  line-height: 23px;
-  color: #000000;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  text-align: center;
-}
-
 /* TABLET */
 
 @media (max-width: 1279px) {
@@ -239,7 +237,7 @@
   }
 
   .form input {
-    width: 150px;
+    width: 170px;
     margin-left: 10px;
   }
 
@@ -252,6 +250,10 @@
     margin-left: 20px;
   }
 
+  .form button:not(.btn_eye):hover {
+    font-size: 11px;
+  }
+
   .title {
     width: 100vw;
     margin-bottom: 30px;
@@ -262,8 +264,8 @@
     margin-bottom: 10px;
   }
 
-  .greeting_btn {
-    margin-top: 10px;
+  .greeting_text:last-child {
+    margin-bottom: 20px;
   }
 
   .decor {
@@ -276,8 +278,6 @@
 
 @media (max-width: 767px) {
   .login_page {
-    width: 100vw;
-    height: 100vh;
     padding: 74px 40px;
     display: flex;
     flex-direction: column;
@@ -286,7 +286,7 @@
   }
 
   .logo {
-    width: 104px;
+    width: 150px;
     margin-bottom: 30px;
   }
 
@@ -301,7 +301,7 @@
   .title {
     width: 60vw;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     line-height: 30px;
   }
 
@@ -318,25 +318,27 @@
   }
 
   .form input {
-    width: 50vw;
-    font-size: 18px;
+    width: 60vw;
+    margin: 0;
+    font-size: 12px;
   }
 
-  /* .form input[name="password"] {
-    width: 200px;
-  } */
-
   .form input::placeholder {
-    font-size: 18px;
+    font-size: 12px;
   }
 
   .eye {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
   }
 
   .form button {
     font-size: 20px;
+    margin: 0;
+  }
+
+  .form button[type='submit'] {
+    width: 80px;
   }
 
   .reg_btn {

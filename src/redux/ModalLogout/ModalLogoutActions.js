@@ -23,5 +23,3 @@ export const logOutError = error => ({
   type: Type.LOG_OUT_ERROR,
   payload: error,
 });
-
-//  ADd action to reducer

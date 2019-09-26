@@ -6,7 +6,7 @@ import LoginPage from '../pages/LoginPage/LoginPage';
 import DashboardContainer from '../pages/DashboardPage/DashboardContainer';
 import ContactsPage from '../pages/ContactsPage/ContactsPage';
 import { refresh } from '../redux/sessionLogin/sessionLoginOperations';
-import ProtectedRoute from './ProtectedRoute';
+import ProtectedRoute from './ProtectedRoute/ProtectedRoute';
 
 class App extends Component {
   static propTypes = {

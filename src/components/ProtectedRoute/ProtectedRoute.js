@@ -1,34 +1,54 @@
-/* eslint-disable */
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import * as sessionSelectors from '../redux/session/sessionSelectors';
+import PropTypes from 'prop-types';
+import { getIsAuthenticated } from '../../redux/sessionLogin/sessionLoginSelectors';
 
 const ProtectedRoute = ({
-  authenticated,
-  redirectTo = '/',
+  autheticated,
   component: Component,
+  redirectTo,
   ...rest
-}) => (
-  <Route
-    {...rest}
-    render={props =>
-      authenticated ? (
-        <Component {...props} />
-      ) : (
-        <Redirect
-          to={{
-            pathname: redirectTo,
-            state: { from: props.location },
-          }}
-        />
-      )
-    }
-  />
-);
+}) => {
+  return (
+    <Route
+      {...rest}
+      render={props =>
+        autheticated ? (
+          <Component {...props} />
+        ) : (
+          <Redirect
+            to={{
+              pathname: redirectTo,
+              state: { from: props.location },
+            }}
+          />
+        )
+      }
+    />
+  );
+};
+
+ProtectedRoute.propTypes = {
+  autheticated: PropTypes.bool.isRequired,
+  component: PropTypes.shape({
+    type: PropTypes.func.isRequired,
+  }).isRequired,
+  redirectTo: PropTypes.string.isRequired,
+  location: PropTypes.shape({
+    state: PropTypes.shape({
+      from: PropTypes.string,
+    }),
+  }),
+};
+
+ProtectedRoute.defaultProps = {
+  location: {},
+};
 
 const mapStateToProps = state => ({
-  authenticated: sessionSelectors.getIsAuthenticated(state),
+  autheticated: getIsAuthenticated(state),
 });
 
 export default connect(mapStateToProps)(ProtectedRoute);

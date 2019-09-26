@@ -1,4 +1,14 @@
 .title_form {
+  margin-right: auto;
+  color: gray;
+  font-weight: 900;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  margin-top: 40px;
+  margin: auto;
+}
+
+.test {
   display: none;
 }
 
@@ -13,6 +23,7 @@
   height: 500px;
   text-align: center;
   font-weight: 700;
+  color: gray;
 }
 
 .title_modal {
@@ -26,7 +37,7 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 2px 3.464px 23.2px 5.8px rgba(29, 29, 27, 0.1);
   margin: 0 auto;
-  width: 849px;
+  max-width: 650px;
   height: 328px;
   display: flex;
   justify-content: space-evenly;
@@ -34,17 +45,38 @@
 
 .form {
   border-radius: 6px;
-  /* background-color: pink; */
   width: 600px;
-  /* height: 200px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  position: relative;
+}
+
+.errorParagraph {
+  width: 500px;
+  color: red;
+  position: absolute;
+  bottom: 18px;
+  left: 5%;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.errorParagraphServer {
+  width: 500px;
+  color: red;
+  position: absolute;
+  bottom: 18px;
+  left: 5%;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .input_task {
-  margin: 40px auto;
-  margin-bottom: 60px;
+  margin: 0 auto;
+  margin-bottom: 0px;
   border-width: 0px 0px 2px 0px;
   border-color: rgb(224, 224, 224);
   border-style: solid;
@@ -71,6 +103,16 @@
   font-family: 'Montserrat';
 }
 
+.input_options::before {
+  content: 'Обери час';
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: -20px;
+  left: 70px;
+  color: gray;
+}
+
 .input_options {
   width: 250px;
   height: 10px;
@@ -79,6 +121,12 @@
   font-family: 'Montserrat';
   font-weight: 900;
   color: black;
+  position: relative;
+  /* overflow: visible; */
+}
+
+.input_options::before {
+  left: 90px;
 }
 
 .input_options_input {
@@ -114,6 +162,7 @@
     rgb(241, 195, 65) 55%,
     rgb(236, 177, 70) 100%
   );
+  outline: none;
 }
 
 @media (max-width: 1279px) {
@@ -128,6 +177,8 @@
     margin-bottom: 0px;
     color: gray;
     font-weight: 900;
+    font-family: 'Montserrat';
+    font-size: 20px;
   }
 
   .modal_container {
@@ -136,7 +187,7 @@
     box-shadow: 2px 3.464px 23.2px 5.8px rgba(29, 29, 27, 0.1);
     margin: 0 auto;
     width: 849px;
-    height: 831px;
+    height: 495px;
     display: flex;
     justify-content: space-evenly;
     background-position: center;
@@ -146,13 +197,13 @@
 
   .form {
     border-radius: 6px;
-    /* background-color: pink; */
     width: 600px;
     height: 400px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    margin-top: 70px;
+    margin-top: 30px;
+    z-index: 11;
   }
 
   .price {
@@ -160,10 +211,18 @@
     position: absolute;
     left: -68px;
     bottom: -75px;
+    z-index: 1;
   }
 
   .title_form {
-    display: block;
+    margin: 0 auto;
+    height: 10px;
+    /* margin-left: 15px; */
+    /* margin-bottom: 0px; */
+    color: gray;
+    font-weight: 900;
+    font-family: 'Montserrat';
+    font-size: 20px;
   }
 
   .input_task {
@@ -176,6 +235,7 @@
     font-size: 14px;
     font-weight: 900;
     font-family: 'Montserrat';
+    background: none;
   }
 
   .input_task::placeholder {
@@ -231,6 +291,7 @@
       rgb(241, 195, 65) 55%,
       rgb(236, 177, 70) 100%
     );
+    outline: none;
   }
 }
 
@@ -257,13 +318,11 @@
     height: 400px;
     display: flex;
     justify-content: space-evenly;
-    background: url(/src//assets/images/modal_present.png);
-    background-position: center;
+    overflow: visible;
   }
 
   .form {
     border-radius: 6px;
-    /* background-color: pink; */
     width: 300px;
     height: 400px;
     display: flex;
@@ -273,7 +332,10 @@
   }
 
   .title_form {
-    display: block;
+    margin-top: 20px;
+    color: gray;
+    font-weight: 900;
+    margin: 0 auto;
   }
 
   .input_task {
@@ -296,7 +358,6 @@
 
   .input_options_section {
     display: flex;
-    /* justify-content: space-between; */
     flex-flow: column-reverse;
     width: 270px;
     margin: 0 auto;
@@ -307,8 +368,19 @@
     display: none;
   }
 
-  .input_options {
+  .form {
+    border-radius: 6px;
+    background-color: white;
+    width: 300px;
+    height: 400px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  .input_options {
+    display: block;
     flex-flow: column;
     justify-content: space-between;
     width: 270px;
@@ -333,6 +405,28 @@
     font-family: 'Montserrat';
   }
 
+  .errorParagraph {
+    width: 500px;
+    color: red;
+    position: absolute;
+    left: -34%;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 700;
+    bottom: 30%;
+  }
+
+  .errorParagraphServer {
+    width: 500px;
+    color: red;
+    position: absolute;
+    left: -34%;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 700;
+    bottom: 30%;
+  }
+
   .button {
     border-radius: 20px 20px 20px 20px;
     font-family: 'Montserrat';
@@ -347,6 +441,7 @@
       rgb(241, 195, 65) 55%,
       rgb(236, 177, 70) 100%
     );
-    margin: 0 auto;
+    margin: 20px auto;
+    outline: none;
   }
 }

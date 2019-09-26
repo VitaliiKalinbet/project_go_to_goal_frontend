@@ -22,7 +22,7 @@ const LoginForm = ({
         onChange={onChange}
         required
         pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
-        placeholder="Enter your login/email..."
+        placeholder="Введiть свiй email..."
       />
       <div>
         <input
@@ -33,7 +33,7 @@ const LoginForm = ({
           required
           minLength="6"
           maxLength="12"
-          placeholder="Enter your password..."
+          placeholder="Введiть свiй пароль..."
         />
         <button type="button" onClick={onShowPassword} className={s.btn_eye}>
           {showPassword === 'text' ? (
@@ -43,7 +43,9 @@ const LoginForm = ({
           )}
         </button>
       </div>
-      <button type="submit">Увiйти</button>
+      <button type="submit" className={s.log_btn}>
+        Увiйти
+      </button>
       <button onClick={onOpenModal} type="button" className={s.reg_btn}>
         Реєстрація
       </button>

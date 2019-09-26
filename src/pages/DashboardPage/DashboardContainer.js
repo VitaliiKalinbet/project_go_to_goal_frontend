@@ -8,6 +8,7 @@ import * as modalDeleteTaskActions from '../../redux/ModalDeleteTask/ModalDelete
 import * as modalLogoutActions from '../../redux/ModalLogout/ModalLogoutActions';
 import * as dashboardOperations from '../../redux/Dashboard/DashboardOperations';
 import * as dashboardSelectors from '../../redux/Dashboard/DashboardSelectors';
+import * as sessionLoginActions from '../../redux/sessionLogin/sessionLoginActions';
 
 //  COMPONENT TO WRAP
 import DashboardPage from './DashboardPage';
@@ -35,6 +36,7 @@ const mapDispatchToProps = dispatch => ({
   onGetGoal: token => dispatch(dashboardOperations.getGoalOperation(token)),
   onGetTasks: token => dispatch(dashboardOperations.getTasksOperation(token)),
   onDashboardErrors: errors => dashboardOperations.getErrorOperation(errors),
+  onLogout: () => dispatch(sessionLoginActions.logout()),
 });
 
 export default connect(

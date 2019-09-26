@@ -1,7 +1,3 @@
-.logo {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
+.logoImg {
+  width: 100px;
 }

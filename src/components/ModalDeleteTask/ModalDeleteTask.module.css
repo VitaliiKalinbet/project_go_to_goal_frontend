@@ -1,33 +1,22 @@
-/* .basicLightbox {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
-} */
-
 .modalContent {
   background-color: #fff;
   color: black;
   padding: 2%;
-  width: 420px;
+  width: 400px;
   height: 200px;
   border-radius: 3%;
+  text-align: center;
 }
 
 .h2 {
   margin: 0;
-  margin-bottom: 25%;
+  margin-top: 5%;
+  margin-bottom: 15%;
 }
 
 .btnConteiner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .btn {
@@ -38,6 +27,7 @@
   outline: none;
   cursor: pointer;
   position: relative;
+  margin: 0 20px;
 }
 
 .btn:hover {
@@ -109,12 +99,16 @@
   0% {
     background-position: 0 0;
   }
-
   50% {
     background-position: 400% 0;
   }
-
   100% {
     background-position: 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .modalContent {
+    max-width: 320px;
   }
 }

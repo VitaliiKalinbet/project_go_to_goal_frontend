@@ -9,7 +9,6 @@ import Loader from '../../components/Loader/Loader';
 import Header from '../../components/Header/Header';
 import TaskList from '../../components/TaskList/TaskList';
 import Footer from '../../components/Footer/Footer';
-import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import Backdrop from '../../components/Backdrop/Backdrop';
 import ModalCreateGoal from '../../components/ModalCreateGoal/ModalCreateGoal';
 import ModalAddTask from '../../components/ModalAddTask/ModalAddTask';
@@ -56,15 +55,13 @@ class DashboardPage extends Component {
       onCloseModalDeleteTask,
       onCloseModalLogout,
       isLoading,
+      onLogout,
     } = this.props;
-
-    const windowWidth = document.documentElement.clientWidth;
 
     return (
       <div className={styles.dashboardBody}>
         {isLoading && <Loader />}
         <Header />
-        {windowWidth >= 768 && windowWidth < 1280 && <ProgressBar />}
         <TaskList />
         <Footer />
         {isModalAddTaskOpen && (
@@ -89,7 +86,7 @@ class DashboardPage extends Component {
         )}
         {isModalLogoutOpen && (
           <Backdrop onClose={onCloseModalLogout}>
-            <ModalLogout onClose={onCloseModalLogout} />
+            <ModalLogout onClose={onCloseModalLogout} onLogout={onLogout} />
           </Backdrop>
         )}
         <ToastContainer />
@@ -113,11 +110,9 @@ DashboardPage.propTypes = {
     points: PropTypes.number.isRequired,
     createdAt: PropTypes.string.isRequired,
   }),
-  tasks: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
   token: PropTypes.string.isRequired,
   hasDashboardError: PropTypes.bool.isRequired,
   dashboardErrors: PropTypes.arrayOf(PropTypes.object),
-  // ---------------------
   onCloseModalAddTask: PropTypes.func.isRequired,
   onCloseModalCongrats: PropTypes.func.isRequired,
   onCloseModalCreateGoal: PropTypes.func.isRequired,
@@ -126,6 +121,7 @@ DashboardPage.propTypes = {
   onGetGoal: PropTypes.func.isRequired,
   onGetTasks: PropTypes.func.isRequired,
   onDashboardErrors: PropTypes.func.isRequired,
+  onLogout: PropTypes.func.isRequired,
 };
 
 DashboardPage.defaultProps = {
