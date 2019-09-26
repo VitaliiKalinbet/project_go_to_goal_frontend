@@ -20,7 +20,7 @@ const CreateTaskButton = ({ openModal, activePosts, hasGoal }) => {
         disabled={isDisabled}
         className={isDisabled === true ? styles.disableBtn : styles.button}
       >
-        &#x2b;
+        +
       </button>
     </>
   );
