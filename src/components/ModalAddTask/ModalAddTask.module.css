@@ -156,10 +156,12 @@
   font-weight: 900;
   width: 200px;
   height: 48px;
-  background-image: -webkit-linear-gradient(90deg,
-      rgb(245, 213, 59) 0%,
-      rgb(241, 195, 65) 55%,
-      rgb(236, 177, 70) 100%);
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgb(245, 213, 59) 0%,
+    rgb(241, 195, 65) 55%,
+    rgb(236, 177, 70) 100%
+  );
   outline: none;
 }
 
@@ -283,10 +285,12 @@
     font-weight: 900;
     width: 200px;
     height: 48px;
-    background-image: -webkit-linear-gradient(90deg,
-        rgb(245, 213, 59) 0%,
-        rgb(241, 195, 65) 55%,
-        rgb(236, 177, 70) 100%);
+    background-image: -webkit-linear-gradient(
+      90deg,
+      rgb(245, 213, 59) 0%,
+      rgb(241, 195, 65) 55%,
+      rgb(236, 177, 70) 100%
+    );
     outline: none;
   }
 }
@@ -431,10 +435,12 @@
     font-weight: 900;
     width: 200px;
     height: 48px;
-    background-image: -webkit-linear-gradient(90deg,
-        rgb(245, 213, 59) 0%,
-        rgb(241, 195, 65) 55%,
-        rgb(236, 177, 70) 100%);
+    background-image: -webkit-linear-gradient(
+      90deg,
+      rgb(245, 213, 59) 0%,
+      rgb(241, 195, 65) 55%,
+      rgb(236, 177, 70) 100%
+    );
     margin: 20px auto;
     outline: none;
   }
