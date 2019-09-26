@@ -100,7 +100,6 @@ export const errorsReducer = (prevState = [], action) => {
     case Type.GOAL_GET_ERROR:
     case Type.TASKLIST_GET_ERROR:
     case TypeAddTask.ADD_TASK_ERROR:
-    case TypeAddGoal.ADD_GOAL_ERROR:
       return [...prevState, action.payload.error];
 
     case Type.GOAL_GET_START:

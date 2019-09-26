@@ -1,4 +1,4 @@
 export const getMessageErr = store =>
-  store.dashboardErrors.map(el => el.message);
+  store.modalCreateGoalsErrors && store.modalCreateGoalsErrors.message;
 
 export const e = () => null;

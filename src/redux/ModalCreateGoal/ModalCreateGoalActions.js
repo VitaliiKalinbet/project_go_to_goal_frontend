@@ -3,6 +3,7 @@ export const TypeAddGoal = {
   MODAL_CREATE_GOAL_CLOSE: 'MODAL_CREATE_GOAL_CLOSE',
   ADD_GOAL_SUCCESS: 'ADD_GOAL_SUCCESS',
   ADD_GOAL_ERROR: 'ADD_GOAL_ERROR',
+  ADD_GOAL_CLEAN_ERROR: 'ADD_GOAL_CLEAN_ERROR',
 };
 
 export const openModal = () => ({
@@ -25,4 +26,8 @@ export const addGoalError = error => ({
   payload: {
     error,
   },
+});
+
+export const cleanModalGoalErrors = () => ({
+  type: TypeAddGoal.ADD_GOAL_CLEAN_ERROR,
 });
