@@ -41,5 +41,5 @@ export const getTasks = (tasksAlias, token) =>
 export const getGoal = (goalAlias, token) =>
   axios.get(goalAlias, setToken(token));
 
-export const patchGoal = (goalId, token) =>
-  axios.patch(`/goals/${goalId}`, { isDone: true }, setToken(token));
+export const patchGoal = (goalId, patch, token) =>
+  axios.patch(`/goals/${goalId}`, patch, setToken(token));
