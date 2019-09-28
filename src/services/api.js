@@ -24,8 +24,9 @@ export const addNewGoal = (goal, token) =>
 export const addTask = (task, token) =>
   axios.post('/tasks', task, setToken(token));
 
-export const toggleTask = (id, status, token) =>
-  axios.patch(`/tasks/${id}`, status, setToken(token));
+export const toggleTask = (id, status, token) => {
+  return axios.patch(`/tasks/${id}`, status, setToken(token));
+};
 
 export const signUpUser = credentials => {
   return axios.post('/auth/register', credentials);
