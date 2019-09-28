@@ -8,7 +8,7 @@ export const Type = {
   TASKLIST_GET_SUCCESS: 'TASKLIST_GET_SUCCESS',
   TASKLIST_GET_ERROR: 'TASKLIST_GET_ERROR',
   TASK_TOGGLE: 'TASK_TOGGLE',
-  
+
   GOAL_GET_START: 'GOAL_GET_START',
   GOAL_GET_SUCCESS: 'GOAL_GET_SUCCESS',
   GOAL_GET_ERROR: 'GOAL_GET_ERROR',
@@ -28,7 +28,6 @@ export const removeCardsError = error => ({
     error,
   },
 });
-
 
 // TASK LIST ACTIONS
 export const getTaskListStart = () => ({
