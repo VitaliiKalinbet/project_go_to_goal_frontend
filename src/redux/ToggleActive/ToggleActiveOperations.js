@@ -15,10 +15,9 @@ export const toggleTaskOperation = (id, update, token) => async dispatch => {
     .then(res => {
       dispatch(taskStatusToggle(id));
 
-      console.log('res', res);
-
       dispatch(handleScores(res.data.user.scores));
     })
+    // eslint-disable-next-line no-console
     .catch(error => console.log('error', error))
     .finally(() => {
       dispatch(getTasksOperation(token));
