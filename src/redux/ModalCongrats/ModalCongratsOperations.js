@@ -13,7 +13,7 @@ export const patchGoalOperation = (goalId, tasks, token) => async dispatch => {
   );
 
   await api
-    .patchGoal(goalId, token)
+    .patchGoal(goalId, { isDone: true }, token)
     .then(res => {
       dispatch(congratsActions.modalSuccess());
       dispatch(handleScores(res.data.user.scores));

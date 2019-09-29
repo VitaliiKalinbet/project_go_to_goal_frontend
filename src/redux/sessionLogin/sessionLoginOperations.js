@@ -25,15 +25,9 @@ export const refresh = () => (dispatch, getState) => {
   const token = getToken(getState());
   if (!token) return;
 
-  const options = {
-    headers: {
-      Authorization: token,
-    },
-  };
-
   dispatch(refreshRequest());
 
-  setTokenLoginPage(options)
+  setTokenLoginPage(token)
     .then(response => {
       dispatch(refreshSuccess(response));
     })

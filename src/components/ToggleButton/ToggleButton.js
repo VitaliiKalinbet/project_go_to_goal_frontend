@@ -9,7 +9,10 @@ const ToggleButton = ({ onChangeToggle, checked, id, token }) => {
       <input
         type="checkbox"
         checked={checked}
-        onChange={() => onChangeToggle(id, `{"isComplete":${!checked}}`, token)}
+        onChange={() => {
+          console.log('checked', checked);
+          onChangeToggle(id, { isComplete: !checked }, token);
+        }}
       />
     </div>
   );

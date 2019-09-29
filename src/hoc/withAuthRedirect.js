@@ -12,7 +12,7 @@ const withAuthRedirect = BaseComponent => {
       }).isRequired,
       location: PropTypes.shape({
         state: PropTypes.shape({
-          from: PropTypes.string,
+          from: PropTypes.shape({}),
         }),
       }),
     };
