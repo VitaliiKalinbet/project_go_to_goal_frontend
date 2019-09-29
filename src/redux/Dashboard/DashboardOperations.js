@@ -34,4 +34,4 @@ export const getGoalOperation = token => dispatch => {
     });
 };
 
-export const getErrorOperation = errors => {};
+export const getErrorOperation = () => {};
