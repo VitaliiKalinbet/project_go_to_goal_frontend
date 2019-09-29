@@ -37,9 +37,9 @@ const LoginForm = ({
         />
         <button type="button" onClick={onShowPassword} className={s.btn_eye}>
           {showPassword === 'text' ? (
-            <OpenEye className={s.eye} />
-          ) : (
             <CloseEye className={s.eye} />
+          ) : (
+            <OpenEye className={s.eye} />
           )}
         </button>
       </div>
