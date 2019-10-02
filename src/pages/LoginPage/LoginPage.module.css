@@ -39,6 +39,7 @@
   border-bottom: 2px solid var(--color-pale-gray);
   margin-left: 20px;
   font-size: 12px;
+  line-height: 14px;
   color: var(--color-gray);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -53,13 +54,13 @@
   font-weight: 600;
 }
 
-.form input:valid:not(:placeholder-shown) {
+/* .form input:required:valid:not(:placeholder-shown) {
   color: #94cf4b;
 }
 
-.form input:invalid:not(:placeholder-shown) {
+.form input:required:invalid:not(:placeholder-shown) {
   color: #ff3561;
-}
+} */
 
 .form input:-webkit-autofill,
 .form input:-webkit-autofill:hover,
@@ -97,6 +98,7 @@
   text-align: center;
   font-size: 12px;
   letter-spacing: 1px;
+  line-height: 18px;
   background-color: transparent;
   color: var(--color-gray);
   font-family: 'Montserrat', sans-serif;
@@ -127,6 +129,8 @@
 }
 
 .error {
+  padding: 0 20px;
+  text-align: center;
   color: #ff3561;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;

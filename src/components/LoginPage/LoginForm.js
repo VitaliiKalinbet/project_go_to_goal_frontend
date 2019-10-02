@@ -12,6 +12,7 @@ const LoginForm = ({
   password,
   showPassword,
   onShowPassword,
+  formValid,
 }) => {
   return (
     <form onSubmit={onSubmit} className={s.form}>
@@ -21,7 +22,6 @@ const LoginForm = ({
         value={email}
         onChange={onChange}
         required
-        pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
         placeholder="Введiть свiй email..."
       />
       <div>
@@ -31,8 +31,6 @@ const LoginForm = ({
           value={password}
           onChange={onChange}
           required
-          minLength="6"
-          maxLength="12"
           placeholder="Введiть свiй пароль..."
         />
         <button type="button" onClick={onShowPassword} className={s.btn_eye}>
@@ -43,7 +41,7 @@ const LoginForm = ({
           )}
         </button>
       </div>
-      <button type="submit" className={s.log_btn}>
+      <button type="submit" disabled={!formValid} className={s.log_btn}>
         Увiйти
       </button>
       <button onClick={onOpenModal} type="button" className={s.reg_btn}>
@@ -65,6 +63,7 @@ LoginForm.propTypes = {
   onOpenModal: PropTypes.func.isRequired,
   onShowPassword: PropTypes.func.isRequired,
   showPassword: PropTypes.string.isRequired,
+  formValid: PropTypes.bool.isRequired,
 };
 
 export default LoginForm;
