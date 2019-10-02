@@ -41,7 +41,7 @@
   font-size: 12px;
   line-height: 14px;
   color: var(--color-gray);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
@@ -50,7 +50,7 @@
   letter-spacing: 1px;
   background-color: transparent;
   color: var(--color-gray);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
@@ -101,7 +101,7 @@
   line-height: 18px;
   background-color: transparent;
   color: var(--color-gray);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   transition: all ease-in-out 200ms;
 }
@@ -110,7 +110,7 @@
   font-size: 13px;
 }
 
-.btn_eye[type="button"] {
+.btn_eye[type='button'] {
   position: absolute;
   top: 50%;
   right: 0;
@@ -132,7 +132,7 @@
   padding: 0 20px;
   text-align: center;
   color: #ff3561;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 600;
 }
@@ -174,7 +174,7 @@
   font-size: 27px;
   letter-spacing: 2px;
   color: var(--color-dark-blue);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 700;
   text-align: center;
@@ -186,7 +186,7 @@
   font-size: 14px;
   letter-spacing: 1px;
   color: var(--color-gray);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
   text-align: center;
@@ -205,12 +205,16 @@
   padding: 0;
   border: none;
   border-radius: 24px;
-  background: linear-gradient(to top, var(--color-yellow), var(--color-dark-yellow));
+  background: linear-gradient(
+    to top,
+    var(--color-yellow),
+    var(--color-dark-yellow)
+  );
   font-size: 14px;
   letter-spacing: 1px;
   line-height: 48px;
   color: var(--color-white);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   text-align: center;
   transition: all ease-in-out 200ms;
@@ -337,7 +341,7 @@
     margin: 0;
   }
 
-  .form button[type="submit"] {
+  .form button[type='submit'] {
     width: 80px;
   }
 
