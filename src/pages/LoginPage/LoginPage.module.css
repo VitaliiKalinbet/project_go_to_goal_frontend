@@ -66,7 +66,7 @@
 .form input:-webkit-autofill:hover,
 .form input:-webkit-autofill:focus,
 .form input:-webkit-autofill:active {
-  -webkit-text-fill-color: #94cf4b;
+  -webkit-text-fill-color: var(--color-gray);
   box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
   background: -webkit-linear-gradient(
@@ -228,7 +228,7 @@
   width: 23.52vw;
   height: 23.52vh;
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   left: 0;
   fill: var(--color-green);
 }

@@ -73,9 +73,5 @@ const mapStateToProps = store => ({
   activePosts: TaskListSelectors.getActivePosts(store),
   getGoal: dashboardSelectors.getGoal(store),
 });
-const mapDispatchToProps = {};
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(ActiveTaskList);
+export default connect(mapStateToProps)(ActiveTaskList);
