@@ -42,7 +42,7 @@ class DoneTaskList extends Component {
               className={styles.button}
               onClick={this.loadModeDoneTasks}
             >
-              &#10507;
+              {showCloseButton ? <span>&#x290A;</span> : <span>&#x290B;</span>}
             </button>
           ) : (
             ''
