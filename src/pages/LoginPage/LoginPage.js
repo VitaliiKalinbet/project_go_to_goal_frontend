@@ -41,11 +41,15 @@ class LoginPage extends Component {
     email: '',
     password: '',
     showPassword: 'password',
+    formErrors: { email: '', password: '' },
+    emailValid: false,
+    passwordValid: false,
+    formValid: false,
   };
 
   handleChange = ({ target }) => {
     const { name, value } = target;
-    this.setState({ [name]: value });
+    this.setState({ [name]: value }, () => this.validateField(name, value));
   };
 
   handleSubmit = e => {
@@ -61,16 +65,68 @@ class LoginPage extends Component {
     }));
   };
 
+  validateField = (fieldName, value) => {
+    const { formErrors, emailValid, passwordValid } = this.state;
+    const fieldValidationErrors = formErrors;
+    let fieldEmailValid = emailValid;
+    let fieldPasswordValid = passwordValid;
+    switch (fieldName) {
+      case 'email':
+        fieldEmailValid =
+          // eslint-disable-next-line no-useless-escape
+          /^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$/.test(value);
+        fieldValidationErrors.email = fieldEmailValid
+          ? ''
+          : 'Нажаль, таких email адрес не iснує...';
+        break;
+      case 'password':
+        fieldPasswordValid = value.length >= 6 && value.length <= 12;
+        fieldValidationErrors.password = fieldPasswordValid
+          ? ''
+          : 'Вибач, але нам потрiбен пароль вiд 6 до 12 символiв...';
+        break;
+      default:
+        break;
+    }
+    this.setState(
+      {
+        formErrors: fieldValidationErrors,
+        emailValid: fieldEmailValid,
+        passwordValid: fieldPasswordValid,
+      },
+      this.validateForm,
+    );
+  };
+
+  validateForm = () => {
+    const { emailValid, passwordValid } = this.state;
+    this.setState({
+      formValid: emailValid && passwordValid,
+    });
+  };
+
   reset = () => {
     this.setState({
       login: '',
       password: '',
       showPassword: 'password',
+      formErrors: { email: '', password: '' },
+      emailValid: false,
+      passwordValid: false,
+      formValid: false,
     });
   };
 
   render() {
-    const { email, password, showPassword } = this.state;
+    const {
+      email,
+      password,
+      showPassword,
+      formErrors,
+      emailValid,
+      passwordValid,
+      formValid,
+    } = this.state;
     const { isModalOpen, onOpenModal, onCloseModal, errorMessage } = this.props;
     const windowWidth = document.documentElement.clientWidth;
     return (
@@ -90,18 +146,16 @@ class LoginPage extends Component {
           <header className={s.header}>
             <div className={s.header_form}>
               <img src={logo} alt="logo" width="104" className={s.logo} />
-              {errorMessage &&
-                (errorMessage.includes('40') ||
-                  errorMessage.includes('41')) && (
-                  <p className={s.error}>
-                    Вибачте, але ви вiдправили некоректнi даннi...
-                  </p>
-                )}
-              {errorMessage && errorMessage.includes('50') && (
-                <p className={s.error}>
-                  Вибачте, але у нас виникли деякi труднощi. Спробуйте
-                  пiзнiше...
-                </p>
+              {!formValid && !emailValid && (
+                <i className={s.error}>{formErrors.email}</i>
+              )}
+              {!formValid && !passwordValid && (
+                <i className={s.error}>{formErrors.password}</i>
+              )}
+              {errorMessage && (
+                <i className={s.error}>
+                  Вибач, але у нас виникли деякi труднощi. Спробуй пiзнiше...
+                </i>
               )}
               <LoginForm
                 onOpenModal={onOpenModal}
@@ -111,6 +165,7 @@ class LoginPage extends Component {
                 showPassword={showPassword}
                 email={email}
                 password={password}
+                formValid={formValid}
               />
             </div>
           </header>
@@ -133,19 +188,18 @@ class LoginPage extends Component {
                   showPassword={showPassword}
                   email={email}
                   password={password}
+                  formValid={formValid}
                 />
-                {errorMessage &&
-                  (errorMessage.includes('40') ||
-                    errorMessage.includes('41')) && (
-                    <p className={s.error}>
-                      Вибачте, але ви вiдправили некоректнi даннi...
-                    </p>
-                  )}
-                {errorMessage && errorMessage.includes('50') && (
-                  <p className={s.error}>
-                    Вибачте, але у нас виникли деякi труднощi. Спробуйте
-                    пiзнiше...
-                  </p>
+                {!formValid && !emailValid && (
+                  <i className={s.error}>{formErrors.email}</i>
+                )}
+                {!formValid && !passwordValid && (
+                  <i className={s.error}>{formErrors.password}</i>
+                )}
+                {errorMessage && (
+                  <i className={s.error}>
+                    Вибач, але у нас виникли деякi труднощi. Спробуй пiзнiше...
+                  </i>
                 )}
               </>
             )}

@@ -1,4 +1,3 @@
-// CARD DELETE
 export const Type = {
   MODAL_DELETE_TASK_OPEN: 'MODAL_DELETE_TASK_OPEN',
   MODAL_DELETE_TASK_CLOSE: 'MODAL_DELETE_TASK_CLOSE',
@@ -15,6 +14,7 @@ export const Type = {
   GOAL_GET_ERROR: 'GOAL_GET_ERROR',
 };
 
+// CARD DELETE
 export const removeCardsSuccess = _id => ({
   type: Type.DELETE_CARD_SUCCESS,
   payload: {
@@ -28,16 +28,6 @@ export const removeCardsError = error => ({
     error,
   },
 });
-
-// export const Type = {
-//   TASKLIST_GET_START: 'TASKLIST_GET_START',
-//   TASKLIST_GET_SUCCESS: 'TASKLIST_GET_SUCCESS',
-//   TASKLIST_GET_ERROR: 'TASKLIST_GET_ERROR',
-
-//   GOAL_GET_START: 'GOAL_GET_START',
-//   GOAL_GET_SUCCESS: 'GOAL_GET_SUCCESS',
-//   GOAL_GET_ERROR: 'GOAL_GET_ERROR',
-// };
 
 // TASK LIST ACTIONS
 export const getTaskListStart = () => ({

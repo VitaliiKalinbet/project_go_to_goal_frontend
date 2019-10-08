@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import styles from './ToggleButton.module.css';
 import { toggleTaskOperation } from '../../redux/ToggleActive/ToggleActiveOperations';
 
@@ -9,10 +10,17 @@ const ToggleButton = ({ onChangeToggle, checked, id, token }) => {
       <input
         type="checkbox"
         checked={checked}
-        onChange={() => onChangeToggle(id, `{"isComplete":${!checked}}`, token)}
+        onChange={() => onChangeToggle(id, { isComplete: !checked }, token)}
       />
     </div>
   );
+};
+
+ToggleButton.propTypes = {
+  onChangeToggle: PropTypes.func.isRequired,
+  checked: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
+  token: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = state => ({

@@ -4,10 +4,6 @@ import { getTasksOperation } from '../Dashboard/DashboardOperations';
 import { handleScores } from '../ModalDeleteTask/ModalDeleteTaskActions';
 
 export const patchGoalOperation = (goalId, tasks, token) => async dispatch => {
-  const tasksToDelete = tasks.filter(task => task.inActive && !task.isComplete);
-
-  await tasksToDelete.forEach(task => api.deleteTask(task._id, token));
-
   const tasksToToggleDone = tasks.filter(
     task => task.inActive && task.isComplete,
   );
@@ -17,7 +13,7 @@ export const patchGoalOperation = (goalId, tasks, token) => async dispatch => {
   );
 
   await api
-    .patchGoal(goalId, token)
+    .patchGoal(goalId, { isDone: true }, token)
     .then(res => {
       dispatch(congratsActions.modalSuccess());
       dispatch(handleScores(res.data.user.scores));

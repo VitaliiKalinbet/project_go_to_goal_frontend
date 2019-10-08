@@ -35,7 +35,7 @@ class ActiveTaskList extends Component {
               <h2 className={styles.activeTask_title3}>Бачиш кнопку внизу?</h2>
               <p className={styles.text1}>
                 Натискай її, вибирай, що і коли треба зробити і
-                <b className={styles.text12}> вперед до мети!</b>
+                <b className={styles.text12}> вперед до цілі !</b>
               </p>
 
               <p className={styles.text2}>
@@ -73,9 +73,5 @@ const mapStateToProps = store => ({
   activePosts: TaskListSelectors.getActivePosts(store),
   getGoal: dashboardSelectors.getGoal(store),
 });
-const mapDispatchToProps = {};
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(ActiveTaskList);
+export default connect(mapStateToProps)(ActiveTaskList);

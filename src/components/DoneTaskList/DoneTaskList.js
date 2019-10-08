@@ -22,7 +22,9 @@ class DoneTaskList extends Component {
 
     return (
       <>
-        <h2 className={styles.blocksTitles}>Виконано</h2>
+        {donePosts.length > 0 && (
+          <h2 className={styles.blocksTitles}>Виконано</h2>
+        )}
 
         <ul className={styles.doneCards}>
           {showCloseButton
@@ -40,7 +42,7 @@ class DoneTaskList extends Component {
               className={styles.button}
               onClick={this.loadModeDoneTasks}
             >
-              &#10507;
+              {showCloseButton ? <span>&#x290A;</span> : <span>&#x290B;</span>}
             </button>
           ) : (
             ''
@@ -58,9 +60,5 @@ DoneTaskList.propTypes = {
 const mapStateToProps = store => ({
   donePosts: TaskListSelectors.getDonePosts(store),
 });
-const mapDispatchToProps = {};
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(DoneTaskList);
+export default connect(mapStateToProps)(DoneTaskList);
