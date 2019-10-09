@@ -16,6 +16,7 @@
   position: absolute;
   z-index: 666;
 }
+
 .modal {
   background-color: #aadd43;
   width: 260px;
@@ -30,6 +31,7 @@
   overflow: hidden;
   padding: 0 20px 0px 20px;
 }
+
 .congrats {
   color: white;
   font-size: 18px;
@@ -37,6 +39,7 @@
   font-weight: bold;
   font-family: 'Montserrat';
 }
+
 .flagContainer {
   background: url('../../assets/images/BlueFlagIcon.png') center;
   background-repeat: no-repeat;
@@ -59,8 +62,9 @@
   margin-bottom: 18px;
   font-family: 'Montserrat';
 }
+
 .textPrise {
-  padding-top: 17px;
+  padding-top: 10px;
   color: white;
   font-size: 13px;
   margin-bottom: 15px;
@@ -80,6 +84,7 @@
   text-align: center;
   font-family: 'Montserrat';
 }
+
 .button {
   background: #f1c640;
   border: none;
@@ -94,18 +99,22 @@
   font-weight: bold;
   font-family: 'Montserrat';
 }
+
 .button:hover {
   background: white;
   color: #f1c640;
   font-size: 21px;
 }
+
 @media (min-width: 768px) {
   .container {
     background: url('../../assets/images/FlagsIcon.png') no-repeat -2% -5%;
   }
+
   .congrats {
     font-size: 61px;
   }
+
   .textInform {
     font-size: 14px;
     margin-bottom: 10px;
@@ -114,12 +123,14 @@
   .textPrise {
     font-size: 28px;
   }
+
   .modal {
     background: url('../../assets/images/PipeParty.png') no-repeat 105% 105%;
     background-color: #aadd43;
     width: 660px;
     height: 440px;
   }
+
   .flagContainer {
     background: url('../../assets/images/BlueFlagIcon.png') center;
     background-repeat: no-repeat;
@@ -131,6 +142,7 @@
     align-items: center;
     padding: 10px 0 10px 0;
   }
+
   .textNewTask {
     font-size: 10px;
     width: 100%;
@@ -142,6 +154,10 @@
     width: 200px;
     height: 60px;
   }
+
+  .textPrise {
+    padding-top: 21px;
+  }
 }
-@media (min-width: 1280px) {
-}
+
+@media (min-width: 1280px) {}
