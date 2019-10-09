@@ -28,10 +28,11 @@ class DoneTaskList extends Component {
 
         <ul className={styles.doneCards}>
           {showCloseButton
-            ? donePosts.map(donePost => (
-                <Card key={donePost._id} task={donePost} />
-              ))
+            ? donePosts
+                .reverse()
+                .map(donePost => <Card key={donePost._id} task={donePost} />)
             : donePosts
+                .reverse()
                 .slice(0, 8)
                 .map(donePost => <Card key={donePost._id} task={donePost} />)}
         </ul>

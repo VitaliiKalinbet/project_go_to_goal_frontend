@@ -4,3 +4,9 @@
   padding-top: 76px;
   padding-bottom: 30px;
 }
+
+@media (max-width: 767px) {
+  .dashboardBody {
+    padding-top: 170px;
+  }
+}

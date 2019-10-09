@@ -156,6 +156,7 @@
   .activeTaskCard {
     margin: 0 auto;
     margin-bottom: 16px;
+    display: none;
   }
 
   .activeTaskListSecretDiv {
