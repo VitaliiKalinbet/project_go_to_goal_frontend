@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import s from './ModalRegistration.module.css';
-import * as sessionOperations from '../../redux/session/sessionOperations';
+import { signupOperation } from '../../redux/session/sessionOperations';
 import { closeModal } from '../../redux/ModalRegistration/ModalRegistrationActions';
 import { getErrorMessageRegistration } from '../../redux/sessionLogin/sessionLoginSelectors';
 import IconsAvatar from '../IconAvatar/IconAvatar';
@@ -21,35 +21,115 @@ class ModalRegistration extends Component {
   };
 
   state = {
-    username: '',
+    name: '',
     age: '',
     email: '',
     password: '',
+    rePassword: '',
     showPassword: 'password',
-    correctPassword: '',
-    errorPassword: '',
+    errorRePassword: '',
     avatar: 'https://go-to-goal.goit.co.ua/image/avatar_008.png',
+    formErrors: { name: '', age: '', email: '', password: '' },
+    formValid: false,
+    nameValid: false,
+    ageValid: false,
+    emailValid: false,
+    passwordValid: false,
   };
 
-  HandleSubmitForm = e => {
+  handleChange = ({ target }) => {
+    const { name, value } = target;
+    this.setState({ [name]: value }, () => this.validateField(name, value));
+  };
+
+  handleSubmitForm = e => {
     e.preventDefault();
-    if (this.state.password === this.state.correctPassword) {
-      // тут запускать операцию
-      const { onSignUp } = this.props;
-      const { username, password, email, age, avatar } = this.state;
+
+    const { name, age, email, password, rePassword, avatar } = this.state;
+    const { onSignUp } = this.props;
+    if (password === rePassword) {
       onSignUp({
+        name,
         email,
         password,
-        name: username,
         age,
         avatar,
         isChild: true,
       });
     } else {
       this.setState({
-        errorPassword: 'Паролі не співпадають!!!',
+        errorRePassword: 'Паролі не співпадають!!!',
       });
     }
+  };
+
+  validateField = (fieldName, value) => {
+    const {
+      formErrors,
+      nameValid,
+      ageValid,
+      emailValid,
+      passwordValid,
+    } = this.state;
+    const fieldValidationErrors = formErrors;
+    let fieldNameValid = nameValid;
+    let fieldAgeValid = ageValid;
+    let fieldEmailValid = emailValid;
+    let fieldPasswordValid = passwordValid;
+    switch (fieldName) {
+      case 'name':
+        fieldNameValid =
+          // eslint-disable-next-line no-useless-escape
+          /^[a-zA-Zа-яА-Я\s]{2,12}$/.test(value);
+        fieldValidationErrors.name = fieldNameValid
+          ? ''
+          : "Вибач, але нам потрiбне iм'я вiд 2 до 12 символiв, яке мiстить тiльки лiтери...";
+        break;
+
+      case 'age':
+        fieldAgeValid =
+          // eslint-disable-next-line no-useless-escape
+          /^\d+$/.test(value) && value >= 3 && value <= 99;
+        fieldValidationErrors.age = fieldAgeValid
+          ? ''
+          : `Вибач, але тобi має бути вiд 3 до 99 рокiв :)`;
+        break;
+
+      case 'email':
+        fieldEmailValid =
+          // eslint-disable-next-line no-useless-escape
+          /^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$/.test(value);
+        fieldValidationErrors.email = fieldEmailValid
+          ? ''
+          : 'Нажаль, таких email адрес не iснує...';
+        break;
+
+      case 'password':
+        fieldPasswordValid = value.length >= 6 && value.length <= 12;
+        fieldValidationErrors.password = fieldPasswordValid
+          ? ''
+          : 'Вибач, але нам потрiбен пароль вiд 6 до 12 символiв...';
+        break;
+      default:
+        break;
+    }
+    this.setState(
+      {
+        formErrors: fieldValidationErrors,
+        nameValid: fieldNameValid,
+        ageValid: fieldAgeValid,
+        emailValid: fieldEmailValid,
+        passwordValid: fieldPasswordValid,
+      },
+      this.validateForm,
+    );
+  };
+
+  validateForm = () => {
+    const { nameValid, ageValid, emailValid, passwordValid } = this.state;
+    this.setState({
+      formValid: nameValid && ageValid && emailValid && passwordValid,
+    });
   };
 
   handleCloseModal = () => {
@@ -57,10 +137,6 @@ class ModalRegistration extends Component {
     const { closeModal } = this.props;
 
     closeModal();
-  };
-
-  HandleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
   };
 
   changeUserPic = avatar => {
@@ -75,138 +151,122 @@ class ModalRegistration extends Component {
 
   render() {
     const {
-      username,
+      name,
       age,
       email,
       password,
       showPassword,
-      correctPassword,
-      errorPassword,
+      rePassword,
+      errorRePassword,
+      formErrors,
+      formValid,
+      nameValid,
+      ageValid,
+      emailValid,
+      passwordValid,
     } = this.state;
     const { errorMessage } = this.props;
     return (
-      <div className={s.formContainer}>
-        {errorMessage &&
-          (errorMessage.includes('40') || errorMessage.includes('41')) && (
-            <p className={s.error}>
-              Вибачте, але ви вiдправили некоректнi даннi...
-            </p>
-          )}
-        {errorMessage && errorMessage.includes('50') && (
-          <p className={s.error}>
-            Вибачте, але у нас виникли деякi труднощi. Спробуйте пiзнiше...
-          </p>
-        )}
-        <div className={s.textContainer}>
-          <h1 className={s.text}>Реєстрація</h1>
-          <h2 className={s.text_2}>Дитина</h2>
-        </div>
-        <div className={s.image_form}>
-          <div className={s.image}>
-            <IconsAvatar
-              className={s.user_image_component}
-              changeAvatar={this.changeUserPic}
-            />
-          </div>
-          <form className={s.form} onSubmit={this.HandleSubmitForm}>
-            <div className={s.wrapper}>
-              <div className={s.inputContant}>
-                <div className={s.nameSurname}>
-                  <input
-                    type="text"
-                    name="username"
-                    value={username}
-                    onChange={this.HandleChange}
-                    required
-                    minLength="2"
-                    maxLength="12"
-                    placeholder="Вкажiть своє iм'я..."
-                    className={s.userName}
-                  />
-                  <input
-                    type="number"
-                    name="age"
-                    value={age}
-                    onChange={this.HandleChange}
-                    required
-                    min="3"
-                    max="99"
-                    placeholder="Вкажiть свій вік..."
-                    className={s.userAge}
-                  />
-                </div>
-                <input
-                  type="email"
-                  name="email"
-                  value={email}
-                  onChange={this.HandleChange}
-                  required
-                  pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
-                  placeholder="Введiть свiй email..."
-                  className={s.inputText}
-                />
-                {/* <div> */}
+      <div className={s.reg_container}>
+        <h1 className={s.title_h1}>Реєстрація</h1>
+        <div className={s.form_container}>
+          <form className={s.form} onSubmit={this.handleSubmitForm}>
+            <h2 className={s.title_h2}>Дитина</h2>
+            <div className={s.box_input}>
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={this.handleChange}
+                placeholder="Вкажи своє iм'я..."
+              />
+              <input
+                type="number"
+                name="age"
+                value={age}
+                onChange={this.handleChange}
+                placeholder="Вкажи свій вік..."
+              />
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+                placeholder="Введи свiй email/логiн..."
+              />
+              <div className={s.box_showPassword}>
                 <input
                   type={showPassword}
                   name="password"
                   value={password}
-                  onChange={this.HandleChange}
-                  minLength="6"
-                  maxLength="12"
-                  placeholder="Введiть свiй пароль..."
-                  className={s.inputText}
+                  onChange={this.handleChange}
+                  placeholder="Введи свiй пароль..."
                 />
-                {/* <button
-                    type="button"
-                    onClick={this.onShowPassword}
-                    className={s.btn_eye}
-                  >
-                    {showPassword === 'text' ? (
-                      <OpenEye className={s.eye} />
-                    ) : (
-                      <CloseEye className={s.eye} />
-                    )}
-                  </button> */}
-                {/* </div>
-                <div> */}
-                <input
-                  type={showPassword}
-                  name="correctPassword"
-                  value={correctPassword}
-                  onChange={this.HandleChange}
-                  minLength="6"
-                  maxLength="12"
-                  placeholder="Підтвердiть пароль..."
-                  className={s.inputText}
-                />
-                {/* </div> */}
                 <button
                   type="button"
                   onClick={this.onShowPassword}
                   className={s.btn_eye}
                 >
                   {showPassword === 'text' ? (
-                    <OpenEye className={s.eye} />
-                  ) : (
                     <CloseEye className={s.eye} />
+                  ) : (
+                    <OpenEye className={s.eye} />
                   )}
                 </button>
               </div>
-              <div className={s.buttonDiv}>
+              <div className={s.box_showPassword}>
+                <input
+                  type={showPassword}
+                  name="rePassword"
+                  value={rePassword}
+                  onChange={this.handleChange}
+                  placeholder="Підтверди пароль..."
+                />
                 <button
-                  className={s.button}
-                  onClick={this.handleCloseModal}
                   type="button"
+                  onClick={this.onShowPassword}
+                  className={s.btn_eye}
                 >
-                  Назад
-                </button>
-                <button className={s.button} type="submit">
-                  Зареєструватися
+                  {showPassword === 'text' ? (
+                    <CloseEye className={s.eye} />
+                  ) : (
+                    <OpenEye className={s.eye} />
+                  )}
                 </button>
               </div>
             </div>
-            <p className={s.passwordError}>{errorPassword || ''}</p>
+
+            {!formValid && !nameValid && (
+              <i className={s.error_name}>{formErrors.name}</i>
+            )}
+            {!formValid && !ageValid && (
+              <i className={s.error_age}>{formErrors.age}</i>
+            )}
+            {!formValid && !emailValid && (
+              <i className={s.error_email}>{formErrors.email}</i>
+            )}
+            {!formValid && !passwordValid && (
+              <i className={s.error_password}>{formErrors.password}</i>
+            )}
+            <i className={s.error}>{errorRePassword || ''}</i>
+            {errorMessage && (
+              <i className={s.error}>
+                Вибач, але у нас виникли деякi труднощi. Спробуй пiзнiше...
+              </i>
+            )}
+            <div className={s.box_btn}>
+              <button type="button" onClick={this.handleCloseModal}>
+                Назад
+              </button>
+              <button type="submit" disabled={!formValid}>
+                Зареєструватися
+              </button>
+            </div>
           </form>
+          <IconsAvatar
+            className={s.user_image_component}
+            changeAvatar={this.changeUserPic}
+          />
         </div>
       </div>
     );
@@ -218,7 +278,7 @@ const mapStateToProps = store => ({
 });
 
 const mapDispatchToProps = {
-  onSignUp: sessionOperations.signupOperation,
+  onSignUp: signupOperation,
   closeModal,
 };
 

@@ -55,7 +55,8 @@ class LoginPage extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    this.props.onLogin({ ...this.state });
+    const { email, password } = this.state;
+    this.props.onLogin({ email, password });
     this.reset();
   };
 
@@ -107,7 +108,7 @@ class LoginPage extends Component {
 
   reset = () => {
     this.setState({
-      login: '',
+      email: '',
       password: '',
       showPassword: 'password',
       formErrors: { email: '', password: '' },
@@ -136,6 +137,9 @@ class LoginPage extends Component {
             <ModalRegistration onClose={onCloseModal} />
           </Backdrop>
         )}
+        {/* <Backdrop onClose={onCloseModal}>
+          <ModalRegistration onClose={onCloseModal} />
+        </Backdrop> */}
         {/* MOBILE || LOGO */}
         {windowWidth < 768 && (
           <img src={logo} alt="logo" width="104" className={s.logo} />

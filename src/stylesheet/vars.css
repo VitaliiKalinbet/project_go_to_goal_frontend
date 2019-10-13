@@ -7,16 +7,16 @@
   --color-pale-gray: #e0e0e0;
   --color-gray: #858598;
   --color-dark-blue: #42414b;
+  --bg-color-white: #ffffff;
+  --text-color-black: #212121;
   /* login-page */
 
-  --bg-color-white: #ffffff;
   --bg-color-grey: #eff1f3;
   --bg-color-blue: #284060;
 
   --text-color-white: #ffffff;
   --text-color-grey: #999daa;
   --text-colot-darkgrey: #838a9a;
-  --text-color-black: #212121;
   --text-color-orange: #fc842c;
 
   --callories-color: #284060;
@@ -29,10 +29,10 @@
   --button-icon-color: #fff;
   --button-icon-color-hover: #fff;
 
-  --logo-fonts: 'GothamProLight', Verdana, sans-serif;
-  --bold-fonts: 'GothamProBold', Verdana, sans-serif;
-  --black-fonts: 'GothamProBlack', Verdana, sans-serif;
-  --light-fonts: 'GothamProLight', Verdana, sans-serif;
+  --logo-fonts: "GothamProLight", Verdana, sans-serif;
+  --bold-fonts: "GothamProBold", Verdana, sans-serif;
+  --black-fonts: "GothamProBlack", Verdana, sans-serif;
+  --light-fonts: "GothamProLight", Verdana, sans-serif;
 
   --footer-bg_color: #f5d53b;
   --footer-text_color: #000;

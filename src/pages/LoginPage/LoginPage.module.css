@@ -36,12 +36,12 @@
   margin: 0;
   padding: 0;
   border: none;
-  border-bottom: 2px solid var(--color-pale-gray);
+  border-bottom: 1px solid var(--color-pale-gray);
   margin-left: 20px;
   font-size: 12px;
   line-height: 14px;
   color: var(--color-gray);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
 
@@ -50,7 +50,7 @@
   letter-spacing: 1px;
   background-color: transparent;
   color: var(--color-gray);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
 
@@ -68,7 +68,7 @@
 .form input:-webkit-autofill:active {
   -webkit-text-fill-color: var(--color-gray);
   box-shadow: 0 0 0px 1000px transparent inset;
-  transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in 0s;
   background: -webkit-linear-gradient(
     top,
     rgba(255, 255, 255, 0) 0%,
@@ -101,16 +101,18 @@
   line-height: 18px;
   background-color: transparent;
   color: var(--color-gray);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  transition: all ease-in-out 200ms;
+  transition: all ease-in 200ms;
 }
 
 .form button:not(.btn_eye):hover {
-  font-size: 13px;
+  /* font-size: 13px; */
+  /* text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); */
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.btn_eye[type='button'] {
+.btn_eye[type="button"] {
   position: absolute;
   top: 50%;
   right: 0;
@@ -132,7 +134,7 @@
   padding: 0 20px;
   text-align: center;
   color: #ff3561;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 600;
 }
@@ -161,7 +163,7 @@
   width: 100vw;
   height: 55vh;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
@@ -174,7 +176,7 @@
   font-size: 27px;
   letter-spacing: 2px;
   color: var(--color-dark-blue);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
   text-align: center;
@@ -186,7 +188,7 @@
   font-size: 14px;
   letter-spacing: 1px;
   color: var(--color-gray);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   text-align: center;
@@ -205,23 +207,20 @@
   padding: 0;
   border: none;
   border-radius: 24px;
-  background: linear-gradient(
-    to top,
-    var(--color-yellow),
-    var(--color-dark-yellow)
-  );
+  background: linear-gradient(to top, var(--color-yellow), var(--color-dark-yellow));
   font-size: 14px;
   letter-spacing: 1px;
   line-height: 48px;
   color: var(--color-white);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
   text-align: center;
-  transition: all ease-in-out 200ms;
+  transition: all ease-in 200ms;
 }
 
 .greeting_btn:hover {
-  font-size: 16px;
+  /* font-size: 16px; */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .decor {
@@ -254,9 +253,10 @@
     margin-left: 20px;
   }
 
-  .form button:not(.btn_eye):hover {
+  /* .form button:not(.btn_eye):hover {
     font-size: 11px;
-  }
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  } */
 
   .title {
     width: 100vw;
@@ -284,7 +284,7 @@
   .login_page {
     padding: 74px 40px;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     justify-content: space-between;
     align-items: center;
   }
@@ -297,7 +297,7 @@
   .greeting {
     height: 70vh;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     justify-content: space-between;
     align-items: center;
   }
@@ -316,7 +316,7 @@
   .form {
     height: 25vh;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     justify-content: space-between;
     align-items: center;
   }
@@ -341,7 +341,7 @@
     margin: 0;
   }
 
-  .form button[type='submit'] {
+  .form button[type="submit"] {
     width: 80px;
   }
 

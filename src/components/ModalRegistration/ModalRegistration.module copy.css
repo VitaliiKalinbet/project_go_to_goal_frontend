@@ -1,0 +1,295 @@
+.formContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: space-around;
+  width: 700px;
+  height: fit-content;
+  padding: 100px;
+  margin: 0;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+}
+
+.box_showPassword {
+  /* width: 400px; */
+  /* height: 100px; */
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.inputText[name="password"],
+.inputText[name="currentPassword"] {
+  width: 400px;
+  height: 50px;
+}
+
+.btn_eye[type="button"] {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--color-gray);
+}
+
+.eye {
+  width: 12px;
+  height: 12px;
+  fill: var(--color-gray);
+}
+
+.error {
+  color: #ff3561;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.textContainer {
+  display: flex;
+  flex-flow: column;
+}
+
+.image_form {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+  align-items: space-between;
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  width: 400px;
+}
+
+.inputContant {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.userName,
+.userAge {
+  width: 180px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #999;
+}
+
+.nameSurname {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 0 0 15px 0;
+}
+
+.userName,
+.userAge,
+.inputText {
+  margin: 15px 0;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #999;
+  font-family: "Montserrat", sans-serif;
+}
+
+.userName::placeholder,
+.userAge::placeholder,
+.inputText::placeholder {
+  font-size: 12px;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: var(--color-gray);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.userName:valid:not(:placeholder-shown),
+.userAge:valid:not(:placeholder-shown),
+.inputText:valid:not(:placeholder-shown) {
+  color: #94cf4b;
+}
+
+.userName:invalid:not(:placeholder-shown),
+.userAge:invalid:not(:placeholder-shown),
+.inputText:invalid:not(:placeholder-shown) {
+  color: #ff3561;
+}
+
+.userName:-webkit-autofill,
+.userAge:-webkit-autofill,
+.inputText:-webkit-autofill,
+.userName:-webkit-autofill:hover,
+.userAge:-webkit-autofill:hover,
+.inputText:-webkit-autofill:hover,
+.userName:-webkit-autofill:focus,
+.userAge:-webkit-autofill:focus,
+.inputText:-webkit-autofill:focus,
+.userName:-webkit-autofill:active,
+.userAge:-webkit-autofill:active,
+.inputText:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--color-gray);
+  box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 174, 255, 0.04) 50%,
+    rgba(255, 255, 255, 0) 51%,
+    rgba(0, 174, 255, 0.03) 100%
+  );
+}
+
+.text {
+  width: 200px;
+  padding: 15px 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.text_2 {
+  color: grey;
+  padding-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.passwordError {
+  display: block;
+}
+
+.buttonDiv {
+  width: 435px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 28px;
+  border: 1px solid #9da39d;
+  background-color: #fff;
+  color: grey;
+  width: 210px;
+  height: 45px;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.button:nth-of-type(2) {
+  background-color: orange;
+  color: white;
+}
+
+.button:hover {
+  background-color: #ffa500c9;
+  color: #fff;
+}
+
+.passwordError {
+  position: absolute;
+  top: 85%;
+  left: 25%;
+  color: red;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 767px) {
+  .formContainer,
+  .form,
+  .inputContant {
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image_form {
+    flex-flow: column;
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nameSurname {
+    display: flex;
+    flex-flow: column;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  .userName,
+  .userAge,
+  .inputText {
+    width: 200px;
+    padding: 10px 0 10px 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .button {
+    width: 100px;
+    outline: none;
+  }
+
+  .buttonDiv {
+    max-width: 205px;
+    padding: 20px 0 0 0;
+  }
+
+  .passwordError {
+    position: absolute;
+    top: 90%;
+    left: 30%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 857px) {
+  .formContainer {
+    max-width: 700px;
+    justify-content: center;
+  }
+
+  .form {
+    max-width: 400px;
+  }
+
+  .inputText {
+    max-width: 350px;
+  }
+
+  .userName,
+  .userAge {
+    max-width: 150px;
+  }
+
+  .nameSurname {
+    max-width: 350px;
+  }
+
+  .buttonDiv {
+    max-width: 350px;
+  }
+
+  .button {
+    max-width: 150px;
+    outline: none;
+  }
+
+  .eye {
+    width: 25px;
+    height: 25px;
+  }
+}
