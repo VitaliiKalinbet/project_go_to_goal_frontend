@@ -47,7 +47,7 @@ class IconsAvatar extends Component {
     return (
       <div className={styles.avatar_choose}>
         <img src={avatar} alt="user_pic" className={styles.user_avatar_big} />
-        <p className={styles.avatar_txt}>Оберіть Вашу аватарку...</p>
+        <p className={styles.avatar_txt}>Обери собi аватарку:</p>
         <div className={styles.avatar_little_div} onClick={this.changeUserPic}>
           {pictures.map(picture => (
             <img
