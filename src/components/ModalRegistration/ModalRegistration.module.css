@@ -19,7 +19,7 @@
   font-size: 20px;
   letter-spacing: 1px;
   color: var(--text-color-black);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -42,7 +42,7 @@
   font-size: 20px;
   letter-spacing: 2px;
   color: var(--color-gray);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -61,15 +61,15 @@
   outline: none;
   border: none;
   border-bottom: 1px solid var(--color-gray);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   line-height: 18px;
   color: var(--color-gray);
   font-weight: 600;
 }
 
-.form input[name="name"],
-.form input[name="age"] {
+.form input[name='name'],
+.form input[name='age'] {
   width: 200px;
 }
 
@@ -78,7 +78,7 @@
   letter-spacing: 1px;
   background-color: transparent;
   color: var(--color-gray);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
@@ -105,7 +105,7 @@
   display: flex;
 }
 
-.btn_eye[type="button"] {
+.btn_eye[type='button'] {
   position: absolute;
   top: 50%;
   right: 0;
@@ -140,9 +140,13 @@
   font-size: 14px;
   letter-spacing: 1px;
   line-height: 48px;
-  background-image: linear-gradient(to top, var(--color-yellow), var(--color-dark-yellow));
+  background-image: linear-gradient(
+    to top,
+    var(--color-yellow),
+    var(--color-dark-yellow)
+  );
   color: var(--color-white);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   text-align: center;
   transition: all 0.2s ease-in;
@@ -152,8 +156,8 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.box_btn button[type="button"]::after {
-  content: "Назад";
+.box_btn button[type='button']::after {
+  content: 'Назад';
   position: relative;
   top: -48px;
   left: 0;
@@ -168,7 +172,7 @@
   transition: all 0.2s ease-in;
 }
 
-.box_btn button[type="button"]:hover::after {
+.box_btn button[type='button']:hover::after {
   opacity: 0;
 }
 
@@ -177,7 +181,7 @@
   width: 450px;
   top: 270px;
   color: #ff3561;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 600;
 }
@@ -233,8 +237,8 @@
   }
 
   .form input,
-  .form input[name="name"],
-  .form input[name="age"] {
+  .form input[name='name'],
+  .form input[name='age'] {
     width: 95vw;
   }
 
