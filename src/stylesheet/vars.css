@@ -29,10 +29,10 @@
   --button-icon-color: #fff;
   --button-icon-color-hover: #fff;
 
-  --logo-fonts: "GothamProLight", Verdana, sans-serif;
-  --bold-fonts: "GothamProBold", Verdana, sans-serif;
-  --black-fonts: "GothamProBlack", Verdana, sans-serif;
-  --light-fonts: "GothamProLight", Verdana, sans-serif;
+  --logo-fonts: 'GothamProLight', Verdana, sans-serif;
+  --bold-fonts: 'GothamProBold', Verdana, sans-serif;
+  --black-fonts: 'GothamProBlack', Verdana, sans-serif;
+  --light-fonts: 'GothamProLight', Verdana, sans-serif;
 
   --footer-bg_color: #f5d53b;
   --footer-text_color: #000;
