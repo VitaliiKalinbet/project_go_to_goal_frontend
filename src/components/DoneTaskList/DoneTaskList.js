@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import styles from './DoneTaskList.module.css';
 import Card from '../Card/Card';
 import * as TaskListSelectors from '../../redux/TaskList/TaskListSelectors';
+import { ReactComponent as ArrowUp } from '../../assets/icons/up-arrow.svg';
+import { ReactComponent as ArrowDown } from '../../assets/icons/arrow-down.svg';
 
 class DoneTaskList extends Component {
   state = {
@@ -28,10 +30,10 @@ class DoneTaskList extends Component {
 
         <ul className={styles.doneCards}>
           {showCloseButton
-            ? donePosts
+            ? [...donePosts]
                 .reverse()
                 .map(donePost => <Card key={donePost._id} task={donePost} />)
-            : donePosts
+            : [...donePosts]
                 .reverse()
                 .slice(0, 8)
                 .map(donePost => <Card key={donePost._id} task={donePost} />)}
@@ -43,7 +45,7 @@ class DoneTaskList extends Component {
               className={styles.button}
               onClick={this.loadModeDoneTasks}
             >
-              {showCloseButton ? <span>&#x290A;</span> : <span>&#x290B;</span>}
+              {showCloseButton ? <ArrowUp /> : <ArrowDown />}
             </button>
           ) : (
             ''
