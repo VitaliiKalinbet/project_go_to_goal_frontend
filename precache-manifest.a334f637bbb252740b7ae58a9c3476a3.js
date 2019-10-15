@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e9d1536fabcac0dc48cf44747744829",
+    "revision": "9c04d3d7f91fd18b7f45e6584c942971",
     "url": "/index.html"
   },
   {
-    "revision": "5786ca18702507d74ff5",
+    "revision": "966ebc5eba49d7db04e1",
     "url": "/static/css/2.4b3442db.chunk.css"
   },
   {
-    "revision": "a05bbf1851979d917cc2",
-    "url": "/static/css/main.e737783a.chunk.css"
+    "revision": "ca59c919776c9f3c63f3",
+    "url": "/static/css/main.07b3a395.chunk.css"
   },
   {
-    "revision": "5786ca18702507d74ff5",
-    "url": "/static/js/2.b3833371.chunk.js"
+    "revision": "966ebc5eba49d7db04e1",
+    "url": "/static/js/2.ef14eaff.chunk.js"
   },
   {
-    "revision": "a05bbf1851979d917cc2",
-    "url": "/static/js/main.318ed381.chunk.js"
+    "revision": "ca59c919776c9f3c63f3",
+    "url": "/static/js/main.95126333.chunk.js"
   },
   {
     "revision": "808c8b8a700800ed7d6f",
@@ -32,6 +32,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/add-plus-button.718c9449.svg"
   },
   {
+    "revision": "dbe6fb2412fa5e2bf21ba83ed4c59863",
+    "url": "/static/media/arrow-down.dbe6fb24.svg"
+  },
+  {
     "revision": "321ba643528ecd2212a14d34840c2e11",
     "url": "/static/media/big-arrow.321ba643.png"
   },
@@ -40,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/close.7d4fa344.svg"
   },
   {
-    "revision": "51656899a4c2d88d5c24e508116f601e",
-    "url": "/static/media/closeEye.51656899.svg"
+    "revision": "50bda4bb1d2c16abcb3ef0189b2a79e6",
+    "url": "/static/media/closeEye.50bda4bb.svg"
   },
   {
     "revision": "1b058b200464739aa028187859cabb32",
@@ -164,11 +168,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/montserrat-v14-latin-ext_cyrillic-ext_latin_cyrillic-regular.faf441c8.eot"
   },
   {
-    "revision": "2275858c3135b828e82727ae87a5864f",
-    "url": "/static/media/openEye.2275858c.svg"
+    "revision": "b05688670781ebfdb28c3bbd862b0682",
+    "url": "/static/media/openEye.b0568867.svg"
   },
   {
     "revision": "e1e25daf57692a417bb09c2019e76f37",
     "url": "/static/media/party.e1e25daf.svg"
+  },
+  {
+    "revision": "4f7571672afc359eefe827849005c172",
+    "url": "/static/media/up-arrow.4f757167.svg"
   }
 ]);
