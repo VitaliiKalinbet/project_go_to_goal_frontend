@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import style from './User.module.css';
 import * as dashboardSelectors from '../../redux/Dashboard/DashboardSelectors';
 import * as logoutActions from '../../redux/ModalLogout/ModalLogoutActions';
+import { ReactComponent as LogoutSVG } from '../../assets/images/logout.svg';
 
 const User = ({ user, avatar, openModalLogout }) => {
   const { name, age } = user;
@@ -20,10 +21,10 @@ const User = ({ user, avatar, openModalLogout }) => {
           className={style.avatar}
         />
         <div className={style.colum}>
-          <span className={style.userName}>{name}</span>
-          <span className={style.userAge}>{age} років</span>
+          <p className={style.userName}>{name}</p>
+          <p className={style.userAge}>{age} років</p>
         </div>
-        <button type="button" className={style.btn} onClick={openModalLogout} />
+        <LogoutSVG onClick={openModalLogout} />
       </div>
     </>
   );
