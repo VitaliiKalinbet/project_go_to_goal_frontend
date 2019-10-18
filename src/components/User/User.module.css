@@ -1,36 +1,37 @@
+.userInfo {
+  font-family: 'Monserrat';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
 .btn {
   background: transparent;
   border: none;
   cursor: pointer;
   outline: none;
-  width: 20px;
-  height: 20px;
-  background-image: url('../../assets/images/logout.svg');
-}
-
-.userInfo {
-  font-family: 'Monserrat';
-  display: flex;
-  align-items: center;
-  min-width: 200px;
 }
 
 .colum {
-  display: flex;
-  flex-flow: column;
-  margin: 0 10px;
   min-width: 110px;
 }
 
-@media screen and (max-width: 767px) {
+.userName {
+  text-align: center;
+}
+
+.userAge {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
   .userInfo {
-    flex-flow: row-reverse;
+    width: 180px;
   }
-  .colum {
-    order: 2;
-  }
+
   .avatar {
-    order: 1;
-    margin: 10px 0;
+    width: 30px;
+    height: 30px;
   }
 }

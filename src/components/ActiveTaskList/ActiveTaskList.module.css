@@ -36,18 +36,6 @@
   position: relative;
 }
 
-.activeTask_title2::after {
-  content: url('../../assets/images/Arrow-full-fledged1.png');
-  margin: 0 auto;
-  display: block;
-  right: -190px;
-  top: -60px;
-}
-
-/* .imgageActiveTaskList {
-  position: absolute;
-} */
-
 .text1 {
   font-family: 'Montserrat';
   margin-bottom: 20px;

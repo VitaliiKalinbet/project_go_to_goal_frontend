@@ -5,8 +5,14 @@
   padding-bottom: 30px;
 }
 
+@media (max-width: 1279px) {
+  .dashboardBody {
+    padding-top: 100px;
+  }
+}
+
 @media (max-width: 767px) {
   .dashboardBody {
-    padding-top: 170px;
+    padding-top: 125px;
   }
 }
