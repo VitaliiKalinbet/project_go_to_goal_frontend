@@ -13,22 +13,29 @@ import ProgressBar from '../ProgressBar/ProgressBar';
 import * as dashboardSelectors from '../../redux/Dashboard/DashboardSelectors';
 
 const Header = ({ goal }) => {
+  const windowWidth = document.documentElement.clientWidth;
   return (
-    <div className={css.bg}>
-      <header className={css.header}>
-        <div className={css.order1}>
-          <Logo />
-        </div>
-        <div className={css.center}>
+    <header className={css.header}>
+      <section className={css.content}>
+        <Logo />
+        {windowWidth >= 768 && (
+          <div className={css.info}>
+            {goal !== null && <Goal />}
+            {goal !== null && <ProgressBar />}
+          </div>
+        )}
+        <User />
+      </section>
+      {windowWidth < 768 && (
+        <div className={css.mobileInfo}>
           {goal !== null && <Goal />}
           {goal !== null && <ProgressBar />}
         </div>
-        <div className={css.order2} />
-        <User />
-      </header>
-    </div>
+      )}
+    </header>
   );
 };
+
 const MSTP = s => ({
   goal: dashboardSelectors.getGoal(s),
 });

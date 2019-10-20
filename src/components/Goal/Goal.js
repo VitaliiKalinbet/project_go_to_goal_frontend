@@ -7,6 +7,7 @@ import 'react-sweet-progress/lib/style.css';
 import css from './Goal.module.css';
 import * as congratsActions from '../../redux/ModalCongrats/ModalCongratsActions';
 import * as dashboardSelectors from '../../redux/Dashboard/DashboardSelectors';
+import Arrow from '../../assets/images/arrow.png';
 
 const Goal = ({ goal, openModalCongrats, percent }) => {
   let btn;
@@ -26,6 +27,15 @@ const Goal = ({ goal, openModalCongrats, percent }) => {
         >
           {title}
         </button>
+        <div
+          style={{
+            display: percent < 100 ? 'none' : 'block',
+          }}
+          className={css.attention}
+        >
+          <img className={css.attentionArrow} src={Arrow} alt="arrow" />
+          <p className={css.attentionLabel}>Натисни мене !</p>
+        </div>
       </div>
     </div>
   );
