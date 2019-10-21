@@ -54,14 +54,6 @@
   font-weight: 600;
 }
 
-/* .form input:required:valid:not(:placeholder-shown) {
-  color: #94cf4b;
-}
-
-.form input:required:invalid:not(:placeholder-shown) {
-  color: #ff3561;
-} */
-
 .form input:-webkit-autofill,
 .form input:-webkit-autofill:hover,
 .form input:-webkit-autofill:focus,
@@ -107,8 +99,6 @@
 }
 
 .form button:not(.btn_eye):hover {
-  /* font-size: 13px; */
-  /* text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); */
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -223,7 +213,6 @@
 }
 
 .greeting_btn:hover {
-  /* font-size: 16px; */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -231,7 +220,7 @@
   width: 23.52vw;
   height: 23.52vh;
   position: absolute;
-  bottom: 5px;
+  bottom: 15px;
   left: 0;
   fill: var(--color-green);
 }
@@ -256,11 +245,6 @@
     font-size: 10px;
     margin-left: 20px;
   }
-
-  /* .form button:not(.btn_eye):hover {
-    font-size: 11px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  } */
 
   .title {
     width: 100vw;

@@ -137,9 +137,6 @@ class LoginPage extends Component {
             <ModalRegistration onClose={onCloseModal} />
           </Backdrop>
         )}
-        {/* <Backdrop onClose={onCloseModal}>
-          <ModalRegistration onClose={onCloseModal} />
-        </Backdrop> */}
         {/* MOBILE || LOGO */}
         {windowWidth < 768 && (
           <img src={logo} alt="logo" width="104" className={s.logo} />

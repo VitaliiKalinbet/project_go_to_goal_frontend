@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import s from './ModalRegistration.module.css';
 import { signupOperation } from '../../redux/session/sessionOperations';
 import { closeModal } from '../../redux/ModalRegistration/ModalRegistrationActions';
 import { getErrorMessageRegistration } from '../../redux/sessionLogin/sessionLoginSelectors';
-import IconsAvatar from '../IconAvatar/IconAvatar';
+import s from './ModalRegistration.module.css';
+import logo from '../../assets/images/login-page-logo@1X.png';
 import { ReactComponent as OpenEye } from '../../assets/svg/openEye.svg';
 import { ReactComponent as CloseEye } from '../../assets/svg/closeEye.svg';
+import IconsAvatar from '../IconAvatar/IconAvatar';
+import Footer from '../Footer/Footer';
 
 class ModalRegistration extends Component {
   static propTypes = {
@@ -166,94 +168,128 @@ class ModalRegistration extends Component {
       passwordValid,
     } = this.state;
     const { errorMessage } = this.props;
+    const windowWidth = document.documentElement.clientWidth;
+
     return (
       <div className={s.reg_container}>
+        {windowWidth < 768 && (
+          <img src={logo} alt="logo" width="104" className={s.logo} />
+        )}
         <h1 className={s.title_h1}>Реєстрація</h1>
         <div className={s.form_container}>
           <form className={s.form} onSubmit={this.handleSubmitForm}>
             <h2 className={s.title_h2}>Дитина</h2>
             <div className={s.box_input}>
-              <input
-                type="text"
-                name="name"
-                value={name}
-                onChange={this.handleChange}
-                placeholder="Вкажи своє iм'я..."
-              />
-              <input
-                type="number"
-                name="age"
-                value={age}
-                onChange={this.handleChange}
-                placeholder="Вкажи свій вік..."
-              />
-              <input
-                type="email"
-                name="email"
-                value={email}
-                onChange={this.handleChange}
-                placeholder="Введи свiй email/логiн..."
-              />
-              <div className={s.box_showPassword}>
+              {/* name */}
+              <div>
                 <input
-                  type={showPassword}
-                  name="password"
-                  value={password}
+                  type="text"
+                  name="name"
+                  value={name}
                   onChange={this.handleChange}
-                  placeholder="Введи свiй пароль..."
+                  placeholder="Вкажи своє iм'я..."
                 />
-                <button
-                  type="button"
-                  onClick={this.onShowPassword}
-                  className={s.btn_eye}
-                >
-                  {showPassword === 'text' ? (
-                    <CloseEye className={s.eye} />
-                  ) : (
-                    <OpenEye className={s.eye} />
-                  )}
-                </button>
+                <div className={s.error_name}>
+                  {!formValid && !nameValid && <i>{formErrors.name}</i>}
+                </div>
               </div>
-              <div className={s.box_showPassword}>
+
+              {/* age */}
+              <div>
                 <input
-                  type={showPassword}
-                  name="rePassword"
-                  value={rePassword}
+                  type="number"
+                  name="age"
+                  value={age}
                   onChange={this.handleChange}
-                  placeholder="Підтверди пароль..."
+                  placeholder="Вкажи свій вік..."
                 />
-                <button
-                  type="button"
-                  onClick={this.onShowPassword}
-                  className={s.btn_eye}
-                >
-                  {showPassword === 'text' ? (
-                    <CloseEye className={s.eye} />
-                  ) : (
-                    <OpenEye className={s.eye} />
+                <div className={s.error_age}>
+                  {!formValid && !ageValid && <i>{formErrors.age}</i>}
+                </div>
+              </div>
+
+              {/* email */}
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  value={email}
+                  onChange={this.handleChange}
+                  placeholder="Введи свiй email/логiн..."
+                />
+                <div className={s.error}>
+                  {!formValid && !emailValid && <i>{formErrors.email}</i>}
+                </div>
+              </div>
+
+              {/* password */}
+              <div>
+                <div className={s.box_showPassword}>
+                  <input
+                    type={showPassword}
+                    name="password"
+                    value={password}
+                    onChange={this.handleChange}
+                    placeholder="Введи свiй пароль..."
+                  />
+                  <button
+                    type="button"
+                    onClick={this.onShowPassword}
+                    className={s.btn_eye}
+                  >
+                    {showPassword === 'text' ? (
+                      <CloseEye className={s.eye} />
+                    ) : (
+                      <OpenEye className={s.eye} />
+                    )}
+                  </button>
+                </div>
+                <div className={s.error}>
+                  {!formValid && !passwordValid && <i>{formErrors.password}</i>}
+                </div>
+              </div>
+
+              {/* rePassword */}
+              <div>
+                <div className={s.box_showPassword}>
+                  <input
+                    type={showPassword}
+                    name="rePassword"
+                    value={rePassword}
+                    onChange={this.handleChange}
+                    placeholder="Підтверди пароль..."
+                  />
+                  <button
+                    type="button"
+                    onClick={this.onShowPassword}
+                    className={s.btn_eye}
+                  >
+                    {showPassword === 'text' ? (
+                      <CloseEye className={s.eye} />
+                    ) : (
+                      <OpenEye className={s.eye} />
+                    )}
+                  </button>
+                </div>
+                <div className={s.error}>
+                  <i>{errorRePassword || ''}</i>
+                  {errorMessage && (
+                    <i>
+                      Вибач, але у нас виникли деякi труднощi. Спробуй
+                      пiзнiше...
+                    </i>
                   )}
-                </button>
+                </div>
               </div>
             </div>
 
-            {!formValid && !nameValid && (
-              <i className={s.error_name}>{formErrors.name}</i>
+            {windowWidth < 768 && (
+              <IconsAvatar
+                className={s.user_image_component}
+                changeAvatar={this.changeUserPic}
+              />
             )}
-            {!formValid && !ageValid && (
-              <i className={s.error_age}>{formErrors.age}</i>
-            )}
-            {!formValid && !emailValid && (
-              <i className={s.error_email}>{formErrors.email}</i>
-            )}
-            {!formValid && !passwordValid && (
-              <i className={s.error_password}>{formErrors.password}</i>
-            )}
-            <i className={s.error}>{errorRePassword || ''}</i>
-            {errorMessage && (
-              <i className={s.error}>
-                Вибач, але у нас виникли деякi труднощi. Спробуй пiзнiше...
-              </i>
-            )}
+
             <div className={s.box_btn}>
               <button type="button" onClick={this.handleCloseModal}>
                 Назад
@@ -263,11 +299,16 @@ class ModalRegistration extends Component {
               </button>
             </div>
           </form>
-          <IconsAvatar
-            className={s.user_image_component}
-            changeAvatar={this.changeUserPic}
-          />
+
+          {windowWidth > 767 && (
+            <IconsAvatar
+              className={s.user_image_component}
+              changeAvatar={this.changeUserPic}
+            />
+          )}
         </div>
+
+        {windowWidth < 768 && <Footer stylesModalReg={s.pos_static} />}
       </div>
     );
   }

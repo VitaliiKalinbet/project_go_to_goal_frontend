@@ -1,5 +1,5 @@
 .avatar_choose {
-  width: 190px;
+  width: 17vw;
   height: fit-content;
   display: flex;
   flex-flow: column;
@@ -8,22 +8,22 @@
 }
 
 .user_avatar_big {
-  width: 190px;
-  height: 140px;
+  width: 17vw;
+  height: fit-content;
   align-self: center;
 }
 
 .avatar_txt {
-  font-size: 14px;
-  padding: 10px 0;
+  font-size: 1.4em;
+  padding: 0.71em 0;
   font-family: 'Montserrat', sans-serif;
   color: var(--color-gray);
   font-weight: 600;
 }
 
 .avatar_little_div {
-  width: 190px;
-  height: 80px;
+  width: 17vw;
+  height: calc(17vw / 2.6);
   display: flex;
   flex-flow: wrap;
   align-content: space-between;
@@ -31,7 +31,7 @@
 }
 
 .user_avatar_small {
-  max-width: 40px;
+  max-width: 21%;
   max-height: auto;
   margin: 0;
   padding: 0;
@@ -45,10 +45,51 @@
 }
 
 .active {
-  max-width: 40px;
+  max-width: 21%;
   max-height: auto;
   outline: none;
   transform: scale(1.1, 1.1);
   translate: transform 0.4s ease-in;
   border: 1px solid darkgreen;
+}
+
+@media (max-width: 1979px) {
+  .avatar_txt {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 1279px) {
+  .avatar_choose {
+    width: 24vw;
+  }
+
+  .user_avatar_big {
+    width: 24vw;
+  }
+
+  .avatar_little_div {
+    width: 24vw;
+    height: calc(24vw / 2.6);
+  }
+
+  .avatar_txt {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 767px) {
+  .avatar_choose {
+    width: 70vw;
+    margin-bottom: 20px;
+  }
+
+  .user_avatar_big {
+    width: 70vw;
+  }
+
+  .avatar_little_div {
+    width: 70vw;
+    height: calc(70vw / 2.6);
+  }
 }
