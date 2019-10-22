@@ -1,8 +1,7 @@
 .reg_container {
-  width: 80vw;
-  height: fit-content;
+  width: 80%;
   margin: 0;
-  padding: 8.8vh 8.5vw;
+  padding: 2.5rem;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -27,7 +26,7 @@
   display: flex;
   flex-flow: wrap;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .form {
@@ -47,16 +46,16 @@
 
 .box_input {
   width: 40vw;
-  height: 23vh;
+  /* height: 23vh; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  margin-bottom: 7vh;
+  margin-bottom: 10px;
 }
 
 .form input {
-  width: 40vw;
+  width: 40%;
   outline: none;
   border: none;
   border-bottom: 1px solid var(--color-gray);
@@ -86,13 +85,11 @@
   -webkit-text-fill-color: var(--color-gray);
   box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in 0s;
-  background: -webkit-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(0, 174, 255, 0.04) 50%,
-    rgba(255, 255, 255, 0) 51%,
-    rgba(0, 174, 255, 0.03) 100%
-  );
+  background: -webkit-linear-gradient(top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 174, 255, 0.04) 50%,
+      rgba(255, 255, 255, 0) 51%,
+      rgba(0, 174, 255, 0.03) 100%);
 }
 
 .box_showPassword {
@@ -121,7 +118,7 @@
 }
 
 .box_btn {
-  width: 40vw;
+  width: 40%;
   display: flex;
   justify-content: space-between;
 }
@@ -135,12 +132,10 @@
   border: none;
   border-radius: 2.2vh;
   font-size: 1.4em;
-  line-height: 4.4vh;
-  background-image: linear-gradient(
-    to top,
-    var(--color-yellow),
-    var(--color-dark-yellow)
-  );
+  line-height: 2rem;
+  background-image: linear-gradient(to top,
+      var(--color-yellow),
+      var(--color-dark-yellow));
   color: var(--color-white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
@@ -152,7 +147,7 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.box_btn button[type='button']::after {
+/* .box_btn button[type='button']::after {
   content: 'Назад';
   position: relative;
   width: 17vw;
@@ -165,11 +160,11 @@
   color: var(--color-gray);
   opacity: 1;
   transition: all 0.2s ease-in;
-}
+} */
 
-.box_btn button[type='button']:hover::after {
+/* .box_btn button[type='button']:hover::after {
   opacity: 0;
-}
+} */
 
 .error {
   position: absolute;
@@ -218,8 +213,8 @@
 /* TABLET */
 @media (max-width: 1279px) {
   .reg_container {
-    width: 100vw;
-    padding: 6vh 4vw;
+    width: 100%;
+    padding: 2rem;
   }
 
   .form {
@@ -228,7 +223,7 @@
 
   .box_input {
     width: 60vw;
-    height: 30vh;
+    /* height: 30vh; */
   }
 
   .form input {
@@ -251,17 +246,17 @@
 
   .box_btn button {
     width: 26vw;
-    height: 5.4vh;
+    /* height: 5.4vh; */
     border-radius: 2.7vh;
     line-height: 5.4vh;
   }
 
-  .box_btn button[type='button']::after {
+  /* .box_btn button[type='button']::after {
     width: 26vw;
     height: 5.4vh;
     border-radius: 2.7vh;
     top: -5.4vh;
-  }
+  } */
 
   .error {
     width: 60vw;
@@ -283,18 +278,19 @@
 /* MOBILE */
 @media (max-width: 767px) {
   .reg_container {
-    width: 100vw;
-    max-height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
     padding: 20px;
     padding-bottom: 0;
     border-radius: 0;
+    overflow-y: auto;
   }
 
   .logo {
     width: 150px;
-    min-height: 26px;
+    /* min-height: 26px; */
     margin-bottom: 20px;
   }
 
@@ -333,7 +329,7 @@
 
   .box_btn {
     width: 70vw;
-    height: 17vh;
+    /* height: 17vh; */
     flex-flow: column-reverse;
     align-items: center;
     justify-content: space-between;
@@ -341,18 +337,19 @@
 
   .box_btn button {
     width: 70vw;
-    height: 7vh;
+    /* height: 7vh; */
     border-radius: 3.5vh;
     line-height: 7vh;
     font-size: 1em;
   }
 
+  /*
   .box_btn button[type='button']::after {
     width: 70vw;
     height: 7vh;
     border-radius: 3.5vh;
     top: -6.9vh;
-  }
+  } */
 
   .error {
     width: 80vw;
@@ -371,5 +368,9 @@
     max-width: 100vw;
     position: static;
     transform: none;
+  }
+
+  .reg_container {
+    overflow-y: auto;
   }
 }

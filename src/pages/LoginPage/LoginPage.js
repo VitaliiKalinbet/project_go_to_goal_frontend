@@ -132,11 +132,14 @@ class LoginPage extends Component {
     const windowWidth = document.documentElement.clientWidth;
     return (
       <div className={s.login_page}>
-        {isModalOpen && (
-          <Backdrop onClose={onCloseModal}>
+        {isModalOpen &&
+          (windowWidth >= 768 ? (
+            <Backdrop onClose={onCloseModal}>
+              <ModalRegistration onClose={onCloseModal} />
+            </Backdrop>
+          ) : (
             <ModalRegistration onClose={onCloseModal} />
-          </Backdrop>
-        )}
+          ))}
         {/* MOBILE || LOGO */}
         {windowWidth < 768 && (
           <img src={logo} alt="logo" width="104" className={s.logo} />
@@ -215,7 +218,7 @@ class LoginPage extends Component {
         </main>
 
         {/* TABLET & DESKTOP || FOOTER */}
-        {windowWidth > 767 && <Footer />}
+        {windowWidth >= 768 && <Footer />}
       </div>
     );
   }

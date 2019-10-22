@@ -9,7 +9,6 @@ import logo from '../../assets/images/login-page-logo@1X.png';
 import { ReactComponent as OpenEye } from '../../assets/svg/openEye.svg';
 import { ReactComponent as CloseEye } from '../../assets/svg/closeEye.svg';
 import IconsAvatar from '../IconAvatar/IconAvatar';
-import Footer from '../Footer/Footer';
 
 class ModalRegistration extends Component {
   static propTypes = {
@@ -307,8 +306,6 @@ class ModalRegistration extends Component {
             />
           )}
         </div>
-
-        {windowWidth < 768 && <Footer stylesModalReg={s.pos_static} />}
       </div>
     );
   }
