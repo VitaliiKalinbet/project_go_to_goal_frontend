@@ -85,12 +85,12 @@
   }
 
   .user_avatar_big {
-    width: 50%;
+    width: 70%;
   }
 
   .avatar_little_div {
     width: 100%;
-    height: 105px;
+    height: 115px;
   }
 
   .user_avatar_small:hover {

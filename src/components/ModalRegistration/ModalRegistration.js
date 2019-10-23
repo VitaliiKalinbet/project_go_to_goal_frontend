@@ -81,7 +81,7 @@ class ModalRegistration extends Component {
       case 'name':
         fieldNameValid =
           // eslint-disable-next-line no-useless-escape
-          /^[a-zA-Zа-яА-Я\s]{2,12}$/.test(value);
+          /^[a-zA-Zа-яА-Я\s]+[a-zA-Zа-яА-ЯёЁ'іІїЇ]{2,12}$/.test(value);
         fieldValidationErrors.name = fieldNameValid
           ? ''
           : "Вибач, але нам потрiбне iм'я вiд 2 до 12 символiв, яке мiстить тiльки лiтери...";

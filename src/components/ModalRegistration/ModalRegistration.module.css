@@ -72,11 +72,6 @@
   font-weight: 600;
 }
 
-/* .form input[name='name'],
-.form input[name='age'] {
-  width: 17vw;
-} */
-
 .form input::placeholder {
   background-color: transparent;
   color: var(--color-gray);
@@ -156,25 +151,6 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* .box_btn button[type='button']::after {
-  content: 'Назад';
-  position: relative;
-  width: 17vw;
-  height: 4.4vh;
-  top: -4.4vh;
-  left: 0;
-  border: 1px solid var(--color-gray);
-  border-radius: 2.2vh;
-  background: var(--color-white);
-  color: var(--color-gray);
-  opacity: 1;
-  transition: all 0.2s ease-in;
-} */
-
-/* .box_btn button[type='button']:hover::after {
-  opacity: 0;
-} */
-
 .error {
   position: absolute;
   max-width: 300px;
@@ -226,15 +202,6 @@
     padding: 1rem;
   }
 
-  /*
-  .form {
-    width: 60vw;
-  }
-
-  .box_input {
-    width: 60vw;
-  } */
-
   .box_input {
     margin-bottom: 35px;
   }
@@ -248,34 +215,14 @@
     margin-bottom: 1.5rem;
   }
 
-  /*
-  .form input[name='name'],
-  .form input[name='age'] {
-    width: 26vw;
-  } */
-
   .eye {
     width: 1em;
     height: 1em;
   }
 
-  /* .box_btn {
-    width: 60vw;
-  } */
-
   .box_btn button {
-    /* width: 26vw;
-    border-radius: 2.7vh;
-    line-height: 5.4vh; */
     font-size: 0.7rem;
   }
-
-  /* .box_btn button[type='button']::after {
-    width: 26vw;
-    height: 5.4vh;
-    border-radius: 2.7vh;
-    top: -5.4vh;
-  } */
 
   .error {
     max-width: 150px;
@@ -314,7 +261,6 @@
 
   .logo {
     width: 150px;
-    /* min-height: 26px; */
     margin-bottom: 20px;
   }
 
@@ -355,32 +301,11 @@
     font-weight: 600;
   }
 
-  /*
-  .form_container {
-    width: 80vw;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-  } */
-
-  /* .form,
-  .box_input {
-    composes: form_container;
-    margin-bottom: 30px;
-  } */
-
   .title_h2 {
     font-size: 1em;
     margin-bottom: 0.7rem;
     text-align: center;
   }
-
-  /* .form input,
-  .form input[name='name'],
-  .form input[name='age'] {
-    width: 80vw;
-    font-size: 0.7em;
-  } */
 
   .eye {
     width: 1.2em;
@@ -397,8 +322,6 @@
   .box_btn button {
     width: 100%;
     display: block;
-    /* width: 50%; */
-    /* height: 7vh; */
     border-radius: 3rem;
     line-height: 1rem;
     font-size: 1rem;
@@ -411,14 +334,6 @@
   .box_btn button:last-child {
     margin-bottom: 1rem;
   }
-
-  /*
-  .box_btn button[type='button']::after {
-    width: 70vw;
-    height: 7vh;
-    border-radius: 3.5vh;
-    top: -6.9vh;
-  } */
 
   .error {
     max-width: 70%;
@@ -434,14 +349,4 @@
     max-width: 70%;
     font-size: 10px;
   }
-
-  /* .pos_static {
-    max-width: 100vw;
-    position: static;
-    transform: none;
-  }
-
-  .reg_container {
-    overflow-y: auto;
-  } */
 }
