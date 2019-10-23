@@ -24,7 +24,7 @@ class ActiveTaskList extends Component {
           <h2 className={styles.dailyTasks}>Мої завдання:</h2>
           <h2 className={styles.blocksTitles}>Сьогодні</h2>
           <div className={styles.positionCards}>
-            <div className={styles.activeTaskCard} />
+            {/* <div className={styles.activeTaskCard} /> */}
             <div className={styles.activeTaskListSecretDiv}>
               <h2 className={styles.activeTask_title1}>
                 Немає завдань? Тоді їх треба створити!

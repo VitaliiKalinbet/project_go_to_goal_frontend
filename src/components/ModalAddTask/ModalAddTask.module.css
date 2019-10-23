@@ -16,16 +16,6 @@
   display: none;
 }
 
-.modal_title {
-  border-radius: 6px;
-  margin: 20px auto;
-  width: 849px;
-  height: 500px;
-  text-align: center;
-  font-weight: 700;
-  color: gray;
-}
-
 .title_modal {
   margin: 20px auto;
   font-weight: 900;
@@ -296,13 +286,9 @@
 }
 
 @media (max-width: 767px) {
-  .modal_title {
-    width: 320px;
-  }
-
   .title_form {
     margin-right: auto;
-    height: 10px;
+    max-height: 10px;
     margin-left: 15px;
     margin-bottom: 0px;
     color: gray;
@@ -315,7 +301,7 @@
     box-shadow: 2px 3.464px 23.2px 5.8px rgba(29, 29, 27, 0.1);
     margin: 0 auto;
     width: 300px;
-    height: 400px;
+    max-height: 260px;
     display: flex;
     justify-content: space-evenly;
     overflow: visible;
@@ -323,8 +309,9 @@
 
   .form {
     border-radius: 6px;
+    background-color: white;
     width: 300px;
-    height: 400px;
+    max-height: 260px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -360,23 +347,12 @@
     display: flex;
     flex-flow: column-reverse;
     width: 270px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     font-family: 'Montserrat';
   }
 
   .price {
     display: none;
-  }
-
-  .form {
-    border-radius: 6px;
-    background-color: white;
-    width: 300px;
-    height: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-top: 20px;
   }
 
   .input_options {
@@ -386,7 +362,7 @@
     width: 270px;
     margin: 0 auto;
     font-family: 'Montserrat';
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     color: black;
     font-weight: 900;
     font-size: 14px;
@@ -441,7 +417,7 @@
       rgb(241, 195, 65) 55%,
       rgb(236, 177, 70) 100%
     );
-    margin: 20px auto;
+    margin: 5px auto;
     outline: none;
   }
 }
