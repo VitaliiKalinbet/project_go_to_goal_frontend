@@ -1,6 +1,6 @@
 .reg_container {
   width: 80%;
-  margin: 0;
+  margin: 0 auto;
   padding: 2.5rem;
   display: flex;
   flex-flow: column;
@@ -12,10 +12,10 @@
 
 .title_h1 {
   margin: 0;
-  margin-bottom: 3.53vh;
+  margin-bottom: 3rem;
   padding: 0;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   color: var(--text-color-black);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -30,32 +30,38 @@
 }
 
 .form {
-  width: 40vw;
-  position: relative;
+  width: 60%;
+  /* position: relative; */
 }
 
 .title_h2 {
   margin: 0;
-  margin-bottom: 3.53vh;
+  margin-bottom: 3.53rem;
   padding: 0;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   color: var(--color-gray);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  text-align: center;
 }
 
 .box_input {
-  width: 40vw;
-  /* height: 23vh; */
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+}
+
+.current_input_box {
+  width: 48%;
+  margin-bottom: 2rem;
 }
 
 .form input {
-  width: 40%;
+  width: 100%;
+  padding: 0.5rem;
   outline: none;
   border: none;
   border-bottom: 1px solid var(--color-gray);
@@ -66,10 +72,10 @@
   font-weight: 600;
 }
 
-.form input[name='name'],
+/* .form input[name='name'],
 .form input[name='age'] {
   width: 17vw;
-}
+} */
 
 .form input::placeholder {
   background-color: transparent;
@@ -118,17 +124,16 @@
 }
 
 .box_btn {
-  width: 40%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .box_btn button {
   width: 17vw;
-  height: 4.4vh;
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 0.5rem;
   border: none;
   border-radius: 2.2vh;
   font-size: 1.4em;
@@ -141,6 +146,10 @@
   font-weight: 800;
   text-align: center;
   transition: all 0.2s ease-in;
+}
+
+.box_btn button:first-child {
+  margin-right: 2rem;
 }
 
 .box_btn button:hover {
@@ -168,7 +177,7 @@
 
 .error {
   position: absolute;
-  width: 40vw;
+  max-width: 300px;
   color: #ff3561;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9em;
@@ -178,12 +187,12 @@
 
 .error_name {
   composes: error;
-  width: 17vw;
+  max-width: 300px;
 }
 
 .error_age {
   composes: error;
-  width: 17vw;
+  max-width: 300px;
 }
 
 /* SMALL DESCTOP */
@@ -213,42 +222,52 @@
 /* TABLET */
 @media (max-width: 1279px) {
   .reg_container {
-    width: 100%;
-    padding: 2rem;
+    width: 90%;
+    padding: 1rem;
   }
 
+  /*
   .form {
     width: 60vw;
   }
 
   .box_input {
     width: 60vw;
-    /* height: 30vh; */
+  } */
+
+  .box_input {
+    margin-bottom: 35px;
   }
 
   .form input {
-    width: 60vw;
+    font-size: 0.6em;
   }
 
+  .current_input_box {
+    width: 45%;
+    margin-bottom: 1.5rem;
+  }
+
+  /*
   .form input[name='name'],
   .form input[name='age'] {
     width: 26vw;
-  }
+  } */
 
   .eye {
-    width: 1.8em;
-    height: 1.8em;
+    width: 1em;
+    height: 1em;
   }
 
-  .box_btn {
+  /* .box_btn {
     width: 60vw;
-  }
+  } */
 
   .box_btn button {
-    width: 26vw;
-    /* height: 5.4vh; */
+    /* width: 26vw;
     border-radius: 2.7vh;
-    line-height: 5.4vh;
+    line-height: 5.4vh; */
+    font-size: 0.7rem;
   }
 
   /* .box_btn button[type='button']::after {
@@ -259,26 +278,30 @@
   } */
 
   .error {
-    width: 60vw;
+    max-width: 150px;
     font-size: 0.9em;
     margin-top: 0.2vw;
   }
 
   .error_name {
     composes: error;
-    width: 26vw;
+    max-width: 150px;
   }
 
   .error_age {
     composes: error;
-    width: 26vw;
+    max-width: 150px;
   }
 }
 
 /* MOBILE */
 @media (max-width: 767px) {
   .reg_container {
-    position: fixed;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     top: 0;
     z-index: 2;
     width: 100%;
@@ -286,6 +309,7 @@
     padding-bottom: 0;
     border-radius: 0;
     overflow-y: auto;
+    padding-bottom: 1rem;
   }
 
   .logo {
@@ -296,31 +320,67 @@
 
   .title_h1 {
     font-size: 1.2em;
+    margin-bottom: 0.8rem;
   }
 
+  .form {
+    width: 100%;
+  }
+
+  .box_input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 10px;
+  }
+
+  .current_input_box {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .form input {
+    width: 100%;
+    padding: 0.2rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--color-gray);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+    color: var(--color-gray);
+    font-weight: 600;
+  }
+
+  /*
   .form_container {
     width: 80vw;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-  }
+  } */
 
-  .form,
+  /* .form,
   .box_input {
     composes: form_container;
     margin-bottom: 30px;
-  }
+  } */
 
   .title_h2 {
     font-size: 1em;
+    margin-bottom: 0.7rem;
+    text-align: center;
   }
 
-  .form input,
+  /* .form input,
   .form input[name='name'],
   .form input[name='age'] {
     width: 80vw;
     font-size: 0.7em;
-  }
+  } */
 
   .eye {
     width: 1.2em;
@@ -328,19 +388,28 @@
   }
 
   .box_btn {
-    width: 70vw;
-    /* height: 17vh; */
+    width: 100%;
     flex-flow: column-reverse;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .box_btn button {
-    width: 70vw;
+    width: 100%;
+    display: block;
+    /* width: 50%; */
     /* height: 7vh; */
-    border-radius: 3.5vh;
-    line-height: 7vh;
-    font-size: 1em;
+    border-radius: 3rem;
+    line-height: 1rem;
+    font-size: 1rem;
+  }
+
+  .box_btn button:first-child {
+    margin-right: 0;
+  }
+
+  .box_btn button:last-child {
+    margin-bottom: 1rem;
   }
 
   /*
@@ -352,19 +421,21 @@
   } */
 
   .error {
-    width: 80vw;
-    font-size: 0.7em;
+    max-width: 70%;
+    font-size: 10px;
   }
 
   .error_name {
-    width: 80vw;
+    max-width: 70%;
+    font-size: 10px;
   }
 
   .error_age {
-    width: 80vw;
+    max-width: 70%;
+    font-size: 10px;
   }
 
-  .pos_static {
+  /* .pos_static {
     max-width: 100vw;
     position: static;
     transform: none;
@@ -372,5 +443,5 @@
 
   .reg_container {
     overflow-y: auto;
-  }
+  } */
 }

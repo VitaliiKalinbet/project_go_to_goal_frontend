@@ -180,8 +180,9 @@ class ModalRegistration extends Component {
             <h2 className={s.title_h2}>Дитина</h2>
             <div className={s.box_input}>
               {/* name */}
-              <div>
+              <div className={s.current_input_box}>
                 <input
+                  required
                   type="text"
                   name="name"
                   value={name}
@@ -194,8 +195,9 @@ class ModalRegistration extends Component {
               </div>
 
               {/* age */}
-              <div>
+              <div className={s.current_input_box}>
                 <input
+                  required
                   type="number"
                   name="age"
                   value={age}
@@ -208,8 +210,9 @@ class ModalRegistration extends Component {
               </div>
 
               {/* email */}
-              <div>
+              <div className={s.current_input_box}>
                 <input
+                  required
                   type="email"
                   name="email"
                   value={email}
@@ -222,9 +225,10 @@ class ModalRegistration extends Component {
               </div>
 
               {/* password */}
-              <div>
+              <div className={s.current_input_box}>
                 <div className={s.box_showPassword}>
                   <input
+                    required
                     type={showPassword}
                     name="password"
                     value={password}
@@ -249,9 +253,10 @@ class ModalRegistration extends Component {
               </div>
 
               {/* rePassword */}
-              <div>
+              <div className={s.current_input_box}>
                 <div className={s.box_showPassword}>
                   <input
+                    required
                     type={showPassword}
                     name="rePassword"
                     value={rePassword}
@@ -299,7 +304,7 @@ class ModalRegistration extends Component {
             </div>
           </form>
 
-          {windowWidth > 767 && (
+          {windowWidth >= 768 && (
             <IconsAvatar
               className={s.user_image_component}
               changeAvatar={this.changeUserPic}
