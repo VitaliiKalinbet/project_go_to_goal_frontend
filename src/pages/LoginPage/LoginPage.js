@@ -158,7 +158,7 @@ class LoginPage extends Component {
               )}
               {errorMessage && (
                 <i className={s.error}>
-                  Введені не валідні данні, спробуй ще раз...
+                  Введіть, будь ласка, пошту та пароль вказані при реєстрації
                 </i>
               )}
               <LoginForm
