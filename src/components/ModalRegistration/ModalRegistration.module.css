@@ -35,7 +35,6 @@
 }
 
 .title_h2 {
-  margin: 0;
   margin-bottom: 3.53rem;
   padding: 0;
   font-size: 1.8rem;
@@ -43,15 +42,21 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   text-align: center;
+  margin-left: 52%;
+  width: 48%;
 }
 
 .box_input {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-content: space-between;
   margin-bottom: 40px;
+}
+
+.current_input_box:nth-of-type(2n) {
+  margin-left: 20px;
 }
 
 .current_input_box {
@@ -86,11 +91,13 @@
   -webkit-text-fill-color: var(--color-gray);
   box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in 0s;
-  background: -webkit-linear-gradient(top,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(0, 174, 255, 0.04) 50%,
-      rgba(255, 255, 255, 0) 51%,
-      rgba(0, 174, 255, 0.03) 100%);
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 174, 255, 0.04) 50%,
+    rgba(255, 255, 255, 0) 51%,
+    rgba(0, 174, 255, 0.03) 100%
+  );
 }
 
 .box_showPassword {
@@ -133,9 +140,11 @@
   border-radius: 2.2vh;
   font-size: 1.4em;
   line-height: 2rem;
-  background-image: linear-gradient(to top,
-      var(--color-yellow),
-      var(--color-dark-yellow));
+  background-image: linear-gradient(
+    to top,
+    var(--color-yellow),
+    var(--color-dark-yellow)
+  );
   color: var(--color-white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
@@ -288,6 +297,10 @@
     margin-bottom: 1.5rem;
   }
 
+  .current_input_box:nth-of-type(2n) {
+    margin-left: 0;
+  }
+
   .form input {
     width: 100%;
     padding: 0.2rem;
@@ -302,6 +315,7 @@
   }
 
   .title_h2 {
+    margin: 0 auto;
     font-size: 1em;
     margin-bottom: 0.7rem;
     text-align: center;

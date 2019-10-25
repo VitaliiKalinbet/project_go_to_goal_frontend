@@ -25,6 +25,10 @@
   text-align: center;
 }
 
+.userLogout {
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   .userInfo {
     width: 180px;
