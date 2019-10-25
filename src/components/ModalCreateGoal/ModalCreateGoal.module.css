@@ -66,6 +66,8 @@
 .button {
   border: 0;
   display: block;
+  margin: 0 30%;
+  left: 50%;
   min-height: 48px;
   width: 200px;
   font-family: Montserrat;

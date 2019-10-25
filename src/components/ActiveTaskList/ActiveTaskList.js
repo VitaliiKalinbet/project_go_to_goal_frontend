@@ -38,8 +38,13 @@ class ActiveTaskList extends Component {
                 <b className={styles.text12}> вперед до цілі !</b>
               </p>
 
-              <p className={styles.text2}>
+              <p className={styles.text1}>
                 Пам'ятай, що бали нараховуються тільки за виконані завдання!
+              </p>
+
+              <p className={styles.text2}>
+                Задачі остаточно переходять до нижнього розділу ВИКОНАНО
+                наступного дня. До цього часу їх можна відмінити.
               </p>
             </div>
           </div>
