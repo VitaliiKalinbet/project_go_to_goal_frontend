@@ -158,7 +158,7 @@ class LoginPage extends Component {
               )}
               {errorMessage && (
                 <i className={s.error}>
-                  Вибач, але у нас виникли деякi труднощi. Спробуй пiзнiше...
+                  Введені не валідні данні, спробуй ще раз...
                 </i>
               )}
               <LoginForm
@@ -202,7 +202,7 @@ class LoginPage extends Component {
                 )}
                 {errorMessage && (
                   <i className={s.error}>
-                    Вибач, але у нас виникли деякi труднощi. Спробуй пiзнiше...
+                    Введіть, будь ласка, пошту та пароль вказані при реєстрації
                   </i>
                 )}
               </>

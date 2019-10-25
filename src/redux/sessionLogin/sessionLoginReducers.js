@@ -76,6 +76,9 @@ const errorLogin = (prevState = null, { type, payload }) => {
     case Type.SIGNUP_USER_SUCCESS:
       return null;
 
+    case ActionType.LOGIN_SUCCESS:
+      return null;
+
     default:
       return prevState;
   }

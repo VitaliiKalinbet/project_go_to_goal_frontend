@@ -81,7 +81,7 @@ class ModalRegistration extends Component {
       case 'name':
         fieldNameValid =
           // eslint-disable-next-line no-useless-escape
-          /^[a-zA-Zа-яА-Я\s]+[a-zA-Zа-яА-ЯёЁ'іІїЇ]{2,12}$/.test(value);
+          /^[a-zA-Zа-яА-Я\s]+[a-zA-Zа-яА-ЯёЁ'іІїЇ]{2,16}$/.test(value);
         fieldValidationErrors.name = fieldNameValid
           ? ''
           : "Вибач, але нам потрiбне iм'я вiд 2 до 12 символiв, яке мiстить тiльки лiтери...";
@@ -182,6 +182,7 @@ class ModalRegistration extends Component {
               {/* name */}
               <div className={s.current_input_box}>
                 <input
+                  maxLength="12"
                   required
                   type="text"
                   name="name"
@@ -275,16 +276,15 @@ class ModalRegistration extends Component {
                     )}
                   </button>
                 </div>
-                <div className={s.error}>
-                  <i>{errorRePassword || ''}</i>
-                  {errorMessage && (
-                    <i>
-                      Вибач, але у нас виникли деякi труднощi. Спробуй
-                      пiзнiше...
-                    </i>
-                  )}
-                </div>
               </div>
+            </div>
+            <div className={s.error}>
+              <i>{errorRePassword || ''}</i>
+              {errorMessage && (
+                <i>
+                  Вибач, але у нас виникли деякi труднощi. Спробуй пiзнiше...
+                </i>
+              )}
             </div>
 
             {windowWidth < 768 && (
