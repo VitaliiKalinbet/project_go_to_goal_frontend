@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import { postSuccess } from '../../redux/ModalAddTask/ModalAddTaskOperations';
 import style from './ModalAddTask.module.css';
-import modalPresent from '../../assets/images/modal_present.png';
 import * as dashBoardSelectors from '../../redux/Dashboard/DashboardSelectors';
 import * as getTaskError from '../../redux/ModalAddTask/ModalAddTaskSelectors';
 import { cleanModalTask } from '../../redux/ModalAddTask/ModalAddTaskActions';
@@ -71,7 +70,6 @@ class ModalAddTask extends Component {
     const { inputValue, inputPoint, selectData } = this.state;
     const { errorTask, clearModal, modalAddTaskErrors } = this.props;
     return (
-      // <div className={style.modal_title}>
       <div className={style.modal_container}>
         <form className={style.form} onSubmit={this.handleSubmit}>
           <p className={style.title_form}>Що зробити?</p>
@@ -132,9 +130,7 @@ class ModalAddTask extends Component {
             OK
           </button>
         </form>
-        <img className={style.price} src={modalPresent} alt="present" />
       </div>
-      // </div>
     );
   }
 }
