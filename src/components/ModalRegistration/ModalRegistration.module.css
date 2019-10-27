@@ -19,7 +19,7 @@
   text-align: center;
   font-size: 2.5em;
   color: var(--text-color-black);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -42,7 +42,7 @@
   padding: 0;
   font-size: 1.8em;
   color: var(--color-gray);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -61,22 +61,22 @@
   outline: none;
   border: none;
   border-bottom: 1px solid var(--color-gray);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.25em;
   line-height: 1.5em;
   color: var(--color-gray);
   font-weight: 600;
 }
 
-.form input[name="name"],
-.form input[name="age"] {
+.form input[name='name'],
+.form input[name='age'] {
   width: 18em;
 }
 
 .form input::placeholder {
   background-color: transparent;
   color: var(--color-gray);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
@@ -103,7 +103,7 @@
   display: flex;
 }
 
-.btn_eye[type="button"] {
+.btn_eye[type='button'] {
   position: absolute;
   top: 50%;
   right: 0;
@@ -137,9 +137,13 @@
   border-radius: 1.5em;
   font-size: 1.5em;
   line-height: 3em;
-  background-image: linear-gradient(to top, var(--color-yellow), var(--color-dark-yellow));
+  background-image: linear-gradient(
+    to top,
+    var(--color-yellow),
+    var(--color-dark-yellow)
+  );
   color: var(--color-white);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   text-align: center;
   transition: all 0.2s ease-in;
@@ -149,8 +153,8 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.box_btn button[type="button"]::after {
-  content: "Назад";
+.box_btn button[type='button']::after {
+  content: 'Назад';
   position: relative;
   width: 15em;
   height: 3em;
@@ -164,7 +168,7 @@
   transition: all 0.2s ease-in;
 }
 
-.box_btn button[type="button"]:hover::after {
+.box_btn button[type='button']:hover::after {
   opacity: 0;
 }
 
@@ -172,7 +176,7 @@
   position: absolute;
   width: 57.14em;
   color: #ff3561;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.875em;
   font-weight: 600;
   margin-top: 0.2em;
@@ -253,8 +257,8 @@
     margin-bottom: 40px;
   }
 
-  .form input[name="name"],
-  .form input[name="age"] {
+  .form input[name='name'],
+  .form input[name='age'] {
     width: 40em;
   }
 
@@ -289,8 +293,8 @@
   }
 
   .form input,
-  .form input[name="name"],
-  .form input[name="age"] {
+  .form input[name='name'],
+  .form input[name='age'] {
     width: 30em;
   }
 
@@ -309,8 +313,8 @@
 
 @media (max-width: 629px) {
   .form input,
-  .form input[name="name"],
-  .form input[name="age"] {
+  .form input[name='name'],
+  .form input[name='age'] {
     width: 20em;
   }
 
@@ -332,13 +336,13 @@
 
 @media (max-width: 429px) {
   .form input,
-  .form input[name="name"],
-  .form input[name="age"] {
+  .form input[name='name'],
+  .form input[name='age'] {
     width: 15em;
   }
 
   .box_btn button,
-  .box_btn button[type="button"]::after {
+  .box_btn button[type='button']::after {
     width: 12em;
   }
 
