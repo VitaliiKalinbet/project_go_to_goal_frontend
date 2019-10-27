@@ -23,6 +23,7 @@ const LoginForm = ({
         onChange={onChange}
         required
         placeholder="Введiть свiй email..."
+        autoFocus
       />
       <div>
         <input

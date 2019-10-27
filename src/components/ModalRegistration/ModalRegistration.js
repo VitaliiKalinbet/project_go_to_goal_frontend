@@ -188,6 +188,7 @@ class ModalRegistration extends Component {
                   value={name}
                   onChange={this.handleChange}
                   placeholder="Вкажи своє iм'я..."
+                  autoFocus
                 />
                 <div className={s.error_name}>
                   {!formValid && !nameValid && <i>{formErrors.name}</i>}
