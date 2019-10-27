@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import { postSuccess } from '../../redux/ModalAddTask/ModalAddTaskOperations';
 import style from './ModalAddTask.module.css';
-import modalPresent from '../../assets/images/modal_present.png';
 import * as dashBoardSelectors from '../../redux/Dashboard/DashboardSelectors';
 import * as getTaskError from '../../redux/ModalAddTask/ModalAddTaskSelectors';
 import { cleanModalTask } from '../../redux/ModalAddTask/ModalAddTaskActions';
@@ -71,69 +70,66 @@ class ModalAddTask extends Component {
     const { inputValue, inputPoint, selectData } = this.state;
     const { errorTask, clearModal, modalAddTaskErrors } = this.props;
     return (
-      <div className={style.modal_title}>
-        <div className={style.modal_container}>
-          <form className={style.form} onSubmit={this.handleSubmit}>
-            <p className={style.title_form}>Що зробити?</p>
+      <div className={style.modal_container}>
+        <form className={style.form} onSubmit={this.handleSubmit}>
+          <p className={style.title_form}>Що зробити?</p>
+          <input
+            maxLength="20"
+            minLength="3"
+            name="inputValue"
+            type="text"
+            className={style.input_task}
+            placeholder="Напиши завдання"
+            value={inputValue}
+            onChange={this.handleChange}
+            required
+          />
+          <div className={style.input_options_section}>
+            <Select
+              required
+              className={style.input_options}
+              value={findOption(selectData)}
+              options={options}
+              onChange={this.onChangeSelect}
+            >
+              Час
+            </Select>
+            {errorTask.map(
+              el =>
+                el.includes('40') && (
+                  <p key={keyelement} className={style.errorParagraph}>
+                    Вибачте, але ви вiдправили некоректнi даннi...
+                  </p>
+                ),
+              modalAddTaskErrors.length > 0 ? clearModal() : null,
+            )}
+
+            {errorTask.map(
+              el =>
+                el.includes('50') && (
+                  <p className={style.errorParagraphServer}>
+                    Вибачте, але у нас виникли деякi труднощi. Спробуйте
+                    пiзнiше...
+                  </p>
+                ),
+              modalAddTaskErrors.length > 0 ? clearModal() : null,
+            )}
             <input
-              maxLength="20"
-              minLength="3"
-              name="inputValue"
-              type="text"
-              className={style.input_task}
-              placeholder="Обери завдання"
-              value={inputValue}
+              name="inputPoint"
+              type="number"
+              max="1000"
+              min="1"
+              value={inputPoint}
               onChange={this.handleChange}
+              className={style.input_options_input}
+              placeholder="Винагорода"
               required
             />
-            <div className={style.input_options_section}>
-              <Select
-                required
-                className={style.input_options}
-                value={findOption(selectData)}
-                options={options}
-                onChange={this.onChangeSelect}
-              >
-                Час
-              </Select>
-              {errorTask.map(
-                el =>
-                  el.includes('40') && (
-                    <p key={keyelement} className={style.errorParagraph}>
-                      Вибачте, але ви вiдправили некоректнi даннi...
-                    </p>
-                  ),
-                modalAddTaskErrors.length > 0 ? clearModal() : null,
-              )}
-
-              {errorTask.map(
-                el =>
-                  el.includes('50') && (
-                    <p className={style.errorParagraphServer}>
-                      Вибачте, але у нас виникли деякi труднощi. Спробуйте
-                      пiзнiше...
-                    </p>
-                  ),
-                modalAddTaskErrors.length > 0 ? clearModal() : null,
-              )}
-              <input
-                name="inputPoint"
-                type="number"
-                max="1000"
-                min="1"
-                value={inputPoint}
-                onChange={this.handleChange}
-                className={style.input_options_input}
-                placeholder="Винагорода"
-                required
-              />
-            </div>
-            <button type="submit" className={style.button}>
-              OK
-            </button>
-          </form>
-          <img className={style.price} src={modalPresent} alt="present" />
-        </div>
+          </div>
+          <button type="submit" className={style.button}>
+            OK
+          </button>
+        </form>
       </div>
     );
   }

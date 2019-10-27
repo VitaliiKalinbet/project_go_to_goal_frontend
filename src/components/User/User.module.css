@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 200px;
+  width: 240px;
 }
 
 .btn {
@@ -11,10 +11,6 @@
   border: none;
   cursor: pointer;
   outline: none;
-}
-
-.colum {
-  min-width: 110px;
 }
 
 .userName {
@@ -25,13 +21,18 @@
   text-align: center;
 }
 
+.userLogout {
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   .userInfo {
-    width: 180px;
+    max-width: 205px;
+    justify-content: space-around;
   }
 
   .avatar {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: auto;
   }
 }

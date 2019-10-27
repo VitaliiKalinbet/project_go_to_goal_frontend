@@ -1,24 +1,25 @@
 .reg_container {
-  width: 80vw;
-  /* height: fit-content; */
+  font-size: 16px;
+  width: 80%;
+  height: fit-content;
   margin: 0;
-  padding: 8.8vh 8.5vw;
+  padding: 5em 10em;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: space-between;
-  border-radius: 5px;
+  border-radius: 0.4em;
   background-color: var(--bg-color-white);
 }
 
 .title_h1 {
   margin: 0;
-  margin-bottom: 3.53vh;
+  margin-bottom: 0.75em;
   padding: 0;
   text-align: center;
   font-size: 2.5em;
   color: var(--text-color-black);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
@@ -31,51 +32,51 @@
 }
 
 .form {
-  width: 40vw;
+  width: 50em;
   position: relative;
 }
 
 .title_h2 {
   margin: 0;
-  margin-bottom: 3.53vh;
+  margin-bottom: 1.1em;
   padding: 0;
   font-size: 1.8em;
   color: var(--color-gray);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
 .box_input {
-  width: 40vw;
-  height: 23vh;
+  width: 50em;
+  height: 16em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  margin-bottom: 7vh;
+  margin-bottom: 3.75em;
 }
 
 .form input {
-  width: 40vw;
+  width: 40em;
   outline: none;
   border: none;
   border-bottom: 1px solid var(--color-gray);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25em;
   line-height: 1.5em;
   color: var(--color-gray);
   font-weight: 600;
 }
 
-.form input[name='name'],
-.form input[name='age'] {
-  width: 17vw;
+.form input[name="name"],
+.form input[name="age"] {
+  width: 18em;
 }
 
 .form input::placeholder {
   background-color: transparent;
   color: var(--color-gray);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
 
@@ -102,7 +103,7 @@
   display: flex;
 }
 
-.btn_eye[type='button'] {
+.btn_eye[type="button"] {
   position: absolute;
   top: 50%;
   right: 0;
@@ -121,28 +122,24 @@
 }
 
 .box_btn {
-  width: 40vw;
+  width: 50em;
   display: flex;
   justify-content: space-between;
 }
 
 .box_btn button {
-  width: 17vw;
-  height: 4.4vh;
+  width: 15em;
+  height: 3em;
   display: block;
   margin: 0;
   padding: 0;
   border: none;
-  border-radius: 2.2vh;
-  font-size: 1.4em;
-  line-height: 4.4vh;
-  background-image: linear-gradient(
-    to top,
-    var(--color-yellow),
-    var(--color-dark-yellow)
-  );
+  border-radius: 1.5em;
+  font-size: 1.5em;
+  line-height: 3em;
+  background-image: linear-gradient(to top, var(--color-yellow), var(--color-dark-yellow));
   color: var(--color-white);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
   text-align: center;
   transition: all 0.2s ease-in;
@@ -152,139 +149,84 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.box_btn button[type='button']::after {
-  content: 'Назад';
+.box_btn button[type="button"]::after {
+  content: "Назад";
   position: relative;
-  width: 17vw;
-  height: 4.4vh;
-  top: -4.4vh;
+  width: 15em;
+  height: 3em;
+  top: -3em;
   left: 0;
   border: 1px solid var(--color-gray);
-  border-radius: 2.2vh;
+  border-radius: 1.5em;
   background: var(--color-white);
   color: var(--color-gray);
   opacity: 1;
   transition: all 0.2s ease-in;
 }
 
-.box_btn button[type='button']:hover::after {
+.box_btn button[type="button"]:hover::after {
   opacity: 0;
 }
 
 .error {
   position: absolute;
-  width: 40vw;
+  width: 57.14em;
   color: #ff3561;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875em;
   font-weight: 600;
-  margin-top: 0.2vw;
+  margin-top: 0.2em;
 }
 
 .error_name {
   composes: error;
-  width: 17vw;
+  width: 25.71em;
 }
 
 .error_age {
   composes: error;
-  width: 17vw;
+  width: 25.71em;
 }
 
 /* SMALL DESCTOP */
 @media (max-width: 1979px) {
-  .title_h1 {
-    font-size: 2.2em;
+  .reg_container {
+    font-size: 14px;
   }
+}
 
-  .title_h2 {
-    font-size: 1.584em;
+@media (max-width: 1649px) {
+  .reg_container {
+    padding: 2em 3em;
   }
+}
 
-  .form input {
-    font-size: 1.056em;
-    line-height: 1.32em;
-  }
-
-  .box_btn button {
-    font-size: 1.232em;
-  }
-
-  .error {
-    font-size: 0.792em;
+@media (max-width: 1399px) {
+  .reg_container {
+    width: 100%;
   }
 }
 
 /* TABLET */
-@media (max-width: 1279px) {
+@media (max-width: 1099px) {
   .reg_container {
-    width: 100vw;
-    padding: 6vh 4vw;
+    font-size: 12px;
   }
+}
 
-  .form {
-    width: 60vw;
-  }
-
-  .box_input {
-    width: 60vw;
-    height: 30vh;
-  }
-
-  .form input {
-    width: 60vw;
-  }
-
-  .form input[name='name'],
-  .form input[name='age'] {
-    width: 26vw;
-  }
-
-  .eye {
-    width: 1.8em;
-    height: 1.8em;
-  }
-
-  .box_btn {
-    width: 60vw;
-  }
-
-  .box_btn button {
-    width: 26vw;
-    height: 5.4vh;
-    border-radius: 2.7vh;
-    line-height: 5.4vh;
-  }
-
-  .box_btn button[type='button']::after {
-    width: 26vw;
-    height: 5.4vh;
-    border-radius: 2.7vh;
-    top: -5.4vh;
-  }
-
-  .error {
-    width: 60vw;
-    font-size: 0.9em;
-    margin-top: 0.2vw;
-  }
-
-  .error_name {
-    composes: error;
-    width: 26vw;
-  }
-
-  .error_age {
-    composes: error;
-    width: 26vw;
+@media (max-width: 979px) {
+  .reg_container {
+    font-size: 11px;
+    padding: 2em;
   }
 }
 
 /* MOBILE */
-@media (max-width: 767px) {
+@media (max-width: 899px) {
   .reg_container {
-    width: 100vw;
-    height: auto;
+    font-size: 16px;
+    width: 100%;
+    max-height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     padding: 20px;
@@ -298,12 +240,8 @@
     margin-bottom: 20px;
   }
 
-  .title_h1 {
-    font-size: 1.2em;
-  }
-
   .form_container {
-    width: 80vw;
+    width: 80%;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
@@ -312,18 +250,12 @@
   .form,
   .box_input {
     composes: form_container;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
-  .title_h2 {
-    font-size: 1em;
-  }
-
-  .form input,
-  .form input[name='name'],
-  .form input[name='age'] {
-    width: 80vw;
-    font-size: 0.7em;
+  .form input[name="name"],
+  .form input[name="age"] {
+    width: 40em;
   }
 
   .eye {
@@ -332,44 +264,93 @@
   }
 
   .box_btn {
-    width: 70vw;
-    height: 17vh;
+    height: 10em;
     flex-flow: column-reverse;
     align-items: center;
     justify-content: space-between;
   }
 
-  .box_btn button {
-    width: 70vw;
-    height: 7vh;
-    border-radius: 3.5vh;
-    line-height: 7vh;
-    font-size: 1em;
-  }
-
-  .box_btn button[type='button']::after {
-    width: 70vw;
-    height: 7vh;
-    border-radius: 3.5vh;
-    top: -6.9vh;
-  }
-
   .error {
-    width: 80vw;
-    font-size: 0.7em;
+    width: 57em;
   }
 
   .error_name {
-    width: 80vw;
+    width: 57em;
   }
 
   .error_age {
-    width: 80vw;
+    width: 57em;
+  }
+}
+
+@media (max-width: 799px) {
+  .box_input {
+    height: 18em;
   }
 
-  .pos_static {
-    max-width: 100vw;
-    position: static;
-    transform: none;
+  .form input,
+  .form input[name="name"],
+  .form input[name="age"] {
+    width: 30em;
+  }
+
+  .error {
+    width: 42em;
+  }
+
+  .error_name {
+    width: 42em;
+  }
+
+  .error_age {
+    width: 42em;
+  }
+}
+
+@media (max-width: 629px) {
+  .form input,
+  .form input[name="name"],
+  .form input[name="age"] {
+    width: 20em;
+  }
+
+  .error {
+    width: 28em;
+    margin-top: 0.05em;
+  }
+
+  .error_name {
+    width: 28em;
+    margin-top: 0.05em;
+  }
+
+  .error_age {
+    width: 28em;
+    margin-top: 0.05em;
+  }
+}
+
+@media (max-width: 429px) {
+  .form input,
+  .form input[name="name"],
+  .form input[name="age"] {
+    width: 15em;
+  }
+
+  .box_btn button,
+  .box_btn button[type="button"]::after {
+    width: 12em;
+  }
+
+  .error {
+    width: 21em;
+  }
+
+  .error_name {
+    width: 21em;
+  }
+
+  .error_age {
+    width: 21em;
   }
 }

@@ -122,8 +122,8 @@
   }
 
   .attention {
-    top: 0;
-    right: -40px;
+    top: 40px;
+    right: 75px;
   }
 
   .attentionLabel {
@@ -134,6 +134,6 @@
   .attentionArrow {
     width: 45px;
     height: 25px;
-    margin-bottom: 10px;
+    transform: rotate(90deg);
   }
 }

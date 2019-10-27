@@ -24,7 +24,7 @@ class ActiveTaskList extends Component {
           <h2 className={styles.dailyTasks}>Мої завдання:</h2>
           <h2 className={styles.blocksTitles}>Сьогодні</h2>
           <div className={styles.positionCards}>
-            <div className={styles.activeTaskCard} />
+            {/* <div className={styles.activeTaskCard} /> */}
             <div className={styles.activeTaskListSecretDiv}>
               <h2 className={styles.activeTask_title1}>
                 Немає завдань? Тоді їх треба створити!
@@ -38,8 +38,13 @@ class ActiveTaskList extends Component {
                 <b className={styles.text12}> вперед до цілі !</b>
               </p>
 
-              <p className={styles.text2}>
+              <p className={styles.text1}>
                 Пам'ятай, що бали нараховуються тільки за виконані завдання!
+              </p>
+
+              <p className={styles.text2}>
+                Задачі остаточно переходять до нижнього розділу ВИКОНАНО
+                наступного дня. До цього часу їх можна відмінити.
               </p>
             </div>
           </div>

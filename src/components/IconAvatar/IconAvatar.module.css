@@ -1,5 +1,5 @@
 .avatar_choose {
-  width: 17vw;
+  width: 18rem;
   height: fit-content;
   display: flex;
   flex-flow: column;
@@ -8,7 +8,7 @@
 }
 
 .user_avatar_big {
-  width: 17vw;
+  width: 18rem;
   height: fit-content;
   align-self: center;
 }
@@ -16,14 +16,14 @@
 .avatar_txt {
   font-size: 1.4em;
   padding: 0.71em 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--color-gray);
   font-weight: 600;
 }
 
 .avatar_little_div {
-  width: 17vw;
-  height: calc(17vw / 2.6);
+  width: 18rem;
+  height: calc(18rem / 2.6);
   display: flex;
   flex-flow: wrap;
   align-content: space-between;
@@ -55,41 +55,42 @@
 
 @media (max-width: 1979px) {
   .avatar_txt {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 }
 
 @media (max-width: 1279px) {
   .avatar_choose {
-    width: 24vw;
+    width: 18rem;
   }
 
   .user_avatar_big {
-    width: 24vw;
+    width: 18rem;
   }
 
   .avatar_little_div {
-    width: 24vw;
-    height: calc(24vw / 2.6);
+    width: 18rem;
+    height: calc(18rem / 2.6);
   }
 
   .avatar_txt {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1099px) {
+  .avatar_txt {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 899px) {
   .avatar_choose {
-    width: 70vw;
+    width: 100%;
     margin-bottom: 20px;
   }
 
-  .user_avatar_big {
-    width: 70vw;
-  }
-
-  .avatar_little_div {
-    width: 70vw;
-    height: calc(70vw / 2.6);
+  .avatar_txt {
+    font-size: 0.98em;
   }
 }

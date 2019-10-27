@@ -15,8 +15,8 @@ const User = ({ user, avatar, openModalLogout }) => {
       <div className={style.userInfo}>
         <img
           src={avatar}
-          width="58"
-          height="50"
+          width="60"
+          height="auto"
           alt="Вася Пупкін"
           className={style.avatar}
         />
@@ -24,7 +24,7 @@ const User = ({ user, avatar, openModalLogout }) => {
           <p className={style.userName}>{name}</p>
           <p className={style.userAge}>{age} років</p>
         </div>
-        <LogoutSVG onClick={openModalLogout} />
+        <LogoutSVG className={style.userLogout} onClick={openModalLogout} />
       </div>
     </>
   );

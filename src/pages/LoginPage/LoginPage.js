@@ -155,7 +155,7 @@ class LoginPage extends Component {
               )}
               {errorMessage && (
                 <i className={s.error}>
-                  Вибач, але у нас виникли деякi труднощi. Спробуй пiзнiше...
+                  Введіть, будь ласка, пошту та пароль вказані при реєстрації
                 </i>
               )}
               <LoginForm
@@ -199,7 +199,7 @@ class LoginPage extends Component {
                 )}
                 {errorMessage && (
                   <i className={s.error}>
-                    Вибач, але у нас виникли деякi труднощi. Спробуй пiзнiше...
+                    Введіть, будь ласка, пошту та пароль вказані при реєстрації
                   </i>
                 )}
               </>
@@ -215,7 +215,7 @@ class LoginPage extends Component {
         </main>
 
         {/* TABLET & DESKTOP || FOOTER */}
-        {windowWidth > 767 && <Footer />}
+        {windowWidth >= 768 && <Footer />}
       </div>
     );
   }
