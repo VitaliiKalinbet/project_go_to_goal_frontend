@@ -42,6 +42,7 @@
 }
 
 .input_options_section {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -82,8 +83,8 @@
   width: 500px;
   color: red;
   position: absolute;
-  bottom: 18px;
-  left: 5%;
+  bottom: -20px;
+  left: 10px;
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 700;
@@ -118,12 +119,10 @@
   font-weight: 900;
   width: 200px;
   height: 48px;
-  background-image: -webkit-linear-gradient(
-    90deg,
-    rgb(245, 213, 59) 0%,
-    rgb(241, 195, 65) 55%,
-    rgb(236, 177, 70) 100%
-  );
+  background-image: -webkit-linear-gradient(90deg,
+      rgb(245, 213, 59) 0%,
+      rgb(241, 195, 65) 55%,
+      rgb(236, 177, 70) 100%);
   outline: none;
 }
 
@@ -150,5 +149,16 @@
 
   .input_options_input {
     width: 45%;
+  }
+
+  .errorParagraph {
+    width: 250px;
+    color: red;
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 500;
   }
 }
