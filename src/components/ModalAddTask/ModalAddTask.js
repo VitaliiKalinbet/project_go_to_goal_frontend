@@ -28,6 +28,8 @@ class ModalAddTask extends Component {
     inputValue: '',
     inputPoint: '',
     selectData: '',
+    isEnterTime: false,
+    timeError: '',
   };
 
   handleChange = e => {
@@ -40,34 +42,44 @@ class ModalAddTask extends Component {
     e.preventDefault();
 
     const { postfunc, token } = this.props;
-    const { inputValue, inputPoint, selectData } = this.state;
+    const { inputValue, inputPoint, selectData, isEnterTime } = this.state;
 
-    postfunc(
-      {
-        title: inputValue,
-        description: 'task descr',
-        points: inputPoint,
-        deadline: selectData,
-        dates: [new Date().toISOString()],
-      },
-      token,
-    );
+    if (isEnterTime) {
+      postfunc(
+        {
+          title: inputValue,
+          description: 'task descr',
+          points: inputPoint,
+          deadline: selectData,
+          dates: [new Date().toISOString()],
+        },
+        token,
+      );
 
-    this.setState({
-      inputValue: '',
-      inputPoint: '',
-      selectData: '',
-    });
+      this.setState({
+        inputValue: '',
+        inputPoint: '',
+        selectData: '',
+        isEnterTime: false,
+        timeError: '',
+      });
+    } else {
+      this.setState({
+        timeError: 'Введіть проміжок часу',
+      });
+    }
   };
 
   onChangeSelect = opt => {
     this.setState({
       selectData: opt.value,
+      isEnterTime: true,
+      timeError: '',
     });
   };
 
   render() {
-    const { inputValue, inputPoint, selectData } = this.state;
+    const { inputValue, inputPoint, selectData, timeError } = this.state;
     const { errorTask, clearModal, modalAddTaskErrors } = this.props;
     return (
       <div className={style.modal_container}>
@@ -103,6 +115,7 @@ class ModalAddTask extends Component {
                 ),
               modalAddTaskErrors.length > 0 ? clearModal() : null,
             )}
+            {timeError && <p className={style.errorParagraph}>{timeError}</p>}
 
             {errorTask.map(
               el =>

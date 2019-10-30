@@ -28,6 +28,7 @@
   flex-flow: wrap;
   align-content: space-between;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .user_avatar_small {

@@ -329,7 +329,7 @@
 
   .box_btn {
     width: 100%;
-    flex-flow: column-reverse;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
   }
