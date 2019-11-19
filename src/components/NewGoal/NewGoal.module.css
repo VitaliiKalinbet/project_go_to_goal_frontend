@@ -47,6 +47,11 @@
   cursor: pointer;
 }
 
+.button:hover .button_overlay {
+  background-color: var(--footer-bg_color);
+  border-radius: 5px;
+}
+
 .button_overlay {
   position: absolute;
   top: 0;
